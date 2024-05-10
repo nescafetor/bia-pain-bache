@@ -1185,7 +1185,7 @@ const getRandomPath = (length) => {
 const resolveDNS = async (domain) => {
     const dohURLv4 = `https://cloudflare-dns.com/dns-query?name=${encodeURIComponent(domain)}&type=A`;
     const dohURLv6 = `https://cloudflare-dns.com/dns-query?name=${encodeURIComponent(domain)}&type=AAAA`;
-:;
+	
     try {
         const [ipv4Response, ipv6Response] = await Promise.all([
             fetch(dohURLv4, { headers: { accept: 'application/dns-json' } }),
