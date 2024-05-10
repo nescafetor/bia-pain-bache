@@ -1185,7 +1185,7 @@ const getRandomPath = (length) => {
 const resolveDNS = async (domain) => {
     const dohURLv4 = `https://cloudflare-dns.com/dns-query?name=${encodeURIComponent(domain)}&type=A`;
     const dohURLv6 = `https://cloudflare-dns.com/dns-query?name=${encodeURIComponent(domain)}&type=AAAA`;
-
+:;
     try {
         const [ipv4Response, ipv6Response] = await Promise.all([
             fetch(dohURLv4, { headers: { accept: 'application/dns-json' } }),
@@ -1532,9 +1532,7 @@ const renderHomePage = async (request, env, hostName, fragConfigs) => {
 	</head>
 	
 	<body>
-		<h1>👻 | BpB Panel | <span style="font-size: smaller;">${panelVersion}</span> </h3>
-            <hr>            
-			<h2>${REvil} </h2>
+		<h1>👻 BpB panel <span style="font-size: smaller;">${panelVersion}</span> </h3>
 		<div class="form-container">
             <h2>FRAGMENT SETTINGS ⚙️</h2>
 			<form id="configForm">
@@ -1767,7 +1765,7 @@ const renderHomePage = async (request, env, hostName, fragConfigs) => {
             <div class="footer">
                 <i class="fa fa-github" style="font-size:36px; margin-right: 10px;"></i>
                 <a class="link" href="https://github.com/bia-pain-bache/BPB-Worker-Panel" target="_blank">Github</a>
-                <button id="openModalBtn" class="button">FUCK OFF sshole </button>
+                <button id="openModalBtn" class="button">FUCK OFF asshole </button>
                 <button type="button" id="logout" style="background: none; margin: 0; border: none; cursor: pointer;">
                     <i class="fa fa-power-off fa-2x" aria-hidden="true"></i>
                 </button>
@@ -2092,7 +2090,7 @@ const renderLoginPage = async () => {
     </head>
     <body>
         <div class="container">
-            <h1>| 👑 BPB | <span style="font-size: smaller;">${panelVersion}</span> </h3>
+            <h1>👻 BpB panel<span style="font-size: smaller;">${panelVersion}</span> </h3>
             <div class="form-container">
                 <h2>User Login</h2>
                 <form id="loginForm">
@@ -2163,9 +2161,9 @@ const renderErrorPage = (message, error, refer) => {
 
     <body>
         <div id="error-container">
-            <h1>🚫FUCKIN ERROR 🚫<span style="font-size: smaller;">${panelVersion}</span> </h3>
+            <h2>❗ERROR ❗<span style="font-size: smaller;">${panelVersion}</span> </h3>
             <div id="error-message">
-                <h2>${message} ${refer 
+                <h3>${message} ${refer 
                     ? 'Please wait 60s and try again or refer to <a href="https://github.com/bia-pain-bache/BPB-Worker-Panel/blob/main/README.md">documents</a>' 
                     : ''}
                 </h2>
