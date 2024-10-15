@@ -1,6 +1,6 @@
 /**
 * @ts-nocheck   <!--GAMFC-->version base on commit 43fad05dcdae3b723c53c226f8181fc5bd47223e, time is 2023-06-22 15:20:02 UTC<!--GAMFC-END-->.
-* Last Update: 4:20 UTC - Sunday, 29 September 2024, By @Sahar-KM , @Diana-Cl , Nesa @EEvanescence
+* Last Update: 4:20 UTC - Tuesday, 15 October 2024, We are REvil
 * Many thanks to github.com/bia-pain-bache
 */
 import { connect } from 'cloudflare:sockets';
@@ -10,7 +10,7 @@ let userID = 'c6d299d4-db0b-4444-8b56-b23bbdcbcd67';
 
 //Find proxyIP : https://github.com/NiREvil/vless/blob/main/sub/ProxyIP.md
 //Find proxyIP : https://www.nslookup.io/domains/ipdb.rr.nu/dns-records/
-const proxyIPs= ['nscl.ir']; // OR use ['bpb.radically.pro', 'turk.radicalization.ir', 'bpb.yousef.isegaro.com', 'proxyip.digitalocean.hw.090227.xyz'];
+const proxyIPs= ['nima.nscl.ir']; // OR use ['bpb.radically.pro', 'turk.radicalization.ir', 'bpb.yousef.isegaro.com', 'proxyip.digitalocean.hw.090227.xyz'];
 const defaultHttpPorts = ['80', '8080', '2052', '2082', '2086', '2095', '8880'];
 const defaultHttpsPorts = ['443', '8443', '2053', '2083', '2087', '2096'];
 let proxyIP = proxyIPs[Math.floor(Math.random() * proxyIPs.length)];
@@ -1207,7 +1207,7 @@ async function updateDataset (env, newSettings, resetSettings) {
 
     const chainProxy = newSettings?.get('outProxy');
     const proxySettings = {
-        remoteDNS: newSettings ? newSettings.get('remoteDNS') : currentSettings?.hasOwnProperty('remoteDNS') ? currentSettings.remoteDNS : 'https://cloudflare-dns.com/dns-query',
+        remoteDNS: newSettings ? newSettings.get('remoteDNS') : currentSettings?.hasOwnProperty('remoteDNS') ? currentSettings.remoteDNS : 'https://dns.google/dns-query',
         localDNS: newSettings ? newSettings.get('localDNS') : currentSettings?.hasOwnProperty('localDNS') ? currentSettings.localDNS : '8.8.8.8',
         lengthMin: newSettings ? newSettings.get('fragmentLengthMin') : currentSettings?.hasOwnProperty('lengthMin') ? currentSettings.lengthMin : '10',
         lengthMax: newSettings ? newSettings.get('fragmentLengthMax') : currentSettings?.hasOwnProperty('lengthMax') ? currentSettings.lengthMax : '30',
@@ -1228,8 +1228,8 @@ async function updateDataset (env, newSettings, resetSettings) {
         trojanConfigs: newSettings ? newSettings.get('trojanConfigs') : currentSettings?.hasOwnProperty('trojanConfigs') ? currentSettings.trojanConfigs : false,
         outProxy: newSettings ? chainProxy : currentSettings?.hasOwnProperty('outProxy') ? currentSettings.outProxy : '',
         outProxyParams: chainProxy ? extractChainProxyParams(chainProxy) : currentSettings?.hasOwnProperty('outProxyParams') ? currentSettings.outProxyParams : '',
-        wowEndpoint: newSettings ? newSettings.get('wowEndpoint')?.replaceAll(' ', '') : currentSettings?.hasOwnProperty('wowEndpoint') ? currentSettings.wowEndpoint : '188.114.99.223:2506,162.159.192.100:1018,162.159.192.135:1074,188.114.98.44:988,162.159.192.175:891,188.114.98.1:1010,162.159.192.0:955,188.114.97.170:2371,162.159.192.175:891,188.114.99.173:3476',
-        warpEndpoints: newSettings ? newSettings.get('warpEndpoints')?.replaceAll(' ', '') : currentSettings?.hasOwnProperty('warpEndpoints') ? currentSettings.warpEndpoints : '188.114.99.223:2506,162.159.192.100:1018,162.159.192.135:1074,188.114.98.44:988,162.159.192.175:891,188.114.98.1:1010,162.159.192.0:955,188.114.97.170:2371,162.159.192.175:891,188.114.99.173:3476',
+        wowEndpoint: newSettings ? newSettings.get('wowEndpoint')?.replaceAll(' ', '') : currentSettings?.hasOwnProperty('wowEndpoint') ? currentSettings.wowEndpoint : '188.114.98.99:4233,188.114.97.149:1070,188.114.96.220:7152,188.114.99.223:2506,188.114.98.44:988,162.159.192.175:891,188.114.98.1:1010,162.159.192.100:1018,162.159.192.0:955,188.114.97.170:2371',
+        warpEndpoints: newSettings ? newSettings.get('warpEndpoints')?.replaceAll(' ', '') : currentSettings?.hasOwnProperty('warpEndpoints') ? currentSettings.warpEndpoints : '188.114.98.99:4233,188.114.97.149:1070,188.114.96.220:7152,188.114.99.223:2506,188.114.98.44:988,162.159.192.175:891,188.114.98.1:1010,162.159.192.100:1018,162.159.192.0:955,188.114.97.170:2371',
         hiddifyNoiseMode: newSettings ? newSettings.get('hiddifyNoiseMode') : currentSettings?.hasOwnProperty('hiddifyNoiseMode') ? currentSettings.hiddifyNoiseMode : 'm4',
         nikaNGNoiseMode: newSettings ? newSettings.get('nikaNGNoiseMode') : currentSettings?.hasOwnProperty('nikaNGNoiseMode') ? currentSettings.nikaNGNoiseMode : 'quic',
         noiseCountMin: newSettings ? newSettings.get('noiseCountMin') : currentSettings?.hasOwnProperty('noiseCountMin') ? currentSettings.noiseCountMin : '10',
@@ -2889,7 +2889,7 @@ async function renderLoginPage () {
         <div class="container">
             <h1> 👻 <br><span style="font-size: smaller;">WELCOME TO BPB</span> </h1>
             <div class="form-container">
-                <h2>User Login</h2>
+                <h2>User Login <span style="font-size: smaller;">${panelVersion}</span></h2>
                 <form id="loginForm">
                     <div class="form-control">
                         <label for="password">Password</label>
