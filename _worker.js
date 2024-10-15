@@ -1,7 +1,7 @@
 /**
-* @ts-nocheck   
-* 
-* PLEASE DONT USE THIS FOR NOW
+* @ts-nocheck   <!--GAMFC-->version base on commit 43fad05dcdae3b723c53c226f8181fc5bd47223e, time is 2023-06-22 15:20:02 UTC<!--GAMFC-END-->.
+* Last Update: 4:20 UTC - Sunday, 29 September 2024, By @Sahar-KM , @Diana-Cl , Nesa @EEvanescence
+* Many thanks to github.com/bia-pain-bache
 */
 import { connect } from 'cloudflare:sockets';
 // How to generate your own UUID:
@@ -1787,11 +1787,11 @@ async function renderHomePage (env, hostName, fragConfigs) {
                         </div>
                     </div>
                     <div class="form-control">
-                        <label for="customCdnAddrs"><span <i class="fa fa-digital-ocean" aria-hidden="true"></i> </span> Custom CDN IP</label>
+                        <label for="customCdnAddrs"><span <i class="fa fa-sort-numeric-desc" aria-hidden="true"></i> </span> Custom CDN IP</label>
                         <input type="text" id="customCdnAddrs" name="customCdnAddrs" value="${customCdnAddrs.replaceAll(",", " , ")}">
                     </div>
                     <div class="form-control">
-                        <label for="customCdnHost"><span <i class="fa fa-sort-numeric-desc" aria-hidden="true"></i> </span> Custom Host</label>
+                        <label for="customCdnHost"><span <i class="fa fa-sort-alpha-desc" aria-hidden="true"></i> </span> Custom Host</label>
                         <input type="text" id="customCdnHost" name="customCdnHost" value="${customCdnHost}">
                     </div>
                     <div class="form-control">
@@ -1836,7 +1836,7 @@ async function renderHomePage (env, hostName, fragConfigs) {
                     <summary><h2>FRAGMENT </h2> <i class="fa fa-cog fa-spin fa-2x fa-fw"></i>
 		    <span class="sr-only">Loading...</span></summary>
                     <div class="form-control">
-                        <label for="fragmentLengthMin"><span <i class="fa fa-buromobelexperte" aria-hidden="true"></i> </span> Length</label>
+                        <label for="fragmentLengthMin"><span <i class="fa fa-delicious" aria-hidden="true"></i> </span> Length</label>
                         <div class="min-max">
                             <input type="number" id="fragmentLengthMin" name="fragmentLengthMin" value="${lengthMin}" min="10" required>
                             <span> - </span>
@@ -1908,7 +1908,7 @@ async function renderHomePage (env, hostName, fragConfigs) {
                         <input type="text" id="warpEndpoints" name="warpEndpoints" value="${warpEndpoints.replaceAll(",", " , ")}" required>
                     </div>
                     <div class="form-control">
-                        <label for="warpPlusLicense"><span <i class="fa fa-fulcrum" aria-hidden="true"></i> </span> License key</label>
+                        <label for="warpPlusLicense"><span <i class="fa fa-flask" aria-hidden="true"></i> </span> License key</label>
                         <input type="text" id="warpPlusLicense" name="warpPlusLicense" value="${warpPlusLicense}" 
                             pattern="^[a-zA-Z0-9]{8}-[a-zA-Z0-9]{8}-[a-zA-Z0-9]{8}$" 
                             title="Please enter a valid Warp Plus license in xxxxxxxx-xxxxxxxx-xxxxxxxx format">
@@ -1920,7 +1920,7 @@ async function renderHomePage (env, hostName, fragConfigs) {
                         </button>
                     </div>
                     <div class="form-control">
-                        <label style="line-height: 1.5;"><span <i class="fa fa-searchengin" aria-hidden="true"></i> </span> Endpoint Scanner  </label>
+                        <label style="line-height: 1.5;"><span <i class="fa fa-search-plus" aria-hidden="true"></i> </span> Endpoint Scanner  </label>
                         <button type="button" class="button" style="padding: 10px 0;" onclick="copyToClipboard('bash <(curl -fsSL https://raw.githubusercontent.com/Ptechgithub/warp/main/endip/install.sh)', false)">
                             Copy Script<span class="material-symbols-outlined">terminal</span>
                         </button>
