@@ -1,4 +1,4 @@
-## $$\color{silver} \Large \text{BPB v2.6}$$
+## $$\color{silver} \Large \text{BPB v2.7}$$
 
 > __[🇮🇷Persian](README-fa.md)__     __[🇬🇧English](README.md)__
 
@@ -118,11 +118,6 @@ HUGE THANKS TO
 | __Clash Meta__  |   | :x: | :x: |
 | __Clash Verge Rev__  |   | :x: | :x: |
 | __FLClash__  |   | :x: | :x: |
-
----
-
-## Stargazers Over Time
-[![Stargazers Over Time](https://starchart.cc/bia-pain-bache/BPB-Worker-Panel.svg?variant=adaptive)](https://starchart.cc/bia-pain-bache/BPB-Worker-Panel)
 
 ---
 
