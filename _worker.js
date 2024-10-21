@@ -6371,7 +6371,7 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                     document.body.style.cursor = 'default';
                     refreshBtn.innerHTML = refreshButtonVal;
                     if (response.ok) {
-                        alert(' The panel settings have been successfully fucked up. ✔ \\n Thanks for your hard work');
+                        alert(' The panel settings have been successfully fucked up ✔ \\n Thanks for your hard work');
                         window.location.reload(true);
                     } else {
                         const errorMessage = await response.text();
@@ -6712,8 +6712,10 @@ function renderLoginPage() {
     <!DOCTYPE html>
     <html lang="en">
     <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="UTF-8">
+ 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  	  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>User Login</title>
     <style>
         :root {
@@ -6815,7 +6817,9 @@ function renderLoginPage() {
                 <h2>User Login</h2>
                 <form id="loginForm">
                     <div class="form-control">
-                        <label for="password">Password</label>
+                        <label for="password"> 
+							<i class="fa-solid fa-user-lock"></i> 
+	   					</label>
                         <input type="password" id="password" name="password" required>
                     </div>
                     <div id="passwordError" style="color: red; margin-bottom: 10px;"></div>
@@ -6860,6 +6864,8 @@ function renderErrorPage(message2, error, refer) {
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <title>Error Page</title>
         <style>
             :root {
@@ -6892,9 +6898,9 @@ function renderErrorPage(message2, error, refer) {
     </head>
     <body>
         <div id="error-container">
-            <h1>BPB Panel <span style="font-size: smaller;">${panelVersion}</span> \u{1F4A6}</h1>
+            <h1><i class="fa-sharp fa-solid fa-fade" style="color: var(--header-color);">BPB PANEL 👻 <span style="font-size:12px; position: fixed; right: 0px; margin-top: 43px;">${panelVersion} </span></i></h1>
             <div id="error-message">
-                <h2>${message2} ${refer ? 'Please try again or refer to <a href="https://github.com/bia-pain-bache/BPB-Worker-Panel/blob/main/README.md">documents</a>' : ""}
+                <h2>${message2} ${refer ? 'Please try again or refer to <a href="https://github.com/NiREvil/bia-pain-bache/blob/main/README.md">documents</a>' : ""}
                 </h2>
                 <p><b>${error ? `\u26A0\uFE0F ${error.stack.toString()}` : ""}</b></p>
             </div>
