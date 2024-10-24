@@ -1,8 +1,7 @@
-// 
 /**
 * Start From the line 4095
 * @ts-nocheck   <!--GAMFC-->version base on commit 43fad05dcdae3b723c53c226f8181fc5bd47223e, time is 2023-06-22 15:20:02 UTC<!--GAMFC-END-->.
-* Last Update: 4:20 UTC - Sunday, 20 October 2024, We are all REvil
+* Last Update: 4:20 UTC - Thursday, 24 October 2024, We are all REvil
 * Many thanks to github.com/bia-pain-bache
 */
 var __create = Object.create;
@@ -4104,7 +4103,7 @@ var defaultHttpsPorts = ["443", "8443", "2053", "2083", "2087", "2096"];
 var proxyIP = proxyIPs[Math.floor(Math.random() * proxyIPs.length)];
 var dohURL = "https://cloudflare-dns.com/dns-query";
 var hashPassword;
-var panelVersion = "V2.7";
+var panelVersion = "v2.7";
 var worker_default = {
   /**
    * @param {import("@cloudflare/workers-types").Request} request
@@ -5034,7 +5033,7 @@ async function updateDataset(env, newSettings, resetSettings) {
     customCdnAddrs: validateField("customCdnAddrs")?.replaceAll(" ", "") ?? currentSettings?.customCdnAddrs ?? "",
     customCdnHost: validateField("customCdnHost")?.trim() ?? currentSettings?.customCdnHost ?? "",
     customCdnSni: validateField("customCdnSni")?.trim() ?? currentSettings?.customCdnSni ?? "",
-    bestVLESSTrojanInterval: validateField("bestVLESSTrojanInterval") ?? currentSettings?.bestVLESSTrojanInterval ?? "20",
+    bestVLESSTrojanInterval: validateField("bestVLESSTrojanInterval") ?? currentSettings?.bestVLESSTrojanInterval ?? "30",
     vlessConfigs: validateField("vlessConfigs") ?? currentSettings?.vlessConfigs ?? true,
     trojanConfigs: validateField("trojanConfigs") ?? currentSettings?.trojanConfigs ?? false,
     ports: validateField("ports")?.split(",") ?? currentSettings?.ports ?? ["443"],
@@ -5206,7 +5205,7 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>BPB Panel ${panelVersion}</title>
         <script src="https://kit.fontawesome.com/69b597926c.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <title>Collapsible Sections</title>
         <style>
@@ -5265,6 +5264,7 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
             h1 { font-size: 2.5em; text-align: center; color: var(--header-color); text-shadow: var(--header-shadow); }
             h2 { margin: 30px 0; text-align: center; color: var(--hr-text-color); }
             hr { border: 1px solid var(--border-color); margin: 20px 0; }
+            fa-solid.fa-cog {color: var(--hr-text-color); }
             .form-control {
             margin-bottom: 10px;
             }
@@ -5276,7 +5276,7 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                 display: none; /* Hide the default arrow in WebKit browsers */
             }   
             details[open] summary ~ * {
-                animation: sweep .5s ease-in-out; /* Add a smooth transition */
+                animation: sweep 0.5s ease-in-out; /* Add a smooth transition */
                 overflow: hidden;
             }
             @keyframes sweep {
@@ -5302,6 +5302,9 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                 clip: rect(0, 0, 0, 0);
                 white-space: nowrap;
                 border: 0;
+            }
+            .fa-cog {
+            color: var(--hr-text-color);
             }
             .footer {
                 display: flex;
@@ -5541,14 +5544,14 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
         </style>
     </head>
     <body>
-        <h1><i class="fa-sharp fa-solid fa-beat-fade" style="color: var(--header-color);">BPB PANEL 👻 <span style="font-size:12px; position: fixed; right: 0px; margin-top: 43px;">${panelVersion} </span></i></h1>
+        <h1><i class="fa-sharp fa-solid fa-beat-fade">BPB PANEL 👻 <span style="font-size:12px; position: fixed; right: 0px; margin-top: 43px;">${panelVersion} </span></i></h1>
         <div class="form-container">
             <form id="configForm">
                 <details open>
                     <summary>
                         <h2>VLESS - TROJAN </h2> 
-                        <i class="fa-solid fa-cog fa-spin fa-spin-reverse fa-xl"> </i>
-                        <span class="sr-only">We are all REvil</span>
+                            <i class="fa-solid fa-cog fa-spin fa-spin-reverse fa-xl"></i>
+                            <span class="sr-only">Loading...</span>
                     </summary>
                     <div class="form-control">
                         <label for="remoteDNS">
@@ -5566,7 +5569,7 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                     </div>
                     <div class="form-control">
                         <label for="vlessTrojanFakeDNS">
-                            <i class="fa-solid fa-radiation"></i> Fake DNS
+                            <i class="fa-solid fa-ghost"></i> Fake DNS
                         </label>
                         <div class="input-with-select">
                             <select id="vlessTrojanFakeDNS" name="vlessTrojanFakeDNS">
@@ -5594,7 +5597,9 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                         <input type="text" id="cleanIPs" name="cleanIPs" value="${cleanIPs.replaceAll(",", " , ")}">
                     </div>
                     <div class="form-control">
-                        <label><span <i class="fa-solid fa-magnifying-glass"></i></span> CF IP Scanner</label>
+                        <label>
+                            <i class="fa-brands fa-searchengin"></i> CF IP Scanner
+                        </label>
                         <a href="https://scanner.github1.cloud/" id="scanner" name="scanner" target="_blank" style="width: 100%;">
                             <button type="button" class="button">
                                 SCAN NOW
@@ -5604,7 +5609,7 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                     </div>
                     <div class="form-control">
                         <label for="enableIPv6"> 
-                            <i class="fa fa-slack"></i> IPv6 Configs
+                            <i class="fa-brands fa-hive"></i> IPv6 Configs
                         </label>
                         <div class="input-with-select">
                             <select id="enableIPv6" name="enableIPv6">
@@ -5633,7 +5638,7 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                     </div>
                     <div class="form-control">
                         <label for="bestVLESSTrojanInterval"> 
-                            <i class="fa-solid fa-splotch fa-spin" style="color: #800000;"> </i> Best Interval
+                            <i class="fa-solid fa-splotch fa-spin" style="color: #d2042d;"> </i> Best Interval
                         </label>
                         <input type="number" id="bestVLESSTrojanInterval" name="bestVLESSTrojanInterval" min="10" max="90" value="${bestVLESSTrojanInterval}">
                     </div>
@@ -5676,12 +5681,12 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                 <details>
                     <summary>
                         <h2>FRAGMENT </h2> 
-                            <i class="fa-solid fa-cog fa-spin  fa-xl fa-spin-reverse" style="--fa-animation-duration: 15s;"></i>
-                        <span class="sr-only">We are all REvil</span>
+                            <i class="fa-solid fa-cog fa-spin fa-xl fa-spin-reverse" style="--fa-animation-duration: 8.5s;"></i>
+                            <span class="sr-only">Loading...</span>
                     </summary>
                     <div class="form-control">
                         <label for="fragmentLengthMin">
-                            <i class="fa-solid fa-grip-vertical"></i> Length
+                            <i class="fa-solid fa-border-none"></i> Length
                         </label>
                         <div class="min-max">
                             <input type="number" id="fragmentLengthMin" name="fragmentLengthMin" value="${lengthMin}" min="10" required>
@@ -5720,7 +5725,7 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                     <summary>
                         <h2>WARP GENERAL </h2> 
                             <i class="fa-solid fa-cog fa-spin fa-xl"></i>
-                        <span class="sr-only">We are all REvil</span>
+                        <span class="sr-only">Loading...</span>
                     </summary>
                     <div class="form-control">
                         <label for="warpEndpoints"> 
@@ -5730,7 +5735,7 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                     </div>
                     <div class="form-control">
                         <label style="line-height: 1.5;"> 
-                            <i class="fa-solid fa-magnifying-glass"></i> Endpoint Scanner
+                            <i class="fa-brands fa-searchengin"></i> Endpoint Scanner
                         </label>
                         <button type="button" class="button" style="padding: 10px 0;" onclick="copyToClipboard('bash <(curl -fsSL https://raw.githubusercontent.com/Ptechgithub/warp/main/endip/install.sh)', false)">
                             COPY SCRIPT <span class="material-symbols-outlined">terminal</span>
@@ -5738,7 +5743,7 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                     </div>
                     <div class="form-control">
                         <label for="warpFakeDNS"> 
-                            <i class="fa-solid fa-radiation"></i> Fake DNS
+                            <i class="fa-solid fa-ghost"></i> Fake DNS
                         </label>
                         <div class="input-with-select">
                             <select id="warpFakeDNS" name="warpFakeDNS">
@@ -5749,7 +5754,7 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                     </div>
                     <div class="form-control">
                         <label for="warpPlusLicense"> 
-                            <i class="fa-solid fa-key fa-rotate-by" style="--fa-rotate-angle: 330deg;"></i> Warp+ License
+                            <i class="fa-solid fa-star-half"></i> License key
                         </label>
                         <input type="text" id="warpPlusLicense" name="warpPlusLicense" value="${warpPlusLicense}" 
                             pattern="^[a-zA-Z0-9]{8}-[a-zA-Z0-9]{8}-[a-zA-Z0-9]{8}$" 
@@ -5757,7 +5762,7 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                     </div>
                     <div class="form-control">
                         <label>
-                            <i class="fa-solid fa-bolt-lightning"></i> Warp Configs
+                            <i class="fa-solid fa-code-branch"></i> Warp Configs
                         </label>
                         <button id="refreshBtn" type="button" class="button" style="padding: 10px 0;" onclick="getWarpConfigs()">
                             Update<span class="material-symbols-outlined">autorenew</span>
@@ -5765,7 +5770,7 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                     </div>
                     <div class="form-control">
                         <label for="bestWarpInterval"> 
-                            <i class="fa-solid fa-splotch fa-spin" style="color: #c21e56;"></i> Best Interval
+                            <i class="fa-solid fa-splotch fa-spin" style="color: #d2042d;"></i> Best Interval
                         </label>
                         <input type="number" id="bestWarpInterval" name="bestWarpInterval" min="10" max="90" value="${bestWarpInterval}">
                     </div>
@@ -5773,8 +5778,8 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                 <details>
                     <summary>
                         <h2>WARP PRO </h2> 
-                            <i class="fa-xl fa-solid fa-cog fa-spin" style="--fa-animation-duration: 15s;"></i>
-                        <span class="sr-only">We are all REvil</span>
+                            <i class="fa-xl fa-solid fa-cog fa-spin" style="--fa-animation-duration: 8.5s;"></i>
+                        <span class="sr-only">Loading...</span>
                     </summary>
                     <div class="form-control">
                         <label for="hiddifyNoiseMode"> 
@@ -5787,7 +5792,7 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                     </div>
                     <div class="form-control">
                         <label for="nikaNGNoiseMode"> 
-                            <i class="fa-solid fa-heart-pulse fa-beat" style="color: #e37383;"></i> NikaNG Mode
+                            <i class="fa-solid fa-heart-pulse fa-beat" style="color: #dc143c;"></i> NikaNG Mode
                         </label>
                         <input type="text" id="nikaNGNoiseMode" name="nikaNGNoiseMode" 
                             pattern="^(none|quic|random|[0-9A-Fa-f]+)$" 
@@ -5796,8 +5801,8 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                     </div>
                     <div class="form-control">
                         <label for="noiseCountMin"> 
-							<i class="fa-solid fa-cubes-stacked"></i> Noise Count
-						</label>
+                            <i class="fa-solid fa-cubes-stacked"></i> Noise Count
+                        </label>
                         <div class="min-max">
                             <input type="number" id="noiseCountMin" name="noiseCountMin"
                                 value="${noiseCountMin}" min="1" required>
@@ -5807,7 +5812,9 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                         </div>
                     </div>
                     <div class="form-control">
-                        <label for="noiseSizeMin">\u{1F4CF} Noise Size</label>
+                        <label for="noiseSizeMin">
+                            <i class="fa-solid fa-ruler"></i> Noise Size
+                        </label>
                         <div class="min-max">
                             <input type="number" id="noiseSizeMin" name="noiseSizeMin"
                                 value="${noiseSizeMin}" min="1" required>
@@ -5817,9 +5824,9 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                         </div>
                     </div>
                     <div class="form-control">
-                        <label for="noiseDelayMin"> 
-							<i class="fa fa-modx" aria-hidden="true"></i> Noise Size
-	   					</label>
+                        <label for="noiseDelayMin">
+                            <i class="fa-solid fa-hourglass"></i> Noise Delay
+                        </label>
                         <div class="min-max">
                             <input type="number" id="noiseDelayMin" name="noiseDelayMin"
                                 value="${noiseDelayMin}" min="1" required>
@@ -5832,8 +5839,8 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                 <details>
                     <summary>
                         <h2>ROUTING RULES </h2> 
-                        <i class="fa-solid fa-gear fa-spin fa-xl"></i>
-                        <span class="sr-only">We are all REvil</span>
+                            <i class="fa-solid fa-cog fa-spin fa-spin-reverse fa-xl"></i>
+                            <span class="sr-only">Loading...</span>
                     </summary>
                     <div id="routing-rules" class="form-control" style="margin-bottom: 20px;">			
                         <div class="routing">
@@ -5924,10 +5931,10 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                         </td>
                         <td>
                             <button onclick="openQR('https://${hostName}/sub/${userID}#BPB-Normal', 'Normal Subscription')" style="margin-bottom: 8px;">
-                                QR Code&nbsp;<span class="material-symbols-outlined">qr_code</span>
+                                QR Code&nbsp;<span class="material-symbols-outlined">qr_code_2</span>
                             </button>
                             <button onclick="copyToClipboard('https://${hostName}/sub/${userID}#BPB-Normal', false)">
-                                Copy Sub<span class="material-symbols-outlined">format_list_bulleted</span>
+                                Copy Sub<span class="material-symbols-outlined">subject</span>
                             </button>
                         </td>
                     </tr>
@@ -5948,7 +5955,7 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                         </td>
                         <td>
                             <button onclick="copyToClipboard('https://${hostName}/sub/${userID}?app=singbox#BPB-Normal', false)">
-                                Copy Sub<span class="material-symbols-outlined">format_list_bulleted</span>
+                                Copy Sub<span class="material-symbols-outlined">subject</span>
                             </button>
                         </td>
                     </tr>
@@ -5990,10 +5997,10 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                         </td>
                         <td>
                             <button onclick="openQR('https://${hostName}/sub/${userID}?app=xray#BPB-Full-Normal', 'Full normal Subscription')" style="margin-bottom: 8px;">
-                                QR Code&nbsp;<span class="material-symbols-outlined">qr_code</span>
+                                QR Code&nbsp;<span class="material-symbols-outlined">qr_code_2</span>
                             </button>
                             <button onclick="copyToClipboard('https://${hostName}/sub/${userID}?app=xray#BPB-Full-Normal', false)">
-                                Copy Sub<span class="material-symbols-outlined">format_list_bulleted</span>
+                                Copy Sub<span class="material-symbols-outlined">subject</span>
                             </button>
                         </td>
                     </tr>
@@ -6006,10 +6013,10 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                         </td>
                         <td>
                             <button onclick="openQR('sing-box://import-remote-profile?url=https://${hostName}/sub/${userID}?app=sfa#BPB-Full-Normal', 'Normal Subscription')" style="margin-bottom: 8px;">
-                                QR Code&nbsp;<span class="material-symbols-outlined">qr_code</span>
+                                QR Code&nbsp;<span class="material-symbols-outlined">qr_code_2</span>
                             </button>
                             <button onclick="copyToClipboard('https://${hostName}/sub/${userID}?app=sfa#BPB-Full-Normal', false)">
-                                Copy Sub<span class="material-symbols-outlined">format_list_bulleted</span>
+                                Copy Sub<span class="material-symbols-outlined">subject</span>
                             </button>
                         </td>
                     </tr>
@@ -6038,10 +6045,10 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                         </td>
                         <td>
                             <button onclick="openQR('https://${hostName}/sub/${userID}?app=clash#BPB-Full-Normal', 'Normal Subscription')" style="margin-bottom: 8px;">
-                                QR Code&nbsp;<span class="material-symbols-outlined">qr_code</span>
+                                QR Code&nbsp;<span class="material-symbols-outlined">qr_code_2</span>
                             </button>
                             <button onclick="copyToClipboard('https://${hostName}/sub/${userID}?app=clash#BPB-Full-Normal', false)">
-                                Copy Sub<span class="material-symbols-outlined">format_list_bulleted</span>
+                                Copy Sub<span class="material-symbols-outlined">subject</span>
                             </button>
                         </td>
                     </tr>
@@ -6083,10 +6090,10 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                         </td>
                         <td>
                             <button onclick="openQR('https://${hostName}/fragsub/${userID}#BPB-Fragment', 'Fragment Subscription')" style="margin-bottom: 8px;">
-                                QR Code&nbsp;<span class="material-symbols-outlined">qr_code</span>
+                                QR Code&nbsp;<span class="material-symbols-outlined">qr_code_2</span>
                             </button>
                             <button onclick="copyToClipboard('https://${hostName}/fragsub/${userID}#BPB-Fragment', true)">
-                                Copy Sub<span class="material-symbols-outlined">format_list_bulleted</span>
+                                Copy Sub<span class="material-symbols-outlined">subject</span>
                             </button>
                         </td>
                     </tr>
@@ -6099,10 +6106,10 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                         </td>
                         <td>
                             <button onclick="openQR('https://${hostName}/fragsub/${userID}?app=hiddify#BPB-Fragment', 'Fragment Subscription')" style="margin-bottom: 8px;">
-                                QR Code&nbsp;<span class="material-symbols-outlined">qr_code</span>
+                                QR Code&nbsp;<span class="material-symbols-outlined">qr_code_2</span>
                             </button>
                             <button onclick="copyToClipboard('https://${hostName}/fragsub/${userID}?app=hiddify#BPB-Fragment', true)">
-                                Copy Sub<span class="material-symbols-outlined">format_list_bulleted</span>
+                                Copy Sub<span class="material-symbols-outlined">subject</span>
                             </button>
                         </td>
                     </tr>
@@ -6132,10 +6139,10 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                         </td>
                         <td>
                             <button onclick="openQR('https://${hostName}/warpsub/${userID}?app=xray#BPB-Warp', 'Warp Subscription')" style="margin-bottom: 8px;">
-                                QR Code&nbsp;<span class="material-symbols-outlined">qr_code</span>
+                                QR Code&nbsp;<span class="material-symbols-outlined">qr_code_2</span>
                             </button>
                             <button onclick="copyToClipboard('https://${hostName}/warpsub/${userID}?app=xray#BPB-Warp', false)">
-                                Copy Sub<span class="material-symbols-outlined">format_list_bulleted</span>
+                                Copy Sub<span class="material-symbols-outlined">subject</span>
                             </button>
                         </td>
                     </tr>
@@ -6152,10 +6159,10 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                         </td>
                         <td>
                             <button onclick="openQR('sing-box://import-remote-profile?url=https://${hostName}/warpsub/${userID}?app=singbox#BPB-Warp', 'Warp Subscription')" style="margin-bottom: 8px;">
-                                QR Code&nbsp;<span class="material-symbols-outlined">qr_code</span>
+                                QR Code&nbsp;<span class="material-symbols-outlined">qr_code_2</span>
                             </button>
                             <button onclick="copyToClipboard('https://${hostName}/warpsub/${userID}?app=singbox#BPB-Warp', false)">
-                                Copy Sub<span class="material-symbols-outlined">format_list_bulleted</span>
+                                Copy Sub<span class="material-symbols-outlined">subject</span>
                             </button>
                         </td>
                     </tr>
@@ -6184,10 +6191,10 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                         </td>
                         <td>
                             <button onclick="openQR('https://${hostName}/warpsub/${userID}?app=clash#BPB-Warp', 'Warp Subscription')" style="margin-bottom: 8px;">
-                                QR Code&nbsp;<span class="material-symbols-outlined">qr_code</span>
+                                QR Code&nbsp;<span class="material-symbols-outlined">qr_code_2</span>
                             </button>
                             <button onclick="copyToClipboard('https://${hostName}/warpsub/${userID}?app=clash#BPB-Warp', false)">
-                                Copy Sub<span class="material-symbols-outlined">format_list_bulleted</span>
+                                Copy Sub<span class="material-symbols-outlined">subject</span>
                             </button>
                         </td>
                     </tr>
@@ -6217,10 +6224,10 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                         </td>
                         <td>
                             <button onclick="openQR('https://${hostName}/warpsub/${userID}?app=nikang#BPB-Warp-Pro', 'Warp Pro Subscription')" style="margin-bottom: 8px;">
-                                QR Code&nbsp;<span class="material-symbols-outlined">qr_code</span>
+                                QR Code&nbsp;<span class="material-symbols-outlined">qr_code_2</span>
                             </button>
                             <button onclick="copyToClipboard('https://${hostName}/warpsub/${userID}?app=nikang#BPB-Warp-Pro', false)">
-                                Copy Sub<span class="material-symbols-outlined">format_list_bulleted</span>
+                                Copy Sub<span class="material-symbols-outlined">subject</span>
                             </button>
                         </td>
                     </tr>
@@ -6233,10 +6240,10 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                         </td>
                         <td>
                             <button onclick="openQR('sing-box://import-remote-profile?url=https://${hostName}/warpsub/${userID}?app=hiddify#BPB-Warp-Pro', 'Warp Pro Subscription')" style="margin-bottom: 8px;">
-                                QR Code&nbsp;<span class="material-symbols-outlined">qr_code</span>
+                                QR Code&nbsp;<span class="material-symbols-outlined">qr_code_2</span>
                             </button>
                             <button onclick="copyToClipboard('https://${hostName}/warpsub/${userID}?app=hiddify#BPB-Warp-Pro', false)">
-                                Copy Sub<span class="material-symbols-outlined">format_list_bulleted</span>
+                                Copy Sub<span class="material-symbols-outlined">subject</span>
                             </button>
                         </td>
                     </tr>
@@ -6353,7 +6360,7 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                 qrcodeContainer.lastElementChild.remove();
             });
             resetSettings.addEventListener('click', async () => {
-                const confirmReset = confirm('🥸 Are you sure?? \\n    This will RESET ALL the panel settings');
+                const confirmReset = confirm('🥸 Are you sure?? \\n   This will RESET ALL the panel settings');
                 if(!confirmReset) return;
                 const formData = new FormData();
                 formData.append('resetSettings', 'true');
@@ -6371,7 +6378,7 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                     document.body.style.cursor = 'default';
                     refreshBtn.innerHTML = refreshButtonVal;
                     if (response.ok) {
-                        alert(' The panel settings have been successfully fucked up ✔ \\n Thanks for your hard work');
+                        alert('The panel settings have been successfully fucked up ✔ \\n Thanks for your hard work');
                         window.location.reload(true);
                     } else {
                         const errorMessage = await response.text();
@@ -6406,7 +6413,7 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
         const getWarpConfigs = async () => {
             const license = document.getElementById('warpPlusLicense').value;
             if (license !== warpPlusLicense) {
-                alert('First APPLY SETTINGS and then update Warp configs! ✋🏿');
+                alert('Dude, First APPLY SETTINGS and then update Warp configs! ✋🏿');
                 return false;
             }
             const confirmReset = confirm('\u26A0\uFE0F Are you sure??');
@@ -6511,7 +6518,7 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
             textarea.select();
             document.execCommand('copy');
             document.body.removeChild(textarea);
-            alert('📋 Copied and ready to paste:\\n\\n' +  value);
+            alert('📋 Copied to clipboard:\\n\\n' +  value);
         }
 
         const applySettings = async (event, configForm) => {
@@ -6616,12 +6623,12 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                 applyButton.value = applyButtonVal;
 
                 if (response.ok) {
-                    alert('\u2705 Parameters applied successfully \u{1F60E}');
+                    alert('Done \u2705');
                     window.location.reload(true);
                 } else {
                     const errorMessage = await response.text();
                     console.error(errorMessage, response.status);
-                    alert('مدت زمان زیادی از آخرین ورود شما به پنل گذشته است، لطفا مجددا وارد شوید.');
+                    alert('.مدت زمان زیادی از آخرین ورود شما به پنل گذشته است، لطفا مجددا وارد شوید');
                     window.location.href = '/login';
                 }           
             } catch (error) {
@@ -6658,7 +6665,7 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
             const confirmPassword = confirmPasswordInput.value;
 
             if (newPassword !== confirmPassword) {
-                passwordError.textContent = "دو ورودی باهم مطابقت ندارند ✋🏿";
+                passwordError.textContent = "✋🏿 دو ورودی باهم مطابقت ندارند";
                 return false;
             }
 
@@ -6684,13 +6691,13 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                 if (response.ok) {
                     modal.style.display = "none";
                     document.body.style.overflow = "";
-                    alert("پسوورد شما با موفقیت تغییر یافت ✔");
+                    alert("✔ پسوورد شما با موفقیت تغییر یافت");
                     window.location.href = '/login';
                 } else if (response.status === 401) {
                     const errorMessage = await response.text();
                     passwordError.textContent = 'پسوورد اشتباه';
                     console.error(errorMessage, response.status);
-                    alert('مدت زمان زیادی از آخرین ورود شما به پنل گذشته است، لطفا مجددا وارد شوید.');
+                    alert('.مدت زمان زیادی از آخرین ورود شما به پنل گذشته است، لطفا مجددا وارد شوید');
                     window.location.href = '/login';
                 } else {
                     const errorMessage = await response.text();
@@ -6712,11 +6719,11 @@ function renderLoginPage() {
     <!DOCTYPE html>
     <html lang="en">
     <head>
-		<meta charset="UTF-8">
- 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  	  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <title>User Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/69b597926c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />    <title>User Login</title>
     <style>
         :root {
             --color: black;
@@ -6795,7 +6802,7 @@ function renderLoginPage() {
             color: white;
             background-color: var(--primary-color);
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.6s ease;
         }
         .button:hover,
         button:focus {
@@ -6812,14 +6819,12 @@ function renderLoginPage() {
     </head>
     <body>
         <div class="container">
-            <h1><i class="fa-sharp fa-solid fa-beat-fade" style="color: var(--header-color);">BPB PANEL 👻 <span style="font-size:12px; position: fixed; right: 0px; margin-top: 43px;">${panelVersion} </span></i></h1>
+            <h1><i class="fa-sharp fa-solid fa-fade;">BPB PANEL 👻 <span style="font-size:12px; position: fixed; right: 0px; margin-top: 43px;">${panelVersion} </span></i></h1>
             <div class="form-container">
                 <h2>User Login</h2>
                 <form id="loginForm">
                     <div class="form-control">
-                        <label for="password"> 
-							<i class="fa-solid fa-user-lock"></i> 
-	   					</label>
+                        <label for="password">Password</label>
                         <input type="password" id="password" name="password" required>
                     </div>
                     <div id="passwordError" style="color: red; margin-bottom: 10px;"></div>
@@ -6845,7 +6850,7 @@ function renderLoginPage() {
                 if (response.ok) {
                     window.location.href = '/panel';
                 } else {
-                    passwordError.textContent = 'پسوورد اشتباه!';
+                    passwordError.textContent = '!پسوورد اشتباه';
                     const errorMessage = await response.text();
                     console.error('Login failed:', errorMessage);
                 }
@@ -6864,9 +6869,8 @@ function renderErrorPage(message2, error, refer) {
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-        <title>Error Page</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />        <title>Error Page</title>
         <style>
             :root {
                 --color: black;
@@ -6892,13 +6896,13 @@ function renderErrorPage(message2, error, refer) {
                 --background-color: #121212;
                 --header-shadow: 2px 2px 4px rgba(255, 255, 255, 0.25);          
             }
-            h1 { font-size: 2.5rem; text-align: center; color: var(--header-color); text-shadow: var(--header-shadow); }
+            h1 { font-size: 5rem; text-align: center; color: var(--header-color); text-shadow: var(--header-shadow); }
             #error-container { text-align: center; }
         </style>
     </head>
     <body>
         <div id="error-container">
-            <h1><i class="fa-sharp fa-solid fa-fade" style="color: var(--header-color);">BPB PANEL 👻 <span style="font-size:12px; position: fixed; right: 0px; margin-top: 43px;">${panelVersion} </span></i></h1>
+            h1><i class="fa-sharp fa-solid fa-fade" style="color: var(--header-color);">BPB PANEL 👻 <span style="font-size:12px; position: fixed; right: 0px; margin-top: 43px;">${panelVersion} </span></i></h1>
             <div id="error-message">
                 <h2>${message2} ${refer ? 'Please try again or refer to <a href="https://github.com/NiREvil/bia-pain-bache/blob/main/README.md">documents</a>' : ""}
                 </h2>
