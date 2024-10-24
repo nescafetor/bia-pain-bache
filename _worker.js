@@ -4103,7 +4103,7 @@ var defaultHttpsPorts = ["443", "8443", "2053", "2083", "2087", "2096"];
 var proxyIP = proxyIPs[Math.floor(Math.random() * proxyIPs.length)];
 var dohURL = "https://cloudflare-dns.com/dns-query";
 var hashPassword;
-var panelVersion = "v2.7";
+var panelVersion = "V2.7";
 var worker_default = {
   /**
    * @param {import("@cloudflare/workers-types").Request} request
@@ -5330,14 +5330,30 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                 border-color: var(--primary-color);
                 border: 1px solid;
             }
-            #apply {display: block; margin-top: 20px;}
-            input.button {font-weight: 600; padding: 15px 0; font-size: 1.1rem;}
-            label {
-                display: block;
-                margin-bottom: 5px;
-                font-size: 110%;
-                font-weight: 600;
-                color: var(--lable-text-color);
+            #apply {
+                display: flex; /* Changed to flex for easier alignment */
+                justify-content: center; /* Center horizontally */
+                margin-top: 20px;
+            }
+            .reset-button-container {
+                display: inline-flex; /* Make it inline-flex to align with button */
+                width: 50px; /* Adjust size as needed */
+                height: 30px; /* Adjust size as needed */
+                border: 1px solid var(--border-color); /* Add border */
+                border-radius: 5px; /* Add rounded corners */
+                background-color: var(--form-background-color); /* Match background */
+                margin-left: 10px; /* Add spacing */
+                justify-content: center; /* Center icon inside the square */
+                align-items: center; /* Center icon vertically */
+            }
+            .reset-button-container button {
+                background: none;
+                border: none;
+                cursor: pointer;
+                padding: 0; /* Remove default button padding */
+            }
+            .reset-button-container i {
+                font-size: 1.2em; /* Adjust icon size as needed */
             }
             input[type="text"],
             input[type="number"],
@@ -5540,6 +5556,16 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                 #apply { display: block; margin: 20px auto 0 auto; max-width: 50%; }
                 .modal-content { width: 30% }
                 .routing { display: grid; grid-template-columns: 4fr 1fr 3fr 4fr; }
+                }
+                #resetSettings:hover {
+                background-color: #dc3545;
+                border-color: #dc3545;
+                box-shadow: 0 35px 15px rgba(232, 28, 36, 0.55);
+                transform: translateY(-2px);
+                max-width: 100%;
+                padding: 15px;
+                font-size: 120%;
+                font-weight: 600;
             }
         </style>
     </head>
@@ -5874,11 +5900,9 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                     </div>
                 </details>
                 <div id="apply" class="form-control">
-                    <div style="grid-column: 2; width: 100%; display: inline-flex;">
-                        <input type="submit" id="applyButton" style="margin-right: 10px;" class="button disabled" value="APPLY SETTINGS" form="configForm">
-                        <button type="button" id="resetSettings" style="background: none; margin: 0; border: none; cursor: pointer;">
-                            <i class="fa-solid fa-sync fa-spin fa-2x" style="border-radius: .2em; border-color: var(--border-color);" aria-hidden="true"></i>
-                        </button>
+                    <div style="grid-column: 2; width: 100%; display: grid; grid-template-columns: 5fr 1fr; gap: 10px;">
+                        <input type="submit" id="applyButton" class="button disabled" value="APPLY SETTINGS" form="configForm">
+                        <button type="button" id="resetSettings" class="button">RESET</button>
                     </div>
                 </div>
             </form>
