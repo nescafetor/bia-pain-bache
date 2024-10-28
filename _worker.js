@@ -5543,7 +5543,7 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                 background-color: var(--reset-button-background-color) !important; 
                 color: var(--reset-button-color) !important; 
                 border: 1px solid var(--reset-button-border-color) !important; 
-                box-shadow: 0 6px 10px var(--reset-button-shadow-color);
+                box-shadow: 0 16px 12px var(--reset-button-shadow-color);
                 padding: 15px;
                 font-size: 110%; 
                 font-weight: 600;
@@ -7007,7 +7007,7 @@ function renderErrorPage(message2, error, refer) {
     </head>
     <body>
         <div id="error-container">
-            h1><i class="fa-sharp fa-solid fa-beat-fade" style="color: var(--header-color);">BPB PANEL 👻 <span style="font-size:12px; position: fixed; right: 0px; margin-top: 43px;">${panelVersion} </span></i></h1>
+            <h1><i class="fa-sharp fa-solid fa-beat-fade" style="color: var(--header-color);">BPB PANEL 👻 <span style="font-size:12px; position: fixed; right: 0px; margin-top: 43px;">${panelVersion} </span></i></h1>
             <div id="error-message">
                 <h2>${message2} ${refer ? 'Please try again or refer to <a href="https://github.com/NiREvil/bia-pain-bache/blob/main/README.md">documents</a>' : ""}
                 </h2>
@@ -7731,7 +7731,7 @@ async function getXrayCustomConfigs(env, proxySettings, hostName, isFragment) {
     for (const port of totalPorts) {
       for (const addr of totalAddresses) {
         const isCustomAddr = customCdnAddresses.includes(addr);
-        const configType = isCustomAddr ? "CDN" : isFragment ? "Frag" : "";
+        const configType = isCustomAddr ? "C" : isFragment ? "F" : "";
         const sni = isCustomAddr ? customCdnSni : randomUpperCase(hostName);
         const host = isCustomAddr ? customCdnHost : hostName;
         const remark = generateRemark(protocolIndex, port, addr, cleanIPs, protocol, configType);
@@ -8039,7 +8039,7 @@ async function getClashWarpConfig(proxySettings, warpConfigs) {
   const selector = config["proxy-groups"][0];
   const warpUrlTest = config["proxy-groups"][1];
   selector.proxies = ["🔴 Warp Best Ping", "🔴 WoW Best Ping"];
-  warpUrlTest.name = "🔴 BEST PING";
+  warpUrlTest.name = "🔴 Warp Best Ping";
   warpUrlTest.interval = +proxySettings.bestWarpInterval;
   config["proxy-groups"].push(structuredClone(warpUrlTest));
   const WoWUrlTest = config["proxy-groups"][2];
@@ -8094,8 +8094,8 @@ async function getClashNormalConfig(env, proxySettings, hostName) {
   config.rules = buildClashRoutingRules(proxySettings);
   const selector = config["proxy-groups"][0];
   const urlTest = config["proxy-groups"][1];
-  selector.proxies = ["🔴 BEST PING"];
-  urlTest.name = "🔴 BEST PING";
+  selector.proxies = ["🔴 Best Ping"];
+  urlTest.name = "🔴 Best Ping";
   urlTest.interval = +bestVLESSTrojanInterval;
   const Addresses = await getConfigAddresses(hostName, cleanIPs, enableIPv6);
   const customCdnAddresses = customCdnAddrs ? customCdnAddrs.split(",") : [];
@@ -8694,9 +8694,9 @@ async function getSingBoxCustomConfig(env, proxySettings, hostName, client, isFr
   config.route.rule_set = rule_set;
   const selector = config.outbounds[0];
   const urlTest = config.outbounds[1];
-  selector.outbounds = ["🔴 BEST PING"];
+  selector.outbounds = ["🔴 Best Ping"];
   urlTest.interval = `${bestVLESSTrojanInterval}s`;
-  urlTest.tag = "🔴 BEST PING";
+  urlTest.tag = "🔴 Best Ping";
   const Addresses = await getConfigAddresses(hostName, cleanIPs, enableIPv6);
   const customCdnAddresses = customCdnAddrs ? customCdnAddrs.split(",") : [];
   const totalAddresses = [...Addresses, ...customCdnAddresses];
