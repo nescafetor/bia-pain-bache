@@ -1,7 +1,7 @@
 /**
 * Start From the line 4095
 * @ts-nocheck   <!--GAMFC-->version base on commit 43fad05dcdae3b723c53c226f8181fc5bd47223e, time is 2023-06-22 15:20:02 UTC<!--GAMFC-END-->.
-* Last Update: 4:20 UTC - Thursday, 24 October 2024, We are all REvil
+* Last Update: 4:20 UTC - Monday, 28 October 2024, We are all REvil
 * Many thanks to github.com/bia-pain-bache
 */
 var __create = Object.create;
@@ -6802,7 +6802,8 @@ function renderLoginPage() {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/69b597926c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />    <title>User Login</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>User Login</title>
     <style>
         :root {
             --color: black;
@@ -6890,14 +6891,14 @@ function renderLoginPage() {
             transform: translateY(-2px);
         }
         button.button:hover { color: white; }
-        .button:active { transform: translateY(1px); box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3); }
+        .button:active { transform: translateY(2px); box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3); }
         @media only screen and (min-width: 768px) {
             .container { width: 30%; }
         }
         .button {
-            background: linear-gradient(45deg,
-                #00ffd5, #4163c6, #0769ba 34.14%, 
-                #00ffd5, #002bff, rgba(32, 195, 190, 0.67) 51.5%);
+        background: linear-gradient(45deg,
+                #09639f, rgba(32, 195, 190, 0.67), 
+                #3498db 34.14%, #3498db, #00ffd5, #3498db 51.5%);
             background-size: 200%;
             color: white;
             font-weight: 600;
@@ -6935,7 +6936,7 @@ function renderLoginPage() {
                 </form>
             </div>
         </div>
-    <script>
+      <script>
         localStorage.getItem('darkMode') === 'enabled' && document.body.classList.add('dark-mode');
         document.getElementById('loginForm').addEventListener('submit', async (event) => {
             event.preventDefault();
@@ -6973,7 +6974,8 @@ function renderErrorPage(message2, error, refer) {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />        <title>Error Page</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <title>Error Page</title>
         <style>
             :root {
                 --color: black;
@@ -7621,7 +7623,7 @@ function buildXrayConfig(proxySettings, remark, isFragment, isBalancer, isChain,
   return config;
 }
 async function buildXrayBestPingConfig(proxySettings, totalAddresses, chainProxy, outbounds, isFragment) {
-  const remark = isFragment ? "\u{1F4A6} BPB F - Best Ping \u{1F4A5}" : "\u{1F4A6} BPB - Best Ping \u{1F4A5}";
+  const remark = isFragment ? "☆ Fragment Best Ping" : "☆ Best Ping";
   let config = buildXrayConfig(proxySettings, remark, isFragment, true, chainProxy, chainProxy ? "chain-2" : "prox-2");
   config.dns = await buildXrayDNS(proxySettings, totalAddresses, void 0);
   config.routing.rules = buildXrayRoutingRules(proxySettings, totalAddresses, chainProxy, true, false);
@@ -7647,9 +7649,11 @@ async function buildXrayBestFragmentConfig(proxySettings, hostName, chainProxy, 
     "60-80",
     "70-90",
     "80-100",
-    "100-200"
+    "100-200",
+    "495-499",
+    "1402-1403"
   ];
-  let config = buildXrayConfig(proxySettings, "\u{1F4A6} BPB F - Best Fragment \u{1F60E}", true, true, chainProxy, void 0, false);
+  let config = buildXrayConfig(proxySettings, "★ Fragment Best Values", true, true, chainProxy, void 0, false);
   config.dns = await buildXrayDNS(proxySettings, [], hostName);
   config.routing.rules = buildXrayRoutingRules(proxySettings, [], chainProxy, true, false);
   const fragment = config.outbounds.shift();
@@ -7674,7 +7678,7 @@ async function buildXrayBestFragmentConfig(proxySettings, hostName, chainProxy, 
   return config;
 }
 async function buildXrayWorkerLessConfig(proxySettings) {
-  let config = buildXrayConfig(proxySettings, "\u{1F4A6} BPB F - WorkerLess \u2B50", true, false, false, void 0, false);
+  let config = buildXrayConfig(proxySettings, "🐓 WorkerLess Config", true, false, false, void 0, false);
   config.dns = await buildXrayDNS(proxySettings, [], void 0, true);
   config.routing.rules = buildXrayRoutingRules(proxySettings, [], false, false, true);
   let fakeOutbound = buildXrayVLESSOutbound("fake-outbound", "google.com", "443", userID, "google.com", "google.com", "", true, false);
@@ -7727,7 +7731,7 @@ async function getXrayCustomConfigs(env, proxySettings, hostName, isFragment) {
     for (const port of totalPorts) {
       for (const addr of totalAddresses) {
         const isCustomAddr = customCdnAddresses.includes(addr);
-        const configType = isCustomAddr ? "C" : isFragment ? "F" : "";
+        const configType = isCustomAddr ? "CDN" : isFragment ? "Frag" : "";
         const sni = isCustomAddr ? customCdnSni : randomUpperCase(hostName);
         const host = isCustomAddr ? customCdnHost : hostName;
         const remark = generateRemark(protocolIndex, port, addr, cleanIPs, protocol, configType);
@@ -7769,8 +7773,8 @@ async function getXrayWarpConfigs(proxySettings, warpConfigs, client) {
   const proIndicator = client === "nikang" ? " Pro " : " ";
   for (const [index, endpoint] of warpEndpoints.split(",").entries()) {
     const endpointHost = endpoint.split(":")[0];
-    let warpConfig = buildXrayConfig(proxySettings, `\u{1F4A6} ${index + 1} - Warp${proIndicator}\u{1F1EE}\u{1F1F7}`, false, false, false, void 0, true);
-    let WoWConfig = buildXrayConfig(proxySettings, `\u{1F4A6} ${index + 1} - WoW${proIndicator}\u{1F30D}`, false, false, true, void 0, true);
+    let warpConfig = buildXrayConfig(proxySettings, `⚫️ ${index + 1} - Warp${proIndicator}`, false, false, false, void 0, true);
+    let WoWConfig = buildXrayConfig(proxySettings, `⚪  ${index + 1} - WoW${proIndicator}`, false, false, true, void 0, true);
     warpConfig.dns = WoWConfig.dns = await buildXrayDNS(proxySettings, [endpointHost], void 0, false, true);
     warpConfig.routing.rules = buildXrayRoutingRules(proxySettings, [endpointHost], false, false, false);
     WoWConfig.routing.rules = buildXrayRoutingRules(proxySettings, [endpointHost], true, false, false);
@@ -7791,11 +7795,11 @@ async function getXrayWarpConfigs(proxySettings, warpConfigs, client) {
     xrayWoWOutbounds.push(chainOutbound);
   }
   const dnsObject = await buildXrayDNS(proxySettings, outboundDomains, void 0, false, true);
-  let xrayWarpBestPing = buildXrayConfig(proxySettings, `\u{1F4A6} Warp${proIndicator}- Best Ping \u{1F680}`, false, true, false, void 0, true);
+  let xrayWarpBestPing = buildXrayConfig(proxySettings, `🔴⚫️ Warp${proIndicator}- Best Ping`, false, true, false, void 0, true);
   xrayWarpBestPing.dns = dnsObject;
   xrayWarpBestPing.routing.rules = buildXrayRoutingRules(proxySettings, outboundDomains, false, true, false);
   xrayWarpBestPing.outbounds.unshift(...xrayWarpOutbounds);
-  let xrayWoWBestPing = buildXrayConfig(proxySettings, `\u{1F4A6} WoW${proIndicator}- Best Ping \u{1F680}`, false, true, true, void 0, true);
+  let xrayWoWBestPing = buildXrayConfig(proxySettings, `🔴⚪ WoW${proIndicator}- Best Ping`, false, true, true, void 0, true);
   xrayWoWBestPing.dns = dnsObject;
   xrayWoWBestPing.routing.rules = buildXrayRoutingRules(proxySettings, outboundDomains, true, true, false);
   xrayWoWBestPing.outbounds.unshift(...xrayWoWOutbounds, ...xrayWarpOutbounds);
@@ -7969,7 +7973,7 @@ function buildClashChainOutbound(chainProxyParams) {
   }
   const { hostName, port, uuid, flow, security, type, sni, fp, alpn, pbk, sid, headerType, host, path, serviceName } = chainProxyParams;
   let chainOutbound = {
-    "name": "\u{1F4A6} Chain Best Ping \u{1F4A5}",
+    "name": "★ Chain Best Ping",
     "type": "vless",
     "server": hostName,
     "port": +port,
@@ -7977,7 +7981,7 @@ function buildClashChainOutbound(chainProxyParams) {
     "uuid": uuid,
     "flow": flow,
     "network": type,
-    "dialer-proxy": "\u{1F4A6} Best Ping \u{1F4A5}"
+    "dialer-proxy": "★ Best Ping"
   };
   if (security === "tls") {
     const tlsAlpns = alpn ? alpn?.split(",") : [];
@@ -8034,16 +8038,16 @@ async function getClashWarpConfig(proxySettings, warpConfigs) {
   config.rules = buildClashRoutingRules(proxySettings);
   const selector = config["proxy-groups"][0];
   const warpUrlTest = config["proxy-groups"][1];
-  selector.proxies = ["\u{1F4A6} Warp - Best Ping \u{1F680}", "\u{1F4A6} WoW - Best Ping \u{1F680}"];
-  warpUrlTest.name = "\u{1F4A6} Warp - Best Ping \u{1F680}";
+  selector.proxies = ["🔴 Warp Best Ping", "🔴 WoW Best Ping"];
+  warpUrlTest.name = "🔴 BEST PING";
   warpUrlTest.interval = +proxySettings.bestWarpInterval;
   config["proxy-groups"].push(structuredClone(warpUrlTest));
   const WoWUrlTest = config["proxy-groups"][2];
-  WoWUrlTest.name = "\u{1F4A6} WoW - Best Ping \u{1F680}";
+  WoWUrlTest.name = "🔴 WoW Best Ping";
   let warpRemarks = [], WoWRemarks = [];
   warpEndpoints.split(",").forEach((endpoint, index) => {
-    const warpRemark = `\u{1F4A6} ${index + 1} - Warp \u{1F1EE}\u{1F1F7}`;
-    const WoWRemark = `\u{1F4A6} ${index + 1} - WoW \u{1F30D}`;
+    const warpRemark = `⚫️ ${index + 1} - Warp`;
+    const WoWRemark = `⚪ ${index + 1} - WoW`;
     const warpOutbound = buildClashWarpOutbound(warpConfigs, warpRemark, endpoint, "");
     const WoWOutbound = buildClashWarpOutbound(warpConfigs, WoWRemark, endpoint, warpRemark);
     config.proxies.push(WoWOutbound, warpOutbound);
@@ -8090,8 +8094,8 @@ async function getClashNormalConfig(env, proxySettings, hostName) {
   config.rules = buildClashRoutingRules(proxySettings);
   const selector = config["proxy-groups"][0];
   const urlTest = config["proxy-groups"][1];
-  selector.proxies = ["\u{1F4A6} Best Ping \u{1F4A5}"];
-  urlTest.name = "\u{1F4A6} Best Ping \u{1F4A5}";
+  selector.proxies = ["🔴 BEST PING"];
+  urlTest.name = "🔴 BEST PING";
   urlTest.interval = +bestVLESSTrojanInterval;
   const Addresses = await getConfigAddresses(hostName, cleanIPs, enableIPv6);
   const customCdnAddresses = customCdnAddrs ? customCdnAddrs.split(",") : [];
@@ -8627,17 +8631,17 @@ async function getSingBoxWarpConfig(proxySettings, warpConfigs, client) {
   const selector = config.outbounds[0];
   const warpUrlTest = config.outbounds[1];
   const proIndicator = client === "hiddify" ? " Pro " : " ";
-  selector.outbounds = [`\u{1F4A6} Warp${proIndicator}- Best Ping \u{1F680}`, `\u{1F4A6} WoW${proIndicator}- Best Ping \u{1F680}`];
+  selector.outbounds = [`🔴⚫️ Warp${proIndicator}- Best Ping`, `🔴⚪ WoW${proIndicator}- Best Ping`];
   config.outbounds.splice(2, 0, structuredClone(warpUrlTest));
   const WoWUrlTest = config.outbounds[2];
-  warpUrlTest.tag = `\u{1F4A6} Warp${proIndicator}- Best Ping \u{1F680}`;
+  warpUrlTest.tag = `🔴⚫️ Warp${proIndicator}- Best Ping`;
   warpUrlTest.interval = `${proxySettings.bestWarpInterval}s`;
-  WoWUrlTest.tag = `\u{1F4A6} WoW${proIndicator}- Best Ping \u{1F680}`;
+  WoWUrlTest.tag = `🔴⚪ WoW${proIndicator}- Best Ping`;
   WoWUrlTest.interval = `${proxySettings.bestWarpInterval}s`;
   let warpRemarks = [], WoWRemarks = [];
   warpEndpoints.split(",").forEach((endpoint, index) => {
-    const warpRemark = `\u{1F4A6} ${index + 1} - Warp \u{1F1EE}\u{1F1F7}`;
-    const WoWRemark = `\u{1F4A6} ${index + 1} - WoW \u{1F30D}`;
+    const warpRemark = `⚫️ ${index + 1} - Warp`;
+    const WoWRemark = `⚪ ${index + 1} - WoW`;
     const warpOutbound = buildSingBoxWarpOutbound(proxySettings, warpConfigs, warpRemark, endpoint, "", client);
     const WoWOutbound = buildSingBoxWarpOutbound(proxySettings, warpConfigs, WoWRemark, endpoint, warpRemark, client);
     config.outbounds.push(WoWOutbound, warpOutbound);
@@ -8690,9 +8694,9 @@ async function getSingBoxCustomConfig(env, proxySettings, hostName, client, isFr
   config.route.rule_set = rule_set;
   const selector = config.outbounds[0];
   const urlTest = config.outbounds[1];
-  selector.outbounds = ["\u{1F4A6} Best Ping \u{1F4A5}"];
+  selector.outbounds = ["🔴 BEST PING"];
   urlTest.interval = `${bestVLESSTrojanInterval}s`;
-  urlTest.tag = "\u{1F4A6} Best Ping \u{1F4A5}";
+  urlTest.tag = "🔴 BEST PING";
   const Addresses = await getConfigAddresses(hostName, cleanIPs, enableIPv6);
   const customCdnAddresses = customCdnAddrs ? customCdnAddrs.split(",") : [];
   const totalAddresses = [...Addresses, ...customCdnAddresses];
@@ -8796,7 +8800,7 @@ async function getNormalConfigs(proxySettings, hostName, client) {
     });
   });
   if (outProxy) {
-    let chainRemark = `#${encodeURIComponent("\u{1F4A6} Chain proxy \u{1F517}")}`;
+    let chainRemark = `#${encodeURIComponent("★ Chain proxy")}`;
     if (outProxy.startsWith("socks") || outProxy.startsWith("http")) {
       const regex = /^(?:socks|http):\/\/([^@]+)@/;
       const isUserPass = outProxy.match(regex);
@@ -9075,7 +9079,7 @@ var clashConfigTemp = {
   "proxies": [],
   "proxy-groups": [
     {
-      "name": "\u2705 Selector",
+      "name": "🔴 Selector",
       "type": "select",
       "proxies": []
     },
