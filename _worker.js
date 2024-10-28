@@ -5543,7 +5543,7 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                 background-color: var(--reset-button-background-color) !important; 
                 color: var(--reset-button-color) !important; 
                 border: 1px solid var(--reset-button-border-color) !important; 
-                box-shadow: 0 16px 12px var(--reset-button-shadow-color);
+                box-shadow: 0 8px 10px var(--reset-button-shadow-color);
                 padding: 15px;
                 font-size: 110%; 
                 font-weight: 600;
@@ -6798,24 +6798,24 @@ function renderLoginPage() {
     <!DOCTYPE html>
     <html lang="en">
     <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/69b597926c.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <title>User Login</title>
-    <style>
-        :root {
-            --color: black;
-            --primary-color: #09639f;
-            --header-color: #09639f;
-            --background-color: #fff;
-            --form-background-color: #f9f9f9;
-            --lable-text-color: #333;
-            --h2-color: #3b3b3b;
-            --border-color: #ddd;
-            --input-background-color: white;
-            --header-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/69b597926c.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <title>User Login</title>
+        <style>
+          :root {
+              --color: black;
+              --primary-color: #09639f;
+              --header-color: #09639f;
+              --background-color: #fff;
+              --form-background-color: #f9f9f9;
+              --lable-text-color: #333;
+              --h2-color: #3b3b3b;
+              --border-color: #ddd;
+              --input-background-color: white;
+              --header-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
         }
         html, body { height: 100%; margin: 0; }
         body {
@@ -6923,7 +6923,7 @@ function renderLoginPage() {
       </head>
       <body>
       <div class="container">
-          <h1><i class="fa-sharp fa-solid fa-beat-fade;">BPB PANEL 👻 <span style="font-size:12px; position: fixed; right: 0px; margin-top: 43px;">${panelVersion} </span></i></h1>
+          <h1><i class="fa-sharp fa-solid fa-beat-fade">BPB PANEL 👻 <span style="font-size:14px; position: fixed; right: 0px; margin-top: 43px;">${panelVersion} </span></i></h1>
           <div class="form-container">
                 <h2>User Login</h2>
                 <form id="loginForm">
@@ -6976,7 +6976,7 @@ function renderErrorPage(message2, error, refer) {
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <title>Error Page</title>
-        <style>
+          <style>
             :root {
                 --color: black;
                 --header-color: #09639f; 
@@ -7007,7 +7007,7 @@ function renderErrorPage(message2, error, refer) {
     </head>
     <body>
         <div id="error-container">
-            <h1><i class="fa-sharp fa-solid fa-beat-fade" style="color: var(--header-color);">BPB PANEL 👻 <span style="font-size:12px; position: fixed; right: 0px; margin-top: 43px;">${panelVersion} </span></i></h1>
+            <h1><i class="fa-sharp fa-solid fa-beat-fade">BPB PANEL 👻 <span style="font-size:12px; position: fixed; right: 0px; margin-top: 43px;">${panelVersion} </span></i></h1>
             <div id="error-message">
                 <h2>${message2} ${refer ? 'Please try again or refer to <a href="https://github.com/NiREvil/bia-pain-bache/blob/main/README.md">documents</a>' : ""}
                 </h2>
