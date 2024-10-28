@@ -5216,13 +5216,17 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                 --header-color: #09639f; 
                 --background-color: #fff;
                 --form-background-color: #f9f9f9;
+                --reset-button-color: ghostwhite;
+                --reset-button-background-color: red;
+                --reset-button-border-color: #dc3545;
+                --reset-button-shadow-color: #dc3545;
                 --table-active-color: #f2f2f2;
                 --hr-text-color: #3b3b3b;
                 --lable-text-color: #333;
                 --border-color: #ddd;
                 --button-color: #09639f;
                 --input-background-color: white;
-                --header-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+                --header-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25); 
             }
             body { font-family: system-ui; background-color: var(--background-color); color: var(--color) }
             body.dark-mode {
@@ -5232,6 +5236,10 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                 --header-color: #3498DB; 
                 --background-color: #121212;
                 --form-background-color: #121212;
+                --reset-button-color: var(--secondary-color);
+                --reset-button-background-color: black;
+                --reset-button-border-color: var(--secondary-color);
+                --reset-button-shadow-color: var(--primary-color);
                 --table-active-color: #252525;
                 --hr-text-color: #D5D5D5;
                 --lable-text-color: #DFDFDF;
@@ -5253,32 +5261,26 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                 font-weight: bold;
                 cursor: pointer;
                 display: flex;
-                justify-content: center; /* Center the content horizontally */
+                justify-content: center;
                 align-items: center;
                 text-align: center;
                 user-select: none;
-                text-wrap: nowrap;
+                text-wrap: nowrap; 
             }
             summary::marker { font-size: 1.5rem; color: var(--secondary-color); }
             summary h2 { display: inline-flex; }
             h1 { font-size: 2.5em; text-align: center; color: var(--header-color); text-shadow: var(--header-shadow); }
             h2 { margin: 30px 0; text-align: center; color: var(--hr-text-color); }
             hr { border: 1px solid var(--border-color); margin: 20px 0; }
-            fa-solid.fa-cog {color: var(--hr-text-color); }
             .form-control {
-            margin-bottom: 10px;
+                margin-bottom: 10px;
             }
             .form-control label {
                 display: block;
                 margin-bottom: 5px;
             }
-            details summary::-webkit-details-marker {
-                display: none; /* Hide the default arrow in WebKit browsers */
-            }   
-            details[open] summary ~ * {
-                animation: sweep 0.5s ease-in-out; /* Add a smooth transition */
-                overflow: hidden;
-            }
+            details summary::-webkit-details-marker {display: none; }   
+            details[open] summary ~ * {animation: sweep 0.5s ease-in-out; overflow: hidden; }
             @keyframes sweep {
                 0% { opacity: 0; margin-top: -10px; }
                 100% { opacity: 1; margin-top: 0; }
@@ -5289,9 +5291,7 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                 max-height: 0;
                 transition: max-height 0.5s ease-in-out;
             }
-            details[open] summary ~ * {
-                max-height: 1000px;
-            }
+            details[open] summary ~ * {max-height: 1000px; }
             .sr-only {
                 position: absolute;
                 width: 1px;
@@ -5303,9 +5303,7 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
                 white-space: nowrap;
                 border: 0;
             }
-            .fa-cog {
-            color: var(--hr-text-color);
-            }
+            .fa-cog {color: var(--hr-text-color); }
             .footer {
                 display: flex;
                 font-weight: 600;
@@ -5324,36 +5322,20 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
             }
             .form-control button {
                 background-color: var(--form-background-color);
-                font-size: 1.1rem;
+                font-size: 1rem;
+                font-weight: 500;
+                color: #ffffff;
+                border-color: var(--color);
+                border: 1px;
+            }
+            #apply {display: block; margin-top: 20px;}
+            input.button {font-weight: 600; padding: 15px 0; font-size: 1.1rem;}
+            label {
+                display: block;
+                margin-bottom: 5px;
+                font-size: 110%;
                 font-weight: 600;
-                color: var(--button-color);
-                border-color: var(--primary-color);
-                border: 1px solid;
-            }
-            #apply {
-                display: flex; /* Changed to flex for easier alignment */
-                justify-content: center; /* Center horizontally */
-                margin-top: 20px;
-            }
-            .reset-button-container {
-                display: inline-flex; /* Make it inline-flex to align with button */
-                width: 50px; /* Adjust size as needed */
-                height: 30px; /* Adjust size as needed */
-                border: 1px solid var(--border-color); /* Add border */
-                border-radius: 5px; /* Add rounded corners */
-                background-color: var(--form-background-color); /* Match background */
-                margin-left: 10px; /* Add spacing */
-                justify-content: center; /* Center icon inside the square */
-                align-items: center; /* Center icon vertically */
-            }
-            .reset-button-container button {
-                background: none;
-                border: none;
-                cursor: pointer;
-                padding: 0; /* Remove default button padding */
-            }
-            .reset-button-container i {
-                font-size: 1.2em; /* Adjust icon size as needed */
+                color: var(--lable-text-color);
             }
             input[type="text"],
             input[type="number"],
@@ -5362,7 +5344,7 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
             select {
                 width: 100%;
                 text-align: center;
-                padding: 10px;
+                padding: 3px;
                 border: 1px solid var(--border-color);
                 border-radius: 5px;
                 font-size: 16px;
@@ -5403,11 +5385,11 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
             }
             table button { margin: auto; width: auto; }
             .button.disabled {
-                background-color: #ccc;
+                background-color: #cccccc;
                 cursor: not-allowed;
                 box-shadow: none;
                 pointer-events: none;
-            }
+            } 
             .button:hover,
             table button:hover,
             table button:focus {
@@ -5541,778 +5523,851 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
             body.dark-mode .floating-button { background-color: var(--color); }
             body.dark-mode .floating-button:hover { transform: scale(1.1); }
             @media only screen and (min-width: 768px) {
-                .form-container { max-width: 70%; }
-                .form-control { 
-                    margin-bottom: 15px;
-                    display: grid;
-                    grid-template-columns: 1fr 1fr;
-                    align-items: baseline;
-                    justify-content: flex-end;
-                    font-family: Arial, sans-serif;
-                }
-                .animated.fast {
+            .form-container { max-width: 70%; }
+            .form-control { 
+                 margin-bottom: 15px;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                align-items: baseline;
+                justify-content: flex-end;
+                font-family: Arial, sans-serif;
+            }
+            .animated.fast {
                 font-family: inherit;
-                }
-                #apply { display: block; margin: 20px auto 0 auto; max-width: 50%; }
-                .modal-content { width: 30% }
-                .routing { display: grid; grid-template-columns: 4fr 1fr 3fr 4fr; }
-                }
-                #resetSettings:hover {
-                background-color: #dc3545;
-                border-color: #dc3545;
-                box-shadow: 0 35px 15px rgba(232, 28, 36, 0.55);
+            }
+            #apply { display: block; margin: 20px auto 0 auto; max-width: 80%; }
+            .modal-content { width: 30% }
+            .routing { display: grid; grid-template-columns: 4fr 1fr 3fr 4fr; }
+            }
+            #resetSettings { 
+                background-color: var(--reset-button-background-color) !important; 
+                color: var(--reset-button-color) !important; 
+                border: 1px solid var(--reset-button-border-color) !important; 
+                box-shadow: 0 6px 10px var(--reset-button-shadow-color);
+                padding: 15px;
+                font-size: 110%; 
+                font-weight: 600;
+                max-width: 100%;
+                text-transform: uppercase;
+                border-radius: 5px; 
+                transition: all 0.3s ease; 
+            }
+            #resetSettings:hover {
+                background-color: var(--reset-button-color) !important; 
+                color: var(--reset-button-background-color) !important; 
+                border-color: var(--reset-button-border-color) !important; 
+                box-shadow: 0 35px 15px var(--reset-button-shadow-color); 
                 transform: translateY(-2px);
                 max-width: 100%;
                 padding: 15px;
-                font-size: 120%;
+                font-size: 122%;
                 font-weight: 600;
+                transform: translateY(-2px);
+            }
+            #resetSettings:active {
+                transform: translateY(2px);
+                box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+            }
+            #resetSettings.disabled {
+                background-color: var(--reset-button-background-color);
+                cursor: not-allowed;
+                transform: none;
+                box-shadow: none;
+            }
+            .button {
+                background: linear-gradient(45deg,
+                #09639f, rgba(32, 195, 190, 0.67), 
+                #3498db 34.14%, #3498db, #00ffd5, #3498db 51.5%);
+                background-size: 200%;
+                color: white;
+                font-weight: 600;
+                animation: rainbow 20s linear infinite;
+                transition: all 0.3s ease;
+            }
+            .button:hover {
+                transform: translateY(-2px);
+                box-shadow: none;
+                animation: rainbow 5s linear infinite;
+            }
+            .footer #openModalBtn {
+                background: linear-gradient(45deg,
+                #09639f, rgba(32, 195, 190, 0.67), 
+                #3498db 34.14%, #3498db, #00ffd5, #3498db 51.5%);
+                background-size: 200%;
+                color: white;
+                font-weight: 600;
+                animation: rainbow 20s linear infinite;
+                transition: all 0.3s ease;
+            }
+            .footer #openModalBtn:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+                animation: rainbow 5s linear infinite;
+            }
+            @keyframes rainbow {
+                0% { background-position: 0% 50%; }
+                50% { background-position: 100% 50%; }
+                100% { background-position: 0% 50%; }
+            }
+            @keyframes textclip {
+                0% { background-position: 200% center; }
+                100% { background-position: -200% center; }
+            }
+            .button.disabled {
+                background: #ccc !important;
+                cursor: not-allowed;
+                transform: none !important;
+                animation: none !important;
+                box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
             }
         </style>
     </head>
     <body>
         <h1><i class="fa-sharp fa-solid fa-beat-fade">BPB PANEL 👻 <span style="font-size:12px; position: fixed; right: 0px; margin-top: 43px;">${panelVersion} </span></i></h1>
         <div class="form-container">
-            <form id="configForm">
-                <details open>
-                    <summary>
-                        <h2>VLESS - TROJAN </h2> 
-                            <i class="fa-solid fa-cog fa-spin fa-spin-reverse fa-xl"></i>
-                            <span class="sr-only">Loading...</span>
-                    </summary>
-                    <div class="form-control">
-                        <label for="remoteDNS">
-                            <i class="fa-solid fa-globe"></i> Remote DNS
-                        </label>
-                        <input type="url" id="remoteDNS" name="remoteDNS" value="${remoteDNS}" required>
-                    </div>
-                    <div class="form-control">
-                        <label for="localDNS">
-                            <i class="fa-solid fa-house-chimney"></i> Local DNS
-                        </label>
-                        <input type="text" id="localDNS" name="localDNS" value="${localDNS}"
-                            pattern="^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)|localhost$"
-                            title="Please enter a valid DNS IP Address or localhost!"  required>
-                    </div>
-                    <div class="form-control">
-                        <label for="vlessTrojanFakeDNS">
-                            <i class="fa-solid fa-ghost"></i> Fake DNS
-                        </label>
-                        <div class="input-with-select">
-                            <select id="vlessTrojanFakeDNS" name="vlessTrojanFakeDNS">
-                                <option value="true" ${vlessTrojanFakeDNS ? "selected" : ""}>Enabled</option>
-                                <option value="false" ${!vlessTrojanFakeDNS ? "selected" : ""}>Disabled</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-control">
-                        <label for="proxyIP">
-                            <i class="fa-solid fa-fingerprint"></i> Proxy IP
-                        </label>
-                        <input type="text" id="proxyIP" name="proxyIP" value="${proxyIP2}">
-                    </div>
-                    <div class="form-control">
-                        <label for="outProxy">
-                            <i class="fa-solid fa-plane-departure"></i> Chain Proxy
-                        </label>
-                        <input type="text" id="outProxy" name="outProxy" value="${outProxy}">
-                    </div>
-                    <div class="form-control">
-                        <label for="cleanIPs">
-                            <i class="fa-solid fa-cannabis fa-bounce" style="color: #2aaa8a;"></i> Clean IP
-                        </label>
-                        <input type="text" id="cleanIPs" name="cleanIPs" value="${cleanIPs.replaceAll(",", " , ")}">
-                    </div>
-                    <div class="form-control">
-                        <label>
-                            <i class="fa-brands fa-searchengin"></i> CF IP Scanner
-                        </label>
-                        <a href="https://scanner.github1.cloud/" id="scanner" name="scanner" target="_blank" style="width: 100%;">
-                            <button type="button" class="button">
-                                SCAN NOW
-                                <span class="material-symbols-outlined">open_in_new</span>
-                            </button>
-                        </a>
-                    </div>
-                    <div class="form-control">
-                        <label for="enableIPv6"> 
-                            <i class="fa-brands fa-hive"></i> IPv6 Configs
-                        </label>
-                        <div class="input-with-select">
-                            <select id="enableIPv6" name="enableIPv6">
-                                <option value="true" ${enableIPv6 ? "selected" : ""}>Enabled</option>
-                                <option value="false" ${!enableIPv6 ? "selected" : ""}>Disabled</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-control">
-                        <label for="customCdnAddrs"> 
-                            <i class="fa fa-sort-numeric-desc"></i> Custom CDN IP
-                        </label>
-                        <input type="text" id="customCdnAddrs" name="customCdnAddrs" value="${customCdnAddrs.replaceAll(",", " , ")}">
-                    </div>
-                    <div class="form-control">
-                        <label for="customCdnHost"> 
-                              <i class="fa fa-sort-alpha-desc"></i> Custom Host
-                        </label>
-                        <input type="text" id="customCdnHost" name="customCdnHost" value="${customCdnHost}">
-                    </div>
-                    <div class="form-control">
-                        <label for="customCdnSni"> 
-                            <i class="fa-solid fa-sort-alpha-desc"></i> Custom SNI
-                        </label>
-                        <input type="text" id="customCdnSni" name="customCdnSni" value="${customCdnSni}">
-                    </div>
-                    <div class="form-control">
-                        <label for="bestVLESSTrojanInterval"> 
-                            <i class="fa-solid fa-splotch fa-spin" style="color: #d2042d;"> </i> Best Interval
-                        </label>
-                        <input type="number" id="bestVLESSTrojanInterval" name="bestVLESSTrojanInterval" min="10" max="90" value="${bestVLESSTrojanInterval}">
-                    </div>
-                    <div class="form-control" style="padding-top: 10px;">
-                        <label> 
-                            <i class="fa-solid fa-microchip"></i> Protocols
-                        </label>
-                        <div style="width: 100%; display: grid; grid-template-columns: 1fr 1fr; align-items: baseline; margin-top: 10px;">
-                            <div style = "display: flex; justify-content: center; align-items: center;">
-                                <input type="checkbox" id="vlessConfigs" name="vlessConfigs" onchange="handleProtocolChange(event)" value="true" ${vlessConfigs ? "checked" : ""}>
-                                <label for="vlessConfigs" style="margin: 0 5px; font-weight: normal; font-size: unset;">VLESS</label>
-                            </div>
-                            <div style = "display: flex; justify-content: center; align-items: center;">
-                                <input type="checkbox" id="trojanConfigs" name="trojanConfigs" onchange="handleProtocolChange(event)" value="true" ${trojanConfigs ? "checked" : ""}>
-                                <label for="trojanConfigs" style="margin: 0 5px; font-weight: normal; font-size: unset;">Trojan</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="table-container">
-                        <table id="ports-block">
-                            <tr>
-                                <th style="text-wrap: nowrap; background-color: gray;">Config type</th>
-                                <th style="text-wrap: nowrap; background-color: gray;">Ports</th>
-                            </tr>
-                            <tr>
-                                <td style="text-align: center; font-size: larger;"><b>TLS</b></td>
-                                <td>
-                                    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr;">${httpsPortsBlock}</div>
-                                </td>    
-                            </tr>
-                            ${!httpPortsBlock ? "" : `<tr>
-                                <td style="text-align: center; font-size: larger;"><b>Non TLS</b></td>
-                                <td>
-                                    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr;">${httpPortsBlock}</div>
-                                </td>    
-                            </tr>`}        
-                        </table>
-                    </div>
-                </details>
-                <details>
-                    <summary>
-                        <h2>FRAGMENT </h2> 
-                            <i class="fa-solid fa-cog fa-spin fa-xl fa-spin-reverse" style="--fa-animation-duration: 8.5s;"></i>
-                            <span class="sr-only">Loading...</span>
-                    </summary>
-                    <div class="form-control">
-                        <label for="fragmentLengthMin">
-                            <i class="fa-solid fa-border-none"></i> Length
-                        </label>
-                        <div class="min-max">
-                            <input type="number" id="fragmentLengthMin" name="fragmentLengthMin" value="${lengthMin}" min="10" required>
-                            <span> - </span>
-                            <input type="number" id="fragmentLengthMax" name="fragmentLengthMax" value="${lengthMax}" max="500" required>
-                        </div>
-                    </div>
-                    <div class="form-control">
-                        <label for="fragmentIntervalMin"> 
-                            <i class="fa-solid fa-stopwatch-20 fa-shake"></i> Interval
-                        </label>
-                        <div class="min-max">
-                            <input type="number" id="fragmentIntervalMin" name="fragmentIntervalMin"
-                                value="${intervalMin}" min="1" max="30" required>
-                            <span> - </span>
-                            <input type="number" id="fragmentIntervalMax" name="fragmentIntervalMax"
-                                value="${intervalMax}" min="1" max="30" required>
-                        </div>
-                    </div>
-                    <div class="form-control">
-                        <label for="fragmentPackets"> 
-                            <i class="fa-solid fa-cube"></i> Packets
-                        </label>
-                        <div class="input-with-select">
-                            <select id="fragmentPackets" name="fragmentPackets">
-                                <option value="tlshello" ${fragmentPackets === "tlshello" ? "selected" : ""}>tlshello</option>
-                                <option value="1-1" ${fragmentPackets === "1-1" ? "selected" : ""}>1-1</option>
-                                <option value="1-2" ${fragmentPackets === "1-2" ? "selected" : ""}>1-2</option>
-                                <option value="1-3" ${fragmentPackets === "1-3" ? "selected" : ""}>1-3</option>
-                                <option value="1-5" ${fragmentPackets === "1-5" ? "selected" : ""}>1-5</option>
-                            </select>
-                        </div>
-                    </div>
-                </details>
-                <details>
-                    <summary>
-                        <h2>WARP GENERAL </h2> 
-                            <i class="fa-solid fa-cog fa-spin fa-xl"></i>
-                        <span class="sr-only">Loading...</span>
-                    </summary>
-                    <div class="form-control">
-                        <label for="warpEndpoints"> 
-                            <i class="fa-solid fa-arrow-trend-up fa-spin"></i> Endpoints
-                        </label>
-                        <input type="text" id="warpEndpoints" name="warpEndpoints" value="${warpEndpoints.replaceAll(",", " , ")}" required>
-                    </div>
-                    <div class="form-control">
-                        <label style="line-height: 1.5;"> 
-                            <i class="fa-brands fa-searchengin"></i> Endpoint Scanner
-                        </label>
-                        <button type="button" class="button" style="padding: 10px 0;" onclick="copyToClipboard('bash <(curl -fsSL https://raw.githubusercontent.com/Ptechgithub/warp/main/endip/install.sh)', false)">
-                            COPY SCRIPT <span class="material-symbols-outlined">terminal</span>
-                        </button>
-                    </div>
-                    <div class="form-control">
-                        <label for="warpFakeDNS"> 
-                            <i class="fa-solid fa-ghost"></i> Fake DNS
-                        </label>
-                        <div class="input-with-select">
-                            <select id="warpFakeDNS" name="warpFakeDNS">
-                                <option value="true" ${warpFakeDNS ? "selected" : ""}>Enabled</option>
-                                <option value="false" ${!warpFakeDNS ? "selected" : ""}>Disabled</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-control">
-                        <label for="warpPlusLicense"> 
-                            <i class="fa-solid fa-star-half"></i> License key
-                        </label>
-                        <input type="text" id="warpPlusLicense" name="warpPlusLicense" value="${warpPlusLicense}" 
-                            pattern="^[a-zA-Z0-9]{8}-[a-zA-Z0-9]{8}-[a-zA-Z0-9]{8}$" 
-                            title="Please enter a valid Warp Plus license in xxxxxxxx-xxxxxxxx-xxxxxxxx format">
-                    </div>
-                    <div class="form-control">
-                        <label>
-                            <i class="fa-solid fa-code-branch"></i> Warp Configs
-                        </label>
-                        <button id="refreshBtn" type="button" class="button" style="padding: 10px 0;" onclick="getWarpConfigs()">
-                            Update<span class="material-symbols-outlined">autorenew</span>
-                        </button>
-                    </div>
-                    <div class="form-control">
-                        <label for="bestWarpInterval"> 
-                            <i class="fa-solid fa-splotch fa-spin" style="color: #d2042d;"></i> Best Interval
-                        </label>
-                        <input type="number" id="bestWarpInterval" name="bestWarpInterval" min="10" max="90" value="${bestWarpInterval}">
-                    </div>
-                </details>
-                <details>
-                    <summary>
-                        <h2>WARP PRO </h2> 
-                            <i class="fa-xl fa-solid fa-cog fa-spin" style="--fa-animation-duration: 8.5s;"></i>
-                        <span class="sr-only">Loading...</span>
-                    </summary>
-                    <div class="form-control">
-                        <label for="hiddifyNoiseMode"> 
-                            <i class="fa-solid fa-bug fa-shake"></i> Hiddify Mode
-                        </label>
-                        <input type="text" id="hiddifyNoiseMode" name="hiddifyNoiseMode" 
-                            pattern="^(m[1-6]|h_[0-9A-Fa-f]{2}|g_([0-9A-Fa-f]{2}_){2}[0-9A-Fa-f]{2})$" 
-                            title="Enter 'm1-m6', 'h_HEX', 'g_HEX_HEX_HEX' which HEX can be between 00 to ff"
-                            value="${hiddifyNoiseMode}" required>
-                    </div>
-                    <div class="form-control">
-                        <label for="nikaNGNoiseMode"> 
-                            <i class="fa-solid fa-heart-pulse fa-beat" style="color: #dc143c;"></i> NikaNG Mode
-                        </label>
-                        <input type="text" id="nikaNGNoiseMode" name="nikaNGNoiseMode" 
-                            pattern="^(none|quic|random|[0-9A-Fa-f]+)$" 
-                            title="Enter 'none', 'quic', 'random', or any HEX string like 'ee0000000108aaaa'"
-                            value="${nikaNGNoiseMode}" required>
-                    </div>
-                    <div class="form-control">
-                        <label for="noiseCountMin"> 
-                            <i class="fa-solid fa-cubes-stacked"></i> Noise Count
-                        </label>
-                        <div class="min-max">
-                            <input type="number" id="noiseCountMin" name="noiseCountMin"
-                                value="${noiseCountMin}" min="1" required>
-                            <span> - </span>
-                            <input type="number" id="noiseCountMax" name="noiseCountMax"
-                                value="${noiseCountMax}" min="1" required>
-                        </div>
-                    </div>
-                    <div class="form-control">
-                        <label for="noiseSizeMin">
-                            <i class="fa-solid fa-ruler"></i> Noise Size
-                        </label>
-                        <div class="min-max">
-                            <input type="number" id="noiseSizeMin" name="noiseSizeMin"
-                                value="${noiseSizeMin}" min="1" required>
-                            <span> - </span>
-                            <input type="number" id="noiseSizeMax" name="noiseSizeMax"
-                                value="${noiseSizeMax}" min="1" required>
-                        </div>
-                    </div>
-                    <div class="form-control">
-                        <label for="noiseDelayMin">
-                            <i class="fa-solid fa-hourglass"></i> Noise Delay
-                        </label>
-                        <div class="min-max">
-                            <input type="number" id="noiseDelayMin" name="noiseDelayMin"
-                                value="${noiseDelayMin}" min="1" required>
-                            <span> - </span>
-                            <input type="number" id="noiseDelayMax" name="noiseDelayMax"
-                                value="${noiseDelayMax}" min="1" required>
-                        </div>
-                    </div>
-                </details>
-                <details>
-                    <summary>
-                        <h2>ROUTING RULES </h2> 
-                            <i class="fa-solid fa-cog fa-spin fa-spin-reverse fa-xl"></i>
-                            <span class="sr-only">Loading...</span>
-                    </summary>
-                    <div id="routing-rules" class="form-control" style="margin-bottom: 20px;">			
-                        <div class="routing">
-                            <input type="checkbox" id="bypass-lan" name="bypass-lan" value="true" ${bypassLAN ? "checked" : ""}>
-                            <label for="bypass-lan">Bypass LAN</label>
-                        </div>
-                        <div class="routing">
-                            <input type="checkbox" id="block-ads" name="block-ads" value="true" ${blockAds ? "checked" : ""}>
-                            <label for="block-ads">Block Ads.</label>
-                        </div>
-                        <div class="routing">
-                            <input type="checkbox" id="bypass-iran" name="bypass-iran" value="true" ${bypassIran ? "checked" : ""}>
-                            <label for="bypass-iran">Bypass Iran</label>
-                        </div>
-                        <div class="routing">
-                            <input type="checkbox" id="block-porn" name="block-porn" value="true" ${blockPorn ? "checked" : ""}>
-                            <label for="block-porn">Block Porn</label>
-                        </div>
-                        <div class="routing">
-                            <input type="checkbox" id="bypass-china" name="bypass-china" value="true" ${bypassChina ? "checked" : ""}>
-                            <label for="bypass-china">Bypass China</label>
-                        </div>
-                        <div class="routing">
-                            <input type="checkbox" id="block-udp-443" name="block-udp-443" value="true" ${blockUDP443 ? "checked" : ""}>
-                            <label for="block-udp-443">Block QUIC</label>
-                        </div>
-                        <div class="routing">
-                            <input type="checkbox" id="bypass-russia" name="bypass-russia" value="true" ${bypassRussia ? "checked" : ""}>
-                            <label for="bypass-russia">Bypass Russia</label>
-                        </div>
-                    </div>
-                </details>
-                <div id="apply" class="form-control">
-                    <div style="grid-column: 2; width: 100%; display: grid; grid-template-columns: 5fr 1fr; gap: 10px;">
-                        <input type="submit" id="applyButton" class="button disabled" value="APPLY SETTINGS" form="configForm">
-                        <button type="button" id="resetSettings" class="button">RESET</button>
-                    </div>
-                </div>
-            </form>
-            <hr>            
-            <h2>NORMAL SUB <i class="fa-solid fa-link fa-fade" aria-hidden="true"></i></h2>
-            <div class="table-container">
-                <table id="normal-configs-table">
-                    <tr>
-                        <th>Application</th>
-                        <th>Subscription</th>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div>
-                                <span class="material-symbols-outlined symbol">verified</span>
-                                <span>v2rayNG</span>
-                            </div>
-                            <div>
-                                <span class="material-symbols-outlined symbol">verified</span>
-                                <span>NikaNG</span>
-                            </div>
-                            <div>
-                                <span class="material-symbols-outlined symbol">verified</span>
-                                <span>MahsaNG</span>
-                            </div>
-                            <div>
-                                <span class="material-symbols-outlined symbol">verified</span>
-                                <span>v2rayN</span>
-                            </div>
-                            <div>
-                                <span class="material-symbols-outlined symbol">verified</span>
-                                <span>v2rayN-PRO</span>
-                            </div>
-                            <div>
-                                <span class="material-symbols-outlined symbol">verified</span>
-                                <span>Shadowrocket</span>
-                            </div>
-                            <div>
-                                <span class="material-symbols-outlined symbol">verified</span>
-                                <span>Streisand</span>
-                            </div>
-                            <div>
-                                <span class="material-symbols-outlined symbol">verified</span>
-                                <span>Hiddify</span>
-                            </div>
-                            <div>
-                                <span class="material-symbols-outlined symbol">verified</span>
-                                <span>Nekoray (Xray)</span>
-                            </div>
-                        </td>
-                        <td>
-                            <button onclick="openQR('https://${hostName}/sub/${userID}#BPB-Normal', 'Normal Subscription')" style="margin-bottom: 8px;">
-                                QR Code&nbsp;<span class="material-symbols-outlined">qr_code_2</span>
-                            </button>
-                            <button onclick="copyToClipboard('https://${hostName}/sub/${userID}#BPB-Normal', false)">
-                                Copy Sub<span class="material-symbols-outlined">subject</span>
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div>
-                                <span class="material-symbols-outlined symbol">verified</span>
-                                <span>Nekobox</span>
-                            </div>
-                            <div>
-                                <span class="material-symbols-outlined symbol">verified</span>
-                                <span>Nekoray (Sing-Box)</span>
-                            </div>
-                            <div>
-                                <span class="material-symbols-outlined symbol">verified</span>
-                                <span>Karing</span>
-                            </div>
-                        </td>
-                        <td>
-                            <button onclick="copyToClipboard('https://${hostName}/sub/${userID}?app=singbox#BPB-Normal', false)">
-                                Copy Sub<span class="material-symbols-outlined">subject</span>
-                            </button>
-                        </td>
-                    </tr>
-                </table>
+        <form id="configForm">
+        <details open>
+          <summary>
+            <h2>VLESS - TROJAN </h2>
+              <i class="fa-solid fa-cog fa-spin fa-spin-reverse fa-xl"></i>
+            <span class="sr-only">Loading...</span>
+          </summary>
+          <div class="form-control">
+            <label for="remoteDNS">
+              <i class="fa-solid fa-globe"></i> Remote DNS
+            </label>
+            <input type="url" id="remoteDNS" name="remoteDNS" value="${remoteDNS}" required>
+          </div>
+          <div class="form-control">
+            <label for="localDNS">
+              <i class="fa-solid fa-house-chimney"></i> Local DNS
+            </label>
+            <input type="text" id="localDNS" name="localDNS" value="${localDNS}"
+              pattern="^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)|localhost$"
+              title="Please enter a valid DNS IP Address or localhost!"  required>
+          </div>
+          <div class="form-control">
+            <label for="vlessTrojanFakeDNS">
+              <i class="fa-solid fa-ghost"></i> Fake DNS
+            </label>
+            <div class="input-with-select">
+              <select id="vlessTrojanFakeDNS" name="vlessTrojanFakeDNS">
+              <option value="true" ${vlessTrojanFakeDNS ? "selected" : ""}>Enabled</option>
+              <option value="false" ${!vlessTrojanFakeDNS ? "selected" : ""}>Disabled</option>
+              </select>
             </div>
-            <h2>FULL NORMAL SUB <i class="fa-solid fa-link fa-fade" aria-hidden="true"></i></h2>
-            <div class="table-container">
-                <table id="full-normal-configs-table">
-                    <tr>
-                        <th>Application</th>
-                        <th>Subscription</th>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div>
-                                <span class="material-symbols-outlined symbol">verified</span>
-                                <span>v2rayNG</span>
-                            </div>
-                            <div>
-                                <span class="material-symbols-outlined symbol">verified</span>
-                                <span>NikaNG</span>
-                            </div>
-                            <div>
-                                <span class="material-symbols-outlined symbol">verified</span>
-                                <span>MahsaNG</span>
-                            </div>
-                            <div>
-                                <span class="material-symbols-outlined symbol">verified</span>
-                                <span>v2rayN</span>
-                            </div>
-                            <div>
-                                <span class="material-symbols-outlined symbol">verified</span>
-                                <span>v2rayN-PRO</span>
-                            </div>
-                            <div>
-                                <span class="material-symbols-outlined symbol">verified</span>
-                                <span>Streisand</span>
-                            </div>
-                        </td>
-                        <td>
-                            <button onclick="openQR('https://${hostName}/sub/${userID}?app=xray#BPB-Full-Normal', 'Full normal Subscription')" style="margin-bottom: 8px;">
-                                QR Code&nbsp;<span class="material-symbols-outlined">qr_code_2</span>
-                            </button>
-                            <button onclick="copyToClipboard('https://${hostName}/sub/${userID}?app=xray#BPB-Full-Normal', false)">
-                                Copy Sub<span class="material-symbols-outlined">subject</span>
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div>
-                                <span class="material-symbols-outlined symbol">verified</span>
-                                <span>Sing-box</b></span>
-                            </div>
-                        </td>
-                        <td>
-                            <button onclick="openQR('sing-box://import-remote-profile?url=https://${hostName}/sub/${userID}?app=sfa#BPB-Full-Normal', 'Normal Subscription')" style="margin-bottom: 8px;">
-                                QR Code&nbsp;<span class="material-symbols-outlined">qr_code_2</span>
-                            </button>
-                            <button onclick="copyToClipboard('https://${hostName}/sub/${userID}?app=sfa#BPB-Full-Normal', false)">
-                                Copy Sub<span class="material-symbols-outlined">subject</span>
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div>
-                                <span class="material-symbols-outlined symbol">verified</span>
-                                <span>Clash Meta</span>
-                            </div>
-                            <div>
-                                <span class="material-symbols-outlined symbol">verified</span>
-                                <span>Clash Verge</span>
-                            </div>
-                            <div>
-                                <span class="material-symbols-outlined symbol">verified</span>
-                                <span>v2rayN</span>
-                            </div>
-                            <div>
-                                <span class="material-symbols-outlined symbol">verified</span>
-                                <span>FlClash</span>
-                            </div>
-                            <div>
-                                <span class="material-symbols-outlined symbol">verified</span>
-                                <span>Stash</span>
-                            </div>
-                        </td>
-                        <td>
-                            <button onclick="openQR('https://${hostName}/sub/${userID}?app=clash#BPB-Full-Normal', 'Normal Subscription')" style="margin-bottom: 8px;">
-                                QR Code&nbsp;<span class="material-symbols-outlined">qr_code_2</span>
-                            </button>
-                            <button onclick="copyToClipboard('https://${hostName}/sub/${userID}?app=clash#BPB-Full-Normal', false)">
-                                Copy Sub<span class="material-symbols-outlined">subject</span>
-                            </button>
-                        </td>
-                    </tr>
-                </table>
+          </div>
+          <div class="form-control">
+            <label for="proxyIP">
+              <i class="fa-solid fa-fingerprint"></i> Proxy IP
+            </label>
+            <input type="text" id="proxyIP" name="proxyIP" value="${proxyIP2}">
+          </div>
+          <div class="form-control">
+            <label for="outProxy">
+              <i class="fa-solid fa-plane-departure"></i> Chain Proxy
+            </label>
+            <input type="text" id="outProxy" name="outProxy" value="${outProxy}">
+          </div>
+          <div class="form-control">
+            <label for="cleanIPs">
+              <i class="fa-solid fa-cannabis fa-bounce" style="color: #2aaa8a;"></i> Clean IP
+            </label>
+            <input type="text" id="cleanIPs" name="cleanIPs" value="${cleanIPs.replaceAll(",", " , ")}">
+          </div>
+          <div class="form-control">
+            <label>
+              <i class="fa-brands fa-searchengin"></i> CF IP Scanner
+            </label>
+            <a href="https://scanner.github1.cloud/" id="scanner" name="scanner" target="_blank" style="width: 100%;">
+            <button type="button" class="button">
+            SCAN NOW
+            <span class="material-symbols-outlined">open_in_new</span>
+            </button>
+            </a>
+          </div>
+          <div class="form-control">
+            <label for="enableIPv6"> 
+              <i class="fa-brands fa-hive"></i> IPv6 Configs
+            </label>
+            <div class="input-with-select">
+              <select id="enableIPv6" name="enableIPv6">
+              <option value="true" ${enableIPv6 ? "selected" : ""}>Enabled</option>
+              <option value="false" ${!enableIPv6 ? "selected" : ""}>Disabled</option>
+              </select>
             </div>
-            <h2>FRAGMENT SUB <i class="fa-solid fa-link fa-fade" aria-hidden="true"></i></h2>
-            <div class="table-container">
-                <table id="frag-sub-table">
-                    <tr>
-                        <th style="text-wrap: nowrap;">Application</th>
-                        <th style="text-wrap: nowrap;">Subscription</th>
-                    </tr>
-                    <tr>
-                        <td style="text-wrap: nowrap;">
-                            <div>
-                                <span class="material-symbols-outlined symbol">verified</span>
-                                <span>v2rayNG</span>
-                            </div>
-                            <div>
-                                <span class="material-symbols-outlined symbol">verified</span>
-                                <span>NikaNG</span>
-                            </div>
-                            <div>
-                                <span class="material-symbols-outlined symbol">verified</span>
-                                <span>MahsaNG</span>
-                            </div>
-                            <div>
-                                <span class="material-symbols-outlined symbol">verified</span>
-                                <span>v2rayN</span>
-                            </div>
-                            <div>
-                                <span class="material-symbols-outlined symbol">verified</span>
-                                <span>v2rayN-PRO</span>
-                            </div>
-                            <div>
-                                <span class="material-symbols-outlined symbol">verified</span>
-                                <span>Streisand</span>
-                            </div>
-                        </td>
-                        <td>
-                            <button onclick="openQR('https://${hostName}/fragsub/${userID}#BPB-Fragment', 'Fragment Subscription')" style="margin-bottom: 8px;">
-                                QR Code&nbsp;<span class="material-symbols-outlined">qr_code_2</span>
-                            </button>
-                            <button onclick="copyToClipboard('https://${hostName}/fragsub/${userID}#BPB-Fragment', true)">
-                                Copy Sub<span class="material-symbols-outlined">subject</span>
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-wrap: nowrap;">
-                            <div>
-                                <span class="material-symbols-outlined symbol">verified</span>
-                                <span>Hiddify</span>
-                            </div>
-                        </td>
-                        <td>
-                            <button onclick="openQR('https://${hostName}/fragsub/${userID}?app=hiddify#BPB-Fragment', 'Fragment Subscription')" style="margin-bottom: 8px;">
-                                QR Code&nbsp;<span class="material-symbols-outlined">qr_code_2</span>
-                            </button>
-                            <button onclick="copyToClipboard('https://${hostName}/fragsub/${userID}?app=hiddify#BPB-Fragment', true)">
-                                Copy Sub<span class="material-symbols-outlined">subject</span>
-                            </button>
-                        </td>
-                    </tr>
-                </table>
+          </div>
+          <div class="form-control">
+            <label for="customCdnAddrs"> 
+              <i class="fa fa-sort-numeric-desc"></i> Custom CDN IP
+            </label>
+            <input type="text" id="customCdnAddrs" name="customCdnAddrs" value="${customCdnAddrs.replaceAll(",", " , ")}">
+          </div>
+          <div class="form-control">
+            <label for="customCdnHost"> 
+              <i class="fa fa-sort-alpha-desc"></i> Custom Host
+            </label>
+            <input type="text" id="customCdnHost" name="customCdnHost" value="${customCdnHost}">
+          </div>
+          <div class="form-control">
+            <label for="customCdnSni"> 
+              <i class="fa-solid fa-sort-alpha-desc"></i> Custom SNI
+            </label>
+            <input type="text" id="customCdnSni" name="customCdnSni" value="${customCdnSni}">
+          </div>
+          <div class="form-control">
+            <label for="bestVLESSTrojanInterval"> 
+              <i class="fa-solid fa-splotch fa-spin" style="color: #d2042d;"> </i> Best Interval
+            </label>
+            <input type="number" id="bestVLESSTrojanInterval" name="bestVLESSTrojanInterval" min="10" max="90" value="${bestVLESSTrojanInterval}">
+          </div>
+          <div class="form-control" style="padding-top: 10px;">
+            <label> 
+              <i class="fa-solid fa-microchip"></i> Protocols
+            </label>
+            <div style="width: 100%; display: grid; grid-template-columns: 1fr 1fr; align-items: baseline; margin-top: 10px;">
+              <div style = "display: flex; justify-content: center; align-items: center;">
+                <input type="checkbox" id="vlessConfigs" name="vlessConfigs" onchange="handleProtocolChange(event)" value="true" ${vlessConfigs ? "checked" : ""}>
+                <label for="vlessConfigs" style="margin: 0 5px; font-weight: normal; font-size: unset;">VLESS</label>
+              </div>
+              <div style = "display: flex; justify-content: center; align-items: center;">
+                <input type="checkbox" id="trojanConfigs" name="trojanConfigs" onchange="handleProtocolChange(event)" value="true" ${trojanConfigs ? "checked" : ""}>
+                <label for="trojanConfigs" style="margin: 0 5px; font-weight: normal; font-size: unset;">Trojan</label>
+              </div>
             </div>
-            <h2>WARP SUB <i class="fa-solid fa-link fa-fade" aria-hidden="true"></i></h2>
-            <div class="table-container">
-                <table id="normal-configs-table">
-                    <tr>
-                        <th>Application</th>
-                        <th>Subscription</th>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div>
-                                <span class="material-symbols-outlined symbol">verified</span>
-                                <span>v2rayNG</span>
-                            </div>
-                            <div>
-                                <span class="material-symbols-outlined symbol">verified</span>
-                                <span>v2rayN</span>
-                            </div>
-                            <div>
-                                <span class="material-symbols-outlined symbol">verified</span>
-                                <span>Streisand</span>
-                            </div>
-                        </td>
-                        <td>
-                            <button onclick="openQR('https://${hostName}/warpsub/${userID}?app=xray#BPB-Warp', 'Warp Subscription')" style="margin-bottom: 8px;">
-                                QR Code&nbsp;<span class="material-symbols-outlined">qr_code_2</span>
-                            </button>
-                            <button onclick="copyToClipboard('https://${hostName}/warpsub/${userID}?app=xray#BPB-Warp', false)">
-                                Copy Sub<span class="material-symbols-outlined">subject</span>
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div>
-                                <span class="material-symbols-outlined symbol">verified</span>
-                                <span>Hiddify</span>
-                            </div>
-                            <div>
-                                <span class="material-symbols-outlined symbol">verified</span>
-                                <span>Singbox</span>
-                            </div>
-                        </td>
-                        <td>
-                            <button onclick="openQR('sing-box://import-remote-profile?url=https://${hostName}/warpsub/${userID}?app=singbox#BPB-Warp', 'Warp Subscription')" style="margin-bottom: 8px;">
-                                QR Code&nbsp;<span class="material-symbols-outlined">qr_code_2</span>
-                            </button>
-                            <button onclick="copyToClipboard('https://${hostName}/warpsub/${userID}?app=singbox#BPB-Warp', false)">
-                                Copy Sub<span class="material-symbols-outlined">subject</span>
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div>
-                                <span class="material-symbols-outlined symbol">verified</span>
-                                <span>Clash Meta</span>
-                            </div>
-                            <div>
-                                <span class="material-symbols-outlined symbol">verified</span>
-                                <span>Clash Verge</span>
-                            </div>
-                            <div>
-                                <span class="material-symbols-outlined symbol">verified</span>
-                                <span>v2rayN</span>
-                            </div>
-                            <div>
-                                <span class="material-symbols-outlined symbol">verified</span>
-                                <span>FlClash</span>
-                            </div>
-                            <div>
-                                <span class="material-symbols-outlined symbol">verified</span>
-                                <span>Stash</span>
-                            </div>
-                        </td>
-                        <td>
-                            <button onclick="openQR('https://${hostName}/warpsub/${userID}?app=clash#BPB-Warp', 'Warp Subscription')" style="margin-bottom: 8px;">
-                                QR Code&nbsp;<span class="material-symbols-outlined">qr_code_2</span>
-                            </button>
-                            <button onclick="copyToClipboard('https://${hostName}/warpsub/${userID}?app=clash#BPB-Warp', false)">
-                                Copy Sub<span class="material-symbols-outlined">subject</span>
-                            </button>
-                        </td>
-                    </tr>
-                </table>
+          </div>
+          <div class="table-container">
+            <table id="ports-block">
+              <tr>
+                <th style="text-wrap: nowrap; background-color: gray;">Config type</th>
+                <th style="text-wrap: nowrap; background-color: gray;">Ports</th>
+              </tr>
+              <tr>
+                <td style="text-align: center; font-size: larger;"><b>TLS</b></td>
+                <td>
+                  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr;">${httpsPortsBlock}</div>
+                </td>
+              </tr>
+              ${!httpPortsBlock ? "" : `
+              <tr>
+                <td style="text-align: center; font-size: larger;"><b>Non TLS</b></td>
+                <td>
+                  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr;">${httpPortsBlock}</div>
+                </td>
+              </tr>
+              `}        
+            </table>
+          </div>
+        </details>
+        <details>
+          <summary>
+            <h2>FRAGMENT </h2>
+              <i class="fa-solid fa-cog fa-spin fa-xl fa-spin-reverse" style="--fa-animation-duration: 8.5s;"></i>
+            <span class="sr-only">Loading...</span>
+          </summary>
+          <div class="form-control">
+            <label for="fragmentLengthMin">
+              <i class="fa-solid fa-border-none"></i> Length
+            </label>
+            <div class="min-max">
+              <input type="number" id="fragmentLengthMin" name="fragmentLengthMin" value="${lengthMin}" min="10" required>
+              <span> - </span>
+              <input type="number" id="fragmentLengthMax" name="fragmentLengthMax" value="${lengthMax}" max="500" required>
             </div>
-            <h2>WARP PRO SUB <i class="fa-solid fa-link fa-fade" aria-hidden="true"></i></h2>
-            <div class="table-container">
-                <table id="warp-pro-configs-table">
-                    <tr>
-                        <th>Application</th>
-                        <th>Subscription</th>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div>
-                                <span class="material-symbols-outlined symbol">verified</span>
-                                <span>NikaNG</span>
-                            </div>
-                            <div>
-                                <span class="material-symbols-outlined symbol">verified</span>
-                                <span>MahsaNG</span>
-                            </div>
-                            <div>
-                                <span class="material-symbols-outlined symbol">verified</span>
-                                <span>v2rayN-PRO</span>
-                            </div>
-                        </td>
-                        <td>
-                            <button onclick="openQR('https://${hostName}/warpsub/${userID}?app=nikang#BPB-Warp-Pro', 'Warp Pro Subscription')" style="margin-bottom: 8px;">
-                                QR Code&nbsp;<span class="material-symbols-outlined">qr_code_2</span>
-                            </button>
-                            <button onclick="copyToClipboard('https://${hostName}/warpsub/${userID}?app=nikang#BPB-Warp-Pro', false)">
-                                Copy Sub<span class="material-symbols-outlined">subject</span>
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div>
-                                <span class="material-symbols-outlined symbol">verified</span>
-                                <span>Hiddify</span>
-                            </div>
-                        </td>
-                        <td>
-                            <button onclick="openQR('sing-box://import-remote-profile?url=https://${hostName}/warpsub/${userID}?app=hiddify#BPB-Warp-Pro', 'Warp Pro Subscription')" style="margin-bottom: 8px;">
-                                QR Code&nbsp;<span class="material-symbols-outlined">qr_code_2</span>
-                            </button>
-                            <button onclick="copyToClipboard('https://${hostName}/warpsub/${userID}?app=hiddify#BPB-Warp-Pro', false)">
-                                Copy Sub<span class="material-symbols-outlined">subject</span>
-                            </button>
-                        </td>
-                    </tr>
-                </table>
+          </div>
+          <div class="form-control">
+            <label for="fragmentIntervalMin"> 
+              <i class="fa-solid fa-stopwatch-20 fa-shake"></i> Interval
+            </label>
+            <div class="min-max">
+              <input type="number" id="fragmentIntervalMin" name="fragmentIntervalMin"
+                value="${intervalMin}" min="1" max="30" required>
+              <span> - </span>
+              <input type="number" id="fragmentIntervalMax" name="fragmentIntervalMax"
+                value="${intervalMax}" min="1" max="30" required>
             </div>
-            <div id="myModal" class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <form id="passwordChangeForm">
-                        <h2>Change Password</h2>
-                        <div class="form-control">
-                            <label for="newPassword">New Password</label>
-                            <input type="password" id="newPassword" name="newPassword" required>
-                            </div>
-                        <div class="form-control">
-                            <label for="confirmPassword">Confirm Password</label>
-                            <input type="password" id="confirmPassword" name="confirmPassword" required>
-                        </div>
-                        <div id="passwordError" style="color: red; margin-bottom: 10px;"></div>
-                        <button id="changePasswordBtn" type="submit" class="button">Change Password</button>
-                    </form>
-                </div>
+          </div>
+          <div class="form-control">
+            <label for="fragmentPackets"> 
+              <i class="fa-solid fa-cube"></i> Packets
+            </label>
+            <div class="input-with-select">
+              <select id="fragmentPackets" name="fragmentPackets">
+              <option value="tlshello" ${fragmentPackets === "tlshello" ? "selected" : ""}>tlshello</option>
+              <option value="1-1" ${fragmentPackets === "1-1" ? "selected" : ""}>1-1</option>
+              <option value="1-2" ${fragmentPackets === "1-2" ? "selected" : ""}>1-2</option>
+              <option value="1-3" ${fragmentPackets === "1-3" ? "selected" : ""}>1-3</option>
+              <option value="1-5" ${fragmentPackets === "1-5" ? "selected" : ""}>1-5</option>
+              </select>
             </div>
-            <div id="myQRModal" class="modalQR">
-                <div class="modal-content" style="width: auto; text-align: center;">
-                    <div style="display: flex; flex-direction: column; align-items: center; margin-bottom: 10px;">
-                        <span id="closeQRModal" class="close" style="align-self: flex-end;">&times;</span>
-                        <span id="qrcodeTitle" style="align-self: center; font-weight: bold;"></span>
-                    </div>
-                    <div id="qrcode-container"></div>
-                </div>
+          </div>
+        </details>
+        <details>
+          <summary>
+            <h2>WARP GENERAL </h2>
+              <i class="fa-solid fa-cog fa-spin fa-xl"></i>
+            <span class="sr-only">Loading...</span>
+          </summary>
+          <div class="form-control">
+            <label for="warpEndpoints"> 
+              <i class="fa-solid fa-arrow-trend-up fa-spin"></i> Endpoints
+            </label>
+            <input type="text" id="warpEndpoints" name="warpEndpoints" value="${warpEndpoints.replaceAll(",", " , ")}" required>
+          </div>
+          <div class="form-control">
+            <label style="line-height: 1.5;"> 
+              <i class="fa-brands fa-searchengin"></i> Endpoint Scanner
+            </label>
+            <button type="button" class="button" style="padding: 10px 0;" onclick="copyToClipboard('bash <(curl -fsSL https://raw.githubusercontent.com/Ptechgithub/warp/main/endip/install.sh)', false)">
+            COPY SCRIPT <span class="material-symbols-outlined">terminal</span>
+            </button>
+          </div>
+          <div class="form-control">
+            <label for="warpFakeDNS"> 
+              <i class="fa-solid fa-ghost"></i> Fake DNS
+            </label>
+            <div class="input-with-select">
+              <select id="warpFakeDNS" name="warpFakeDNS">
+              <option value="true" ${warpFakeDNS ? "selected" : ""}>Enabled</option>
+              <option value="false" ${!warpFakeDNS ? "selected" : ""}>Disabled</option>
+              </select>
             </div>
-            <hr>
-            <div class="footer">
-                <i class="fa fa-github" style="font-size:36px; margin-right: 10px;"></i>
-                <a class="link" href="https://github.com/NiREvil/bia-pain-bache" style="color: var(--color); text-decoration: underline;" target="_blank">Github</a>
-                <button id="openModalBtn" class="button">Change Password</button>
-                <button type="button" id="logout" style="background: none; color: var(--color); margin: 0; border: none; cursor: pointer;">
-                    <i class="fa fa-power-off fa-2x" aria-hidden="true"></i>
-                </button>
+          </div>
+          <div class="form-control">
+            <label for="warpPlusLicense"> 
+              <i class="fa-solid fa-star-half"></i> License key
+            </label>
+            <input type="text" id="warpPlusLicense" name="warpPlusLicense" value="${warpPlusLicense}" 
+              pattern="^[a-zA-Z0-9]{8}-[a-zA-Z0-9]{8}-[a-zA-Z0-9]{8}$" 
+              title="Please enter a valid Warp Plus license in xxxxxxxx-xxxxxxxx-xxxxxxxx format">
+          </div>
+          <div class="form-control">
+            <label>
+              <i class="fa-solid fa-code-branch"></i> Warp Configs
+            </label>
+            <button id="refreshBtn" type="button" class="button" style="padding: 10px 0;" onclick="getWarpConfigs()">
+            Update<span class="material-symbols-outlined">autorenew</span>
+            </button>
+          </div>
+          <div class="form-control">
+            <label for="bestWarpInterval"> 
+              <i class="fa-solid fa-splotch fa-spin" style="color: #d2042d;"></i> Best Interval
+            </label>
+            <input type="number" id="bestWarpInterval" name="bestWarpInterval" min="10" max="90" value="${bestWarpInterval}">
+          </div>
+        </details>
+        <details>
+          <summary>
+            <h2>WARP PRO </h2>
+              <i class="fa-xl fa-solid fa-cog fa-spin" style="--fa-animation-duration: 8.5s;"></i>
+            <span class="sr-only">Loading...</span>
+          </summary>
+          <div class="form-control">
+            <label for="hiddifyNoiseMode"> 
+              <i class="fa-solid fa-bug fa-shake"></i> Hiddify Mode
+            </label>
+            <input type="text" id="hiddifyNoiseMode" name="hiddifyNoiseMode" 
+              pattern="^(m[1-6]|h_[0-9A-Fa-f]{2}|g_([0-9A-Fa-f]{2}_){2}[0-9A-Fa-f]{2})$" 
+              title="Enter 'm1-m6', 'h_HEX', 'g_HEX_HEX_HEX' which HEX can be between 00 to ff"
+              value="${hiddifyNoiseMode}" required>
+          </div>
+          <div class="form-control">
+            <label for="nikaNGNoiseMode"> 
+              <i class="fa-solid fa-heart-pulse fa-beat" style="color: #dc143c;"></i> NikaNG Mode
+            </label>
+            <input type="text" id="nikaNGNoiseMode" name="nikaNGNoiseMode" 
+              pattern="^(none|quic|random|[0-9A-Fa-f]+)$" 
+              title="Enter 'none', 'quic', 'random', or any HEX string like 'ee0000000108aaaa'"
+              value="${nikaNGNoiseMode}" required>
+          </div>
+          <div class="form-control">
+            <label for="noiseCountMin"> 
+              <i class="fa-solid fa-cubes-stacked"></i> Noise Count
+            </label>
+            <div class="min-max">
+              <input type="number" id="noiseCountMin" name="noiseCountMin"
+                value="${noiseCountMin}" min="1" required>
+              <span> - </span>
+              <input type="number" id="noiseCountMax" name="noiseCountMax"
+                value="${noiseCountMax}" min="1" required>
             </div>
+          </div>
+          <div class="form-control">
+            <label for="noiseSizeMin">
+              <i class="fa-solid fa-ruler"></i> Noise Size
+            </label>
+            <div class="min-max">
+              <input type="number" id="noiseSizeMin" name="noiseSizeMin"
+                value="${noiseSizeMin}" min="1" required>
+              <span> - </span>
+              <input type="number" id="noiseSizeMax" name="noiseSizeMax"
+                value="${noiseSizeMax}" min="1" required>
+            </div>
+          </div>
+          <div class="form-control">
+            <label for="noiseDelayMin">
+              <i class="fa-solid fa-hourglass"></i> Noise Delay
+            </label>
+            <div class="min-max">
+              <input type="number" id="noiseDelayMin" name="noiseDelayMin"
+                value="${noiseDelayMin}" min="1" required>
+              <span> - </span>
+              <input type="number" id="noiseDelayMax" name="noiseDelayMax"
+                value="${noiseDelayMax}" min="1" required>
+            </div>
+          </div>
+        </details>
+        <details>
+          <summary>
+            <h2>ROUTING RULES </h2>
+              <i class="fa-solid fa-cog fa-spin fa-spin-reverse fa-xl"></i>
+            <span class="sr-only">Loading...</span>
+          </summary>
+          <div id="routing-rules" class="form-control" style="margin-bottom: 20px;">
+            <div class="routing">
+              <input type="checkbox" id="bypass-lan" name="bypass-lan" value="true" ${bypassLAN ? "checked" : ""}>
+              <label for="bypass-lan">Bypass LAN</label>
+            </div>
+            <div class="routing">
+              <input type="checkbox" id="block-ads" name="block-ads" value="true" ${blockAds ? "checked" : ""}>
+              <label for="block-ads">Block Ads.</label>
+            </div>
+            <div class="routing">
+              <input type="checkbox" id="bypass-iran" name="bypass-iran" value="true" ${bypassIran ? "checked" : ""}>
+              <label for="bypass-iran">Bypass Iran</label>
+            </div>
+            <div class="routing">
+              <input type="checkbox" id="block-porn" name="block-porn" value="true" ${blockPorn ? "checked" : ""}>
+              <label for="block-porn">Block Porn</label>
+            </div>
+            <div class="routing">
+              <input type="checkbox" id="bypass-china" name="bypass-china" value="true" ${bypassChina ? "checked" : ""}>
+              <label for="bypass-china">Bypass China</label>
+            </div>
+            <div class="routing">
+              <input type="checkbox" id="block-udp-443" name="block-udp-443" value="true" ${blockUDP443 ? "checked" : ""}>
+              <label for="block-udp-443">Block QUIC</label>
+            </div>
+            <div class="routing">
+              <input type="checkbox" id="bypass-russia" name="bypass-russia" value="true" ${bypassRussia ? "checked" : ""}>
+              <label for="bypass-russia">Bypass Russia</label>
+            </div>
+          </div>
+        </details>
+        <div id="apply" class="form-control">
+          <div style="grid-column: 2; width: 100%; display: grid; grid-template-columns: 5fr 1fr; gap: 10px;">
+            <input type="submit" id="applyButton" class="button disabled" value="APPLY SETTINGS" form="configForm">
+            <button type="button" id="resetSettings" class="reset-button">RESET</button>
+          </div>
         </div>
-        <button id="darkModeToggle" class="floating-button">
-            <i id="modeIcon" class="fa fa-2x fa-adjust" style="color: var(--background-color);" aria-hidden="true"></i>
-        </button>   
+      </form>
+    <hr>
+    <h2>NORMAL SUB <i class="fa-solid fa-link fa-fade" aria-hidden="true"></i></h2>
+    <div class="table-container">
+      <table id="normal-configs-table">
+        <tr>
+          <th>Application</th>
+          <th>Subscription</th>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <span class="material-symbols-outlined symbol">verified</span>
+              <span>v2rayNG</span>
+            </div>
+            <div>
+              <span class="material-symbols-outlined symbol">verified</span>
+              <span>NikaNG</span>
+            </div>
+            <div>
+              <span class="material-symbols-outlined symbol">verified</span>
+              <span>MahsaNG</span>
+            </div>
+            <div>
+              <span class="material-symbols-outlined symbol">verified</span>
+              <span>v2rayN</span>
+            </div>
+            <div>
+              <span class="material-symbols-outlined symbol">verified</span>
+              <span>v2rayN-PRO</span>
+            </div>
+            <div>
+              <span class="material-symbols-outlined symbol">verified</span>
+              <span>Shadowrocket</span>
+            </div>
+            <div>
+              <span class="material-symbols-outlined symbol">verified</span>
+              <span>Streisand</span>
+            </div>
+            <div>
+              <span class="material-symbols-outlined symbol">verified</span>
+              <span>Hiddify</span>
+            </div>
+            <div>
+              <span class="material-symbols-outlined symbol">verified</span>
+              <span>Nekoray (Xray)</span>
+            </div>
+          </td>
+          <td>
+            <button onclick="openQR('https://${hostName}/sub/${userID}#BPB-Normal', 'Normal Subscription')" style="margin-bottom: 8px;">
+            QR Code&nbsp;<span class="material-symbols-outlined">qr_code_2</span>
+            </button>
+            <button onclick="copyToClipboard('https://${hostName}/sub/${userID}#BPB-Normal', false)">
+            Copy Sub<span class="material-symbols-outlined">subject</span>
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <span class="material-symbols-outlined symbol">verified</span>
+              <span>Nekobox</span>
+            </div>
+            <div>
+              <span class="material-symbols-outlined symbol">verified</span>
+              <span>Nekoray (Sing-Box)</span>
+            </div>
+            <div>
+              <span class="material-symbols-outlined symbol">verified</span>
+              <span>Karing</span>
+            </div>
+          </td>
+          <td>
+            <button onclick="copyToClipboard('https://${hostName}/sub/${userID}?app=singbox#BPB-Normal', false)">
+            Copy Sub<span class="material-symbols-outlined">subject</span>
+            </button>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <h2>FULL NORMAL SUB <i class="fa-solid fa-link fa-fade" aria-hidden="true"></i></h2>
+    <div class="table-container">
+      <table id="full-normal-configs-table">
+        <tr>
+          <th>Application</th>
+          <th>Subscription</th>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <span class="material-symbols-outlined symbol">verified</span>
+              <span>v2rayNG</span>
+            </div>
+            <div>
+              <span class="material-symbols-outlined symbol">verified</span>
+              <span>NikaNG</span>
+            </div>
+            <div>
+              <span class="material-symbols-outlined symbol">verified</span>
+              <span>MahsaNG</span>
+            </div>
+            <div>
+              <span class="material-symbols-outlined symbol">verified</span>
+              <span>v2rayN</span>
+            </div>
+            <div>
+              <span class="material-symbols-outlined symbol">verified</span>
+              <span>v2rayN-PRO</span>
+            </div>
+            <div>
+              <span class="material-symbols-outlined symbol">verified</span>
+              <span>Streisand</span>
+            </div>
+          </td>
+          <td>
+            <button onclick="openQR('https://${hostName}/sub/${userID}?app=xray#BPB-Full-Normal', 'Full normal Subscription')" style="margin-bottom: 8px;">
+            QR Code&nbsp;<span class="material-symbols-outlined">qr_code_2</span>
+            </button>
+            <button onclick="copyToClipboard('https://${hostName}/sub/${userID}?app=xray#BPB-Full-Normal', false)">
+            Copy Sub<span class="material-symbols-outlined">subject</span>
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <span class="material-symbols-outlined symbol">verified</span>
+              <span>Sing-box</b></span>
+            </div>
+          </td>
+          <td>
+            <button onclick="openQR('sing-box://import-remote-profile?url=https://${hostName}/sub/${userID}?app=sfa#BPB-Full-Normal', 'Normal Subscription')" style="margin-bottom: 8px;">
+            QR Code&nbsp;<span class="material-symbols-outlined">qr_code_2</span>
+            </button>
+            <button onclick="copyToClipboard('https://${hostName}/sub/${userID}?app=sfa#BPB-Full-Normal', false)">
+            Copy Sub<span class="material-symbols-outlined">subject</span>
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <span class="material-symbols-outlined symbol">verified</span>
+              <span>Clash Meta</span>
+            </div>
+            <div>
+              <span class="material-symbols-outlined symbol">verified</span>
+              <span>Clash Verge</span>
+            </div>
+            <div>
+              <span class="material-symbols-outlined symbol">verified</span>
+              <span>v2rayN</span>
+            </div>
+            <div>
+              <span class="material-symbols-outlined symbol">verified</span>
+              <span>FlClash</span>
+            </div>
+            <div>
+              <span class="material-symbols-outlined symbol">verified</span>
+              <span>Stash</span>
+            </div>
+          </td>
+          <td>
+            <button onclick="openQR('https://${hostName}/sub/${userID}?app=clash#BPB-Full-Normal', 'Normal Subscription')" style="margin-bottom: 8px;">
+            QR Code&nbsp;<span class="material-symbols-outlined">qr_code_2</span>
+            </button>
+            <button onclick="copyToClipboard('https://${hostName}/sub/${userID}?app=clash#BPB-Full-Normal', false)">
+            Copy Sub<span class="material-symbols-outlined">subject</span>
+            </button>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <h2>FRAGMENT SUB <i class="fa-solid fa-link fa-fade" aria-hidden="true"></i></h2>
+    <div class="table-container">
+      <table id="frag-sub-table">
+        <tr>
+          <th style="text-wrap: nowrap;">Application</th>
+          <th style="text-wrap: nowrap;">Subscription</th>
+        </tr>
+        <tr>
+          <td style="text-wrap: nowrap;">
+            <div>
+              <span class="material-symbols-outlined symbol">verified</span>
+              <span>v2rayNG</span>
+            </div>
+            <div>
+              <span class="material-symbols-outlined symbol">verified</span>
+              <span>NikaNG</span>
+            </div>
+            <div>
+              <span class="material-symbols-outlined symbol">verified</span>
+              <span>MahsaNG</span>
+            </div>
+            <div>
+              <span class="material-symbols-outlined symbol">verified</span>
+              <span>v2rayN</span>
+            </div>
+            <div>
+              <span class="material-symbols-outlined symbol">verified</span>
+              <span>v2rayN-PRO</span>
+            </div>
+            <div>
+              <span class="material-symbols-outlined symbol">verified</span>
+              <span>Streisand</span>
+            </div>
+          </td>
+          <td>
+            <button onclick="openQR('https://${hostName}/fragsub/${userID}#BPB-Fragment', 'Fragment Subscription')" style="margin-bottom: 8px;">
+            QR Code&nbsp;<span class="material-symbols-outlined">qr_code_2</span>
+            </button>
+            <button onclick="copyToClipboard('https://${hostName}/fragsub/${userID}#BPB-Fragment', true)">
+            Copy Sub<span class="material-symbols-outlined">subject</span>
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td style="text-wrap: nowrap;">
+            <div>
+              <span class="material-symbols-outlined symbol">verified</span>
+              <span>Hiddify</span>
+            </div>
+          </td>
+          <td>
+            <button onclick="openQR('https://${hostName}/fragsub/${userID}?app=hiddify#BPB-Fragment', 'Fragment Subscription')" style="margin-bottom: 8px;">
+            QR Code&nbsp;<span class="material-symbols-outlined">qr_code_2</span>
+            </button>
+            <button onclick="copyToClipboard('https://${hostName}/fragsub/${userID}?app=hiddify#BPB-Fragment', true)">
+            Copy Sub<span class="material-symbols-outlined">subject</span>
+            </button>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <h2>WARP SUB <i class="fa-solid fa-link fa-fade" aria-hidden="true"></i></h2>
+    <div class="table-container">
+      <table id="normal-configs-table">
+        <tr>
+          <th>Application</th>
+          <th>Subscription</th>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <span class="material-symbols-outlined symbol">verified</span>
+              <span>v2rayNG</span>
+            </div>
+            <div>
+              <span class="material-symbols-outlined symbol">verified</span>
+              <span>v2rayN</span>
+            </div>
+            <div>
+              <span class="material-symbols-outlined symbol">verified</span>
+              <span>Streisand</span>
+            </div>
+          </td>
+          <td>
+            <button onclick="openQR('https://${hostName}/warpsub/${userID}?app=xray#BPB-Warp', 'Warp Subscription')" style="margin-bottom: 8px;">
+            QR Code&nbsp;<span class="material-symbols-outlined">qr_code_2</span>
+            </button>
+            <button onclick="copyToClipboard('https://${hostName}/warpsub/${userID}?app=xray#BPB-Warp', false)">
+            Copy Sub<span class="material-symbols-outlined">subject</span>
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <span class="material-symbols-outlined symbol">verified</span>
+              <span>Hiddify</span>
+            </div>
+            <div>
+              <span class="material-symbols-outlined symbol">verified</span>
+              <span>Singbox</span>
+            </div>
+          </td>
+          <td>
+            <button onclick="openQR('sing-box://import-remote-profile?url=https://${hostName}/warpsub/${userID}?app=singbox#BPB-Warp', 'Warp Subscription')" style="margin-bottom: 8px;">
+            QR Code&nbsp;<span class="material-symbols-outlined">qr_code_2</span>
+            </button>
+            <button onclick="copyToClipboard('https://${hostName}/warpsub/${userID}?app=singbox#BPB-Warp', false)">
+            Copy Sub<span class="material-symbols-outlined">subject</span>
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <span class="material-symbols-outlined symbol">verified</span>
+              <span>Clash Meta</span>
+            </div>
+            <div>
+              <span class="material-symbols-outlined symbol">verified</span>
+              <span>Clash Verge</span>
+            </div>
+            <div>
+              <span class="material-symbols-outlined symbol">verified</span>
+              <span>v2rayN</span>
+            </div>
+            <div>
+              <span class="material-symbols-outlined symbol">verified</span>
+              <span>FlClash</span>
+            </div>
+            <div>
+              <span class="material-symbols-outlined symbol">verified</span>
+              <span>Stash</span>
+            </div>
+          </td>
+          <td>
+            <button onclick="openQR('https://${hostName}/warpsub/${userID}?app=clash#BPB-Warp', 'Warp Subscription')" style="margin-bottom: 8px;">
+            QR Code&nbsp;<span class="material-symbols-outlined">qr_code_2</span>
+            </button>
+            <button onclick="copyToClipboard('https://${hostName}/warpsub/${userID}?app=clash#BPB-Warp', false)">
+            Copy Sub<span class="material-symbols-outlined">subject</span>
+            </button>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <h2>WARP PRO SUB <i class="fa-solid fa-link fa-fade" aria-hidden="true"></i></h2>
+    <div class="table-container">
+      <table id="warp-pro-configs-table">
+        <tr>
+          <th>Application</th>
+          <th>Subscription</th>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <span class="material-symbols-outlined symbol">verified</span>
+              <span>NikaNG</span>
+            </div>
+            <div>
+              <span class="material-symbols-outlined symbol">verified</span>
+              <span>MahsaNG</span>
+            </div>
+            <div>
+              <span class="material-symbols-outlined symbol">verified</span>
+              <span>v2rayN-PRO</span>
+            </div>
+          </td>
+          <td>
+            <button onclick="openQR('https://${hostName}/warpsub/${userID}?app=nikang#BPB-Warp-Pro', 'Warp Pro Subscription')" style="margin-bottom: 8px;">
+            QR Code&nbsp;<span class="material-symbols-outlined">qr_code_2</span>
+            </button>
+            <button onclick="copyToClipboard('https://${hostName}/warpsub/${userID}?app=nikang#BPB-Warp-Pro', false)">
+            Copy Sub<span class="material-symbols-outlined">subject</span>
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <span class="material-symbols-outlined symbol">verified</span>
+              <span>Hiddify</span>
+            </div>
+          </td>
+          <td>
+            <button onclick="openQR('sing-box://import-remote-profile?url=https://${hostName}/warpsub/${userID}?app=hiddify#BPB-Warp-Pro', 'Warp Pro Subscription')" style="margin-bottom: 8px;">
+            QR Code&nbsp;<span class="material-symbols-outlined">qr_code_2</span>
+            </button>
+            <button onclick="copyToClipboard('https://${hostName}/warpsub/${userID}?app=hiddify#BPB-Warp-Pro', false)">
+            Copy Sub<span class="material-symbols-outlined">subject</span>
+            </button>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <form id="passwordChangeForm">
+          <h2>Change Password</h2>
+          <div class="form-control">
+            <label for="newPassword">New Password</label>
+            <input type="password" id="newPassword" name="newPassword" required>
+          </div>
+          <div class="form-control">
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+          </div>
+          <div id="passwordError" style="color: red; margin-bottom: 10px;"></div>
+          <button id="changePasswordBtn" type="submit" class="button">Change Password</button>
+        </form>
+      </div>
+    </div>
+    <div id="myQRModal" class="modalQR">
+      <div class="modal-content" style="width: auto; text-align: center;">
+        <div style="display: flex; flex-direction: column; align-items: center; margin-bottom: 10px;">
+          <span id="closeQRModal" class="close" style="align-self: flex-end;">&times;</span>
+          <span id="qrcodeTitle" style="align-self: center; font-weight: bold;"></span>
+        </div>
+        <div id="qrcode-container"></div>
+      </div>
+    </div>
+    <hr>
+    <div class="footer">
+      <i class="fa fa-github" style="font-size:36px; margin-right: 10px;"></i>
+      <a class="link" href="https://github.com/NiREvil/bia-pain-bache" style="color: var(--color);" target="_blank">GitHub</a>
+      <button id="openModalBtn" class="button">Change Password</button>
+      <button type="button" id="logout" style="background: none; color: var(--color); margin: 0; border: none; cursor: pointer;">
+      <i class="fa fa-power-off fa-2x" aria-hidden="true"></i>
+      </button>
+    </div>
+    </div>
+    <button id="darkModeToggle" class="floating-button">
+    <i id="modeIcon" class="fa fa-2x fa-adjust" style="color: var(--background-color);" aria-hidden="true"></i>
+    </button>   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"><\/script>
     <script>
         const defaultHttpsPorts = ['443', '8443', '2053', '2083', '2087', '2096'];
@@ -6542,7 +6597,7 @@ function renderHomePage(proxySettings, hostName, isPassSet) {
             textarea.select();
             document.execCommand('copy');
             document.body.removeChild(textarea);
-            alert('📋 Copied to clipboard:\\n\\n' +  value);
+            alert('  DONE ✔ \\n\\n📋 Copied to clipboard:\\n\\n' +  value);
         }
 
         const applySettings = async (event, configForm) => {
@@ -6752,7 +6807,7 @@ function renderLoginPage() {
         :root {
             --color: black;
             --primary-color: #09639f;
-            --header-color: #09639f; 
+            --header-color: #09639f;
             --background-color: #fff;
             --form-background-color: #f9f9f9;
             --lable-text-color: #333;
@@ -6771,7 +6826,7 @@ function renderLoginPage() {
         body.dark-mode {
             --color: white;
             --primary-color: #09639F;
-            --header-color: #3498DB; 
+            --header-color: #3498DB;
             --background-color: #121212;
             --form-background-color: #121212;
             --lable-text-color: #DFDFDF;
@@ -6839,12 +6894,36 @@ function renderLoginPage() {
         @media only screen and (min-width: 768px) {
             .container { width: 30%; }
         }
-    </style>
-    </head>
-    <body>
-        <div class="container">
-            <h1><i class="fa-sharp fa-solid fa-fade;">BPB PANEL 👻 <span style="font-size:12px; position: fixed; right: 0px; margin-top: 43px;">${panelVersion} </span></i></h1>
-            <div class="form-container">
+        .button {
+            background: linear-gradient(45deg,
+                #00ffd5, #4163c6, #0769ba 34.14%, 
+                #00ffd5, #002bff, rgba(32, 195, 190, 0.67) 51.5%);
+            background-size: 200%;
+            color: white;
+            font-weight: 600;
+            animation: rainbow 20s linear infinite;
+            transition: all 0.3s ease;
+        }
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            animation: rainbow 5s linear infinite;
+            }
+            @keyframes rainbow {
+              0% { background-position: 0% 50%; }
+              50% { background-position: 100% 50%; }
+              100% { background-position: 0% 50%; }
+            }
+            @keyframes textclip {
+              0% { background-position: 200% center; }
+              100% { background-position: -200% center; }
+            }
+        </style>
+      </head>
+      <body>
+      <div class="container">
+          <h1><i class="fa-sharp fa-solid fa-beat-fade;">BPB PANEL 👻 <span style="font-size:12px; position: fixed; right: 0px; margin-top: 43px;">${panelVersion} </span></i></h1>
+          <div class="form-container">
                 <h2>User Login</h2>
                 <form id="loginForm">
                     <div class="form-control">
@@ -6926,7 +7005,7 @@ function renderErrorPage(message2, error, refer) {
     </head>
     <body>
         <div id="error-container">
-            h1><i class="fa-sharp fa-solid fa-fade" style="color: var(--header-color);">BPB PANEL 👻 <span style="font-size:12px; position: fixed; right: 0px; margin-top: 43px;">${panelVersion} </span></i></h1>
+            h1><i class="fa-sharp fa-solid fa-beat-fade" style="color: var(--header-color);">BPB PANEL 👻 <span style="font-size:12px; position: fixed; right: 0px; margin-top: 43px;">${panelVersion} </span></i></h1>
             <div id="error-message">
                 <h2>${message2} ${refer ? 'Please try again or refer to <a href="https://github.com/NiREvil/bia-pain-bache/blob/main/README.md">documents</a>' : ""}
                 </h2>
