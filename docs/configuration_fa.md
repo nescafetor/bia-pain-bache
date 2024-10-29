@@ -16,7 +16,7 @@
 ## 1 - سابسکریپشن نرمال
 
 <p align="center">
-  <img src="assets/images/Normal-Configs.jpg">
+  <img src="assets/images/Normal-Configs.png">
 </p>
 
 از این بخش شروع کردم چون خیلیا بدون فرگمنت هم میتونن استفاده کنن.
@@ -63,7 +63,7 @@
 
 ### 2-1 - سابسکریپشن Fragment برای Xray
 <p align="center">
-  <img src="assets/images/Fragment-Sub.jpg">
+  <img src="assets/images/Fragment-Sub.png">
 </p>
 
 منظور برنامه‌هایی هستن که از هسته‌ی Xray استفاده میکنن، در اصل ردیف اول جدول FRAGMENT SUB در پنل، وارد کردنش داخل اپ هم مثل ساب معمولیه. کانفیگ‌های این قسمت یه `F` تو اسمشون دارن.
@@ -105,7 +105,7 @@
 ## 3- سابسکریپشن‌های Warp
 
 <p align="center">
-  <img src="assets/images/Warp-Configs.jpg">
+  <img src="assets/images/Warp-Configs.png">
 </p>
 
 این ساب‌ها یه کانفیگ Warp میدن که IP کلادفلر ایران هست و یه کانفیگ Warp on Warp (به اختضار WoW) که IP خارجه و یه کافیگ Warp Best Ping که میاد به سریعترین کانفیگ Warp وصل میشه و همیشه IP ایران داره و یه کانفیگ WoW Best Ping که به سریعترین کانفیگ WoW وصل میشه و همیشه IP خارجه. بصورت پبشفرض یه کانفیگ Warp و WoW بیشتر نیست ولی اگر قسمت Warp Endpoints و WoW Endpoints رو ویرایش کنید به تعداد Endpoint های ورودی کانفیگ Warp اضافه میشه.
@@ -125,7 +125,7 @@
 ### 4-1- تنظیمات VLESS/TROJAN
 
 <p align="center">
-  <img src="assets/images/Fragment-Settings.jpg">
+  <img src="assets/images/Fragment-Settings.png">
 </p>
 
 این قسمت برای تنظیمات کانفیگای Fragment و ساب‌های Clash و Singbox هست و تاثیری روی کانفیگ‌های بخش نرمال v2ray و همچنین ساب‌های وارپ نداره.
@@ -134,7 +134,7 @@
 ### 4-1- تنظیمات VLESS/TROJAN
 
 <p align="center">
-  <img src="assets/images/Fragment-Settings.jpg">
+  <img src="assets/images/Fragment-Settings.png">
 </p>
 
 این قسمت برای تنظیمات کانفیگای Fragment و ساب‌های Clash و Singbox هست و تاثیری روی کانفیگ‌های بخش نرمال v2ray و همچنین ساب‌های وارپ نداره.
@@ -172,7 +172,13 @@
 
 #### 4-1-2- تنظیمات Proxy IP
 
-برای تغییر Proxy IP از ورژن 2.3.5 به بعد میتونید از طریق خود پنل انجام بدید، به این ترتیب که اعمال میکنید و ساب رو آپدیت میکنید و تمام. اما توصیه میکنم از روش قدیمی داشبورد کلادفلر انجام بدید چون:
+برای تغییر Proxy IP از ورژن 2.3.5 به بعد میتونید از طریق خود پنل انجام بدید، به این ترتیب که اعمال میکنید و ساب رو آپدیت میکنید و تمام.
+
+<p align="center">
+  <img src="assets/images/Proxy_IP_settings.png">
+</p>
+
+اما توصیه میکنم از روش قدیمی داشبورد کلادفلر انجام بدید چون:
 
 > [!CAUTION]
 > اگر از طریق پنل Proxy IP رو اعمال کنید و اون IP از کار بیافته، باید یه IP جایگزین کنید و ساب رو آپدیت کنید. معنیش اینه که اگر کانفیگ اهدا کرده باشید و Proxy IP رو تغییر بدید دیگه فایده‌ای نداره چون یوزر ساب نداره که کانفیگ رو آپدیت کنه. بنابراین توصیه میشه از این روش فقط برای مصرف شخصی استفاده کنید. اما خوبی روش قدیمی اینه که نیازی به آپدیت کردن کانفیگ‌ها نداره.
@@ -197,14 +203,12 @@
 لاین 13 فایل [_worker.js](_worker.js) به این شکله:
 
 ```css
-const proxyIPs = ['turk.radicalization.ir'];
+const proxyIPs = ['bpb.radicalization.ir'];
 ```
 در نهایت Comit changes بزنید تا ذخیره بشه.
 <br>
 
-همچنین میتونید از [این آموزش](https://github.com/bia-pain-bache/BPB-Worker-Panel/blob/main/docs/proxy-ip-scanner.md) برای خودتون اسکن کنید.
-
-
+همچنین میتونید از [این آموزش](https://github.com/bia-pain-bache/BPB-Worker-Panel/blob/main/docs/proxy-ip-scanner.md) برای خودتون اسکن کنید.(صلاح نمیدونم)
 
 <br>
 
@@ -223,7 +227,7 @@ const proxyIPs = ['turk.radicalization.ir'];
 خب حالا اگر خواستید علاوه بر اون 6 تا کانفیگ دیگه ای اضافه کنید که با IP تمیز خودتون باشه، مطابق عکس IP یا دامین‌های تمیز خودتون رو با ویرگول وارد کنید و Apply بزنید، اسکنر آنلاین بچه‌های [IRCF](https://ircf.space) رو هم اضافه کردم:
 
 <p align="center">
-  <img src="assets/images/Clean_ip_domain.jpg">
+  <img src="assets/images/Clean_ip_domain.png">
 </p>
 
 الان اگر توی اپلیکیشن Update subscription بزنید میبینید که کانفیگای جدید اضافه شدن.
@@ -240,7 +244,14 @@ const proxyIPs = ['turk.radicalization.ir'];
 
 3 تا فیلد داریم به اسم Custom، در اصل مخفف Custom CDN. برای مواقعی استفاده میشه که شما میاید دامنه‌ی Worker خودتون رو میبرید پشت یه CDN دیگه، مثلا Fastly یا Gcore یا هر CDN دیگه‌ای. این 3 قسمت به ترتیب عبارتند از:
 
-1- بخش `Custom Addr` که در اصل حکم همون IP ها یا IP تمیزهای کلادفلر رو داره. ولی از هر CDN که اینجا استفاده میکنید باید IP های خودشو بذارید، نمیشه IP کلادفلرو بذارید برای Fastly یا Gcore. اینجام مثل IP تمیز که داشتیم میتونید دامنه، IP ورژن 4 یا 6 با ویرگول بذارید، حواستون باشه IPv6 باید بین [ ] باشه مثل:
+1- بخش `Custom Addr` که در اصل حکم همون IP ها یا IP تمیزهای کلادفلر رو داره. ولی از هر CDN که اینجا استفاده میکنید باید IP های خودشو بذارید، نمیشه IP کلادفلرو بذارید برای Fastly یا Gcore. 
+
+<p align="center">
+  <img src="assets/images/Custom_settings.png">
+</p>
+
+
+اینجام مثل IP تمیز که داشتیم میتونید دامنه، IP ورژن 4 یا 6 با ویرگول بذارید، حواستون باشه IPv6 باید بین [ ] باشه مثل:
 > speedtest.net , [2a04:4e42:200::731] , 151.101.66.219
 
 2- بخش `Custom Host` باید host که توی اون CDN تعریف کردید و اشاره میکنه به ورکر خودتون رو بذارید. مثلا توی Fastly میشه یه آدرس دامنه فیک تعریف کرد.
@@ -318,7 +329,7 @@ const proxyIPs = ['turk.radicalization.ir'];
 #### 4-2-2- تنظیمات Chain Proxy
 
 <p align="center">
-  <img src="assets/images/Proxy_IP_settings.jpg">
+  <img src="assets/images/Proxy_IP_settings.png">
 </p>
 
 قبلا گفتیم که میشه یه دونه Proxy IP گذاشت و IP رو برای سایت‌های پشت کلادفلر ثابت کرد، اما کماکان وقتی سایتای معمولی رو باز میکنیم IP ما متعلق به ورکر هست که اینم هر چند وقت یک بار عوض میشه. برای اینکه کلا برای همه‌ی سایت‌ها IP رو فیکس کنیم این قسمت اضافه شده. میتونیم یه کانفیگ VLESS یا Socks یا Http رایگان که حتی فیلتر هم شده باشه (بشرطی که فقط تو ایران فیلتر شده باشه ولی کار کنه) این قسمت بذاریم و IP ما برای همیشه ثابت میشه به IP این کانفیگ.
@@ -403,7 +414,7 @@ const proxyIPs = ['turk.radicalization.ir'];
 ### 4-4- تنظیمات Warp
 
 <p align="center">
-  <img src="assets/images/Warp-Settings.jpg">
+  <img src="assets/images/Warp-Settings.png">
 </p>
 
 #### 4-4-1 تنظیمات WARP SETTINGS
