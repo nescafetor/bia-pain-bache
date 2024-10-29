@@ -1,34 +1,37 @@
-### $$\color{silver} \Large \text{بیا پایین بچه}$$
+## $$\color{silver} \Large \text{ بیا پایین بچه}$$  
+
+ __*[🇮🇷فارسی](README-fa.md)*__   __*[🇬🇧انگلیسی](README.md)*__  
+
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/2687f318-87eb-4af6-a30a-5904f25bd394" width="160px" 
+   style="text-align: center;" alt="https://github/.com/NiREvil/bia-pain-bache" <figcaption>v2.7
+</p><br>
 
 
 
+### $$\color{#ghostwhite} \Large \text{جدول مطالب}$$
 
-
-> __[🇮🇷فارسی](README-fa.md)__     __[🇬🇧انگلیسی](README.md)__
-
-
-### جدول مطالب
 - [معرفی](#معرفی)
 - [ویژگی ها](#ویژگی-ها)
 - [نحوه راه اندازی و تنظیمات](#نحوه-راه-اندازی-و-تنظیمات)
 - [درباره متغیر ها](#درباره-متغیر-ها)
 - [پیش نمایش پنل](#پیش-نمایش-پنل)  
 - [کلاینت های پشتیبانی‌ شده](#کلاینت-های-پشتیبانی-شده)
+</p><br>
 
+## $$\color{ghostwhite} \Large \text{معرفی}$$ 
+#### $$\color{silver} \large \text{این پروژه توسعه‌ی یک پنل کاربری برای اسکریپت وورکر کلادفلر ایجاد شده توسط}$$ $$\color{gold} \Large \text{yonggekkk}$$ [^1] $$\color{silver} \large \text{می‌باشد.}$$
 
-### معرفی
-این پروژه توسعه‌ی یک پنل کاربری برای اسکریپت <a href="https://github.com/yonggekkk/Cloudflare-workers-pages-vless">پروکسی Cloudflare-workers/pages</a> ایجاد شده توسط <a href="https://github.com/yonggekkk">yonggekkk</a> می‌باشد.
+#### $$\color{silver} \large \text{و همچنین قدردانی می‌کنم از توسعه دهنده اصلی پروژه}$$  $$\color{gold} \Large \text{بیا پایین بچه}$$ [^2] $$\color{silver} \large \text{.بخاطر پنل فوق العاده ای که ایجاد کردند}$$
 
-و همچنین قدردانی می‌کنم از توسعه دهنده اصلی پروژه [bia pain bache](https://github.com/bia-pain-bache) بخاطر پنل فوق العاده ای که ایجاد کردند.
+</p><br>
 
+### $$\color{ghostwhite} \Large \text{:این پنل به دو روش راه‌اندازی می‌شود}$$
 
-#### این پنل به دو روش راه‌اندازی می‌شود:
-
-- راه‌اندازی با __Cloudflare Worker__
-- راه‌اندازی با __Cloudflare Pages__
-<br>
-
-
+- [__راه‌اندازی با Worker__](docs/worker_installation_fa.md)  
+- [__راه‌اندازی با Pages__](docs/pages_installation_fa.md)
+</p><br>
 
 ## ویژگی‌ ها
 <br>
@@ -46,6 +49,7 @@
 </ol>
 <br><br>
 
+
 ## نحوه راه اندازی و تنظیمات
 - [نصب به صورت Pages](docs/pages_installation_fa.md)
 - [نصب به صورت Worker](docs/worker_installation_fa.md)
@@ -55,8 +59,6 @@
 <br>
 
 
-
-
 ## درباره متغیر ها
 > برای مشاهده توضیحات بیشتر درباره چگونگی ایجاد متغییر‌ها به [این لینک](https://github.com/NiREvil/bia-pain-bache/blob/main/docs/pages_installation_fa.md#3--%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D9%BE%D8%B3%D9%88%D8%B1%D8%AF%D9%87%D8%A7%DB%8C-trojan) مراجعه کنید. 
 
@@ -64,7 +66,8 @@
 
 | نام متغیر | مثال | الزام | توضیحات|
 |-----|----|--|------------|
-| UUID | `90cd4a77-141a-43c9-991b-08263cfe9c10` |✅|برای ایجاد آی‌دی خود به [این لینک](https://www.uuidgenerator.net/)مراجعه کنید. |
+| UUID | `90cd4a77-141a-43c9-991b-08263cfe9c10` |✅| برای ایجاد آی‌دی خود به [این لینک] (https://www.uuidgenerator.net/) مراجعه 
+کنید. |
 | PROXYIP | `bpb.radically.pro` |❌|برای دسترسی به سایت‌هایی که از سی‌دی‌ان کلادفلر استفاده می‌کنند باید از پروکسی‌ آی‌پی‌ها استفاده کنیم، پشتیبانی از چند پروکسی آی‌پی، برای مثال : ```['bpb.radically.pro', 'bpb.yousef.isegaro.com'];```برای پیدا کردن پروکسی‌های بیشتر به [این لینک](https://github.com/NiREvil/vless/blob/main/sub/ProxyIP.md) مراجعه کنید. |
 | TROJAN_PASS  | `REvil` |✅|پسوورد دلخواه شما برای کانفیگ‌های تروجان |
 | HASH_PASS | `6dfd0e8e67ad3230498f80938cb924bc767b7` |✅| پسوورد تروجان دلخواه شما باید به رشته‌های هش SHA-224 به منزله ذخیره ایمن رمز عبور و تأیید صحت داده ها تبدیل شود، برای انجام تبدیل به [این لینک](https://emn178.github.io/online-tools/sha224.html) مراجعه کنید. |
@@ -75,32 +78,28 @@
 ## پیش نمایش پنل
 
 <p align="center">
-  <img src="docs/assets/images/Panel.jpg">
+  <img src="docs/assets/images/Panel.png">
 </p>
 
 <p align="center">
-  <img src="docs/assets/images/Panel_2.jpg">
+  <img src="docs/assets/images/Panel_2.png">
 </p>
 
 <p align="center">
-  <img src="docs/assets/images/Panel_3.jpg">
+  <img src="docs/assets/images/Panel_3.png">
 </p>
 
 <p align="center">
-  <img src="docs/assets/images/Panel_4.jpg">
+  <img src="docs/assets/images/Panel_4.png">
 </p>
-
 
 <p align="center">
-  <img src="docs/assets/images/Panel_5.jpg">
+  <img src="docs/assets/images/Panel_5.png">
 </p>
-
-
 
 <p align="center">
-  <img src="docs/assets/images/Panel_6.jpg">
+  <img src="docs/assets/images/Panel_6.png">
 </p>
-
 
 <br><br> 
 
@@ -204,15 +203,17 @@
 </div>
 
 ---
-## تعداد ستاره‌ها به مرور زمان
 
-[![تعداد ستاره‌ها به مرور زمان](https://starchart.cc/bia-pain-bache/BPB-Worker-Panel.svg?variant=adaptive)](https://starchart.cc/bia-pain-bache/BPB-Worker-Panel)
-
----
 ### تشکر ویژه
 
 - نویسنده کد CF-vless <a href="https://github.com/3Kmfi6HP/EDtunnel">3Kmfi6HP</a>
 - نویسنده برنامه IP ترجیحی CF <a href="https://github.com/badafans/Cloudflare-IP-SpeedTest">badafans</a>، <a href="https://github.com/XIU2/CloudflareSpeedTest">XIU2</a>
 
 ---
-برای آموزش جزئیات اسکریپت اصلی، لطفاً به <a href="https://ygkkk.blogspot.com/2023/07/cfworkers-vless.html">وبلاگ و آموزش‌های ویدیویی Yongge</a> مراجعه کنید.
+
+- برای آموزش جزئیات اسکریپت اصلی، لطفاً به <a href="https://ygkkk.blogspot.com/2023/07/cfworkers-vless.html"> وبلاگ و آموزش‌های ویدیویی Yongge</a> مراجعه کنید.
+
+---
+
+[^1]: [yonggekkk](https://github.com/yonggekkk/Cloudflare-workers-pages-vless) 
+[^2]: [BPB](https://github.com/bia-pain-bache) 
