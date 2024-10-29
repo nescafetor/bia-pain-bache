@@ -1,12 +1,12 @@
 ## $$\color{silver} \Large \text{BPB PANEL}$$
 
- __*[🇮🇷 Persian](README-fa.md)__
- __[🇬🇧 English](README.md)__
+ __*[🇮🇷 Persian](README-fa.md)*__
+ __*[🇬🇧 English](README.md)*__
 
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/2687f318-87eb-4af6-a30a-5904f25bd394" width="160px" 
-   style="text-align: center;" alt="https://github/.com/NiREvil/bia-pain-bache"<figcaption> __*v2.7*__
+   style="text-align: center;" alt="https://github/.com/NiREvil/bia-pain-bache"<figcaption> v2.7
 </p><br>
 
 
