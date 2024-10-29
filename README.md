@@ -1,10 +1,17 @@
-## $$\color{silver} \Large \text{BPB v2.7}$$
+## $$\color{silver} \Large \text{BPB PANEL}$$
 
-> __[🇮🇷Persian](README-fa.md)__  
-> __[🇬🇧English](README.md)__
+ __*[🇮🇷 Persian](README-fa.md)__
+ __[🇬🇧 English](README.md)__
 
 
-## table of contents
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/2687f318-87eb-4af6-a30a-5904f25bd394" width="160px" 
+   style="text-align: center;" alt="https://github/.com/NiREvil/bia-pain-bache"<figcaption> __*v2.7*__
+</p><br>
+
+
+
+### $$\color{silver} \Large \text{Table of Contents}$$
 - [Introduction](#Introduction)
 - [Features](#Features)
 - [How to use](#How-to-use)
@@ -14,14 +21,16 @@
 
 
 ### Introduction
-This project is dedicated to developing a user panel for the [Cloudflare-workers/pages proxy script](https://github.com/yonggekkk/Cloudflare-workers-pages-vless) created by [yonggekkk](https://github.com/yonggekkk).
+This project is dedicated to developing a user panel for the [Cloudflare Workers-Pages proxy-script](https://github.com/yonggekkk/Cloudflare-workers-pages-vless) created by [yonggekkk](https://github.com/yonggekkk).
 
-HUGE THANKS TO
-[bia pain bache](https://github.com/bia-pain-bache) for creating these amazing panel
+__*HUGE THANKS TO*__
+[Bia Pain Bache](https://github.com/bia-pain-bache) for creating these amazing panel
+<br>
 
- The panel offers two deployment options:
-- __Worker__ deployment
-- __Pages__ deployment
+#### $$\color{silver} \large \text{The panel offers two deployment options:}$$
+> [__Worker__ deployment](docs/worker_installation_fa.md)  
+> [__Pages__ deployment](docs/pages_installation_fa.md)
+
 <br>
 
 
