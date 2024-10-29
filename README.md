@@ -11,7 +11,7 @@
 
 
 
-### $$\color{silver} \Large \text{Table of Contents}$$
+### $$\color{ghostwhite} \Large \text{Table of Contents}$$
 - [Introduction](#Introduction)
 - [Features](#Features)
 - [How to use](#How-to-use)
@@ -20,14 +20,13 @@
 - [Supported clients](#Supported-clients)
 
 
-## Introduction
-This project is dedicated to developing a user panel for the [Cloudflare Workers-Pages proxy-script](https://github.com/yonggekkk/Cloudflare-workers-pages-vless) created by [yonggekkk](https://github.com/yonggekkk).
+## $$\color{ghostwhite} \Large \text{Introduction}$$ 
+#### $$\color{silver} \large \text{This project is dedicated to developing a user panel for the Cloudflare Workers-Pages proxy-script created by}$$ $$\color{gold} \Large \text{yonggekkk}$$ 
 
-#### $$\color{silver} \large \text{Huge thanks to:}$$  
-[Bia Pain Bache](https://github.com/bia-pain-bache)  $$\color{silver} \small \text{for creating these amazing panel}$$
+#### $$\color{silver} \large \text{Huge thanks to}$$ $$\color{gold} \Large \text{Bia Pain Bache}$$ $$\color{silver} \small \text{for creating these amazing panel}$$
 <br><br>
 
-#### $$\color{silver} \large \text{The panel offers two deployment options:}$$
+#### $$\color{ghostwhite} \Large \text{The panel offers two deployment options:}$$
 > [__Worker__ deployment](docs/worker_installation_fa.md)  
 > [__Pages__ deployment](docs/pages_installation_fa.md)
 <br>
@@ -122,6 +121,9 @@ This project is dedicated to developing a user panel for the [Cloudflare Workers
 ### Special Thanks
 - CF-vless code author [3Kmfi6HP](https://github.com/3Kmfi6HP/EDtunnel)
 - CF preferred IP program author [badafans](https://github.com/badafans/Cloudflare-IP-SpeedTest), [XIU2](https://github.com/XIU2/CloudflareSpeedTest)
+---
+[BPB](https://github.com/bia-pain-bache)  
+[yonggekkk](https://github.com/yonggekkk/Cloudflare-workers-pages-vless)  
 
 ---
 For a detailed tutorial on the core script, please refer to [Yongge’s blog and video tutorials](https://ygkkk.blogspot.com/2023/07/cfworkers-vless.html).
