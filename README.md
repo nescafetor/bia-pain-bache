@@ -1,6 +1,7 @@
 ## $$\color{silver} \Large \text{BPB v2.7}$$
 
-> __[🇮🇷Persian](README-fa.md)__     __[🇬🇧English](README.md)__
+> __[🇮🇷Persian](README-fa.md)__  
+> __[🇬🇧English](README.md)__
 
 
 ## table of contents
@@ -71,27 +72,27 @@ HUGE THANKS TO
 ## Panel preview
 
 <p align="center">
-  <img src="docs/assets/images/Panel.jpg">
+  <img src="docs/assets/images/Panel.png">
 </p>
 
 <p align="center">
-  <img src="docs/assets/images/Panel_2.jpg">
+  <img src="docs/assets/images/Panel_2.png">
 </p>
 
 <p align="center">
-  <img src="docs/assets/images/Panel_3.jpg">
+  <img src="docs/assets/images/Panel_3.png">
 </p>
 
 <p align="center">
-  <img src="docs/assets/images/Panel_4.jpg">
+  <img src="docs/assets/images/Panel_4.png">
 </p>
 
 <p align="center">
-  <img src="docs/assets/images/Panel_5.jpg">
+  <img src="docs/assets/images/Panel_5.png">
 </p>
 
 <p align="center">
-  <img src="docs/assets/images/Panel_6.jpg">
+  <img src="docs/assets/images/Panel_6.png">
 </p>
 
 <br><br> 
