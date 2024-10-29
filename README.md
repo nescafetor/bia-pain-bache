@@ -20,45 +20,37 @@
 - [Supported clients](#Supported-clients)
 
 
-### Introduction
+## Introduction
 This project is dedicated to developing a user panel for the [Cloudflare Workers-Pages proxy-script](https://github.com/yonggekkk/Cloudflare-workers-pages-vless) created by [yonggekkk](https://github.com/yonggekkk).
 
-__*HUGE THANKS TO*__
-[Bia Pain Bache](https://github.com/bia-pain-bache) for creating these amazing panel
-<br>
+#### $$\color{silver} \large \text{Huge thanks to:}$$  
+[Bia Pain Bache](https://github.com/bia-pain-bache)  $$\color{silver} \small \text{for creating these amazing panel}$$
+<br><br>
 
 #### $$\color{silver} \large \text{The panel offers two deployment options:}$$
 > [__Worker__ deployment](docs/worker_installation_fa.md)  
 > [__Pages__ deployment](docs/pages_installation_fa.md)
-
 <br>
 
 
 ## Features
-
-1. __Free__: No cost involved.
-2. __User-Friendly Panel:__ Designed for easy navigation, configuration and usage.
-3. __Protocols:__ Provides VLESS, Trojan and Wireguard (Warp) protocols.
-4. __Warp Pro configs:__ Optimized Warp for crucial circumstances.
-5. __Support Fragment:__ Supports Fragment functionality for crucial network situations.
-6. __Full routing rules:__ Bypassing Iran/China/Russia and LAN, Blocking QUIC, Porn, Ads, Malwares, Phishing...
-5. __Bypass Iran and LAN (Optional)__
-6. __Full routing rules:__ Bypassing Iran, Blocking Ads, Malwares, Phishing... for Sing-box.
-7. __Chain Proxy:__ Capable of adding a chain proxy to fix IP.
-8. __Supports Wide Range of Clients:__ Offers subscription links for Xray, Sing-box and Clash core clients.
-9. __Password-Protected Panel:__ Secure your panel with password protection.
-10. __Fully customizable:__ Ability to use online scanner and setting up clean IP-domains, Proxy IP, setting DNS servers, choosing ports and protocols, Warp endpoints...
+1. **Free**: No cost involved.
+2. **User-Friendly Panel:** Designed for easy navigation, configuration and usage.
+3. **Protocols:** Provides VLESS, Trojan and Wireguard (Warp) protocols.
+4. **Warp Pro configs:** Optimized Warp for crucial circumstances.
+5. **Support Fragment:** Supports Fragment functionality for crucial network situations.
+6. **Full routing rules:** Bypassing Iran/China/Russia and LAN, Blocking QUIC, Porn, Ads, Malwares, Phishing...
+7. **Chain Proxy:** Capable of adding a chain proxy to fix IP.
+8. **Supports Wide Range of Clients:** Offers subscription links for Xray, Sing-box and Clash core clients.
+9. **Password-Protected Panel:** Secure your panel with password protection.
+10. **Fully customizable:** Ability to use online scanner and setting up clean IP-domains, Proxy IP, setting DNS servers, choosing ports and protocols, Warp endpoints...
 <br>
 
 ## How to use
 - [Installation (Pages)](docs/pages_installation_fa.md)
-
 - [Installation (Worker)](docs/worker_installation_fa.md)
-
 - [Scanning Proxy IP](docs/proxy-ip-scanner.md)
-
 - [How to use](docs/configuration_fa.md)
-
 - [FAQ](docs/faq.md)
 <br>
 
@@ -75,8 +67,6 @@ __*HUGE THANKS TO*__
 | HASH_PASS | `6dfd0e8e67ad3230498f80938cb924bc767b7` |✅| Your preferred trojan password should be converted to SHA-224 Hash string to securely store password and verify data integrity, To perform this conversion refer to [this link](https://emn178.github.io/online-tools/sha224.html) |
 
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
-
-
 
 ## Panel preview
 
@@ -108,7 +98,6 @@ __*HUGE THANKS TO*__
 
 <br><br>
 
----
 ## Supported clients  
 
 | Client  | Version | Fragment | Warp Pro |
@@ -135,5 +124,4 @@ __*HUGE THANKS TO*__
 - CF preferred IP program author [badafans](https://github.com/badafans/Cloudflare-IP-SpeedTest), [XIU2](https://github.com/XIU2/CloudflareSpeedTest)
 
 ---
-
 For a detailed tutorial on the core script, please refer to [Yongge’s blog and video tutorials](https://ygkkk.blogspot.com/2023/07/cfworkers-vless.html).
