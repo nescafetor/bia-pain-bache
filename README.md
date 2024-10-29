@@ -9,8 +9,6 @@
    style="text-align: center;" alt="https://github/.com/NiREvil/bia-pain-bache"<figcaption> v2.7
 </p><br>
 
-
-
 ### $$\color{ghostwhite} \Large \text{Table of Contents}$$
 - [Introduction](#Introduction)
 - [Features](#Features)
@@ -21,9 +19,9 @@
 
 
 ## $$\color{ghostwhite} \Large \text{Introduction}$$ 
-#### $$\color{silver} \large \text{This project is dedicated to developing a user panel for the Cloudflare Workers-Pages proxy-script created by}$$ $$\color{gold} \Large \text{yonggekkk}$$ 
+#### $$\color{silver} \large \text{This project is dedicated to developing a user panel for the Cloudflare Workers-Pages proxy-script created by}$$ $$\color{gold} \Large \text{yonggekkk}$$ [^1] 
 
-#### $$\color{silver} \large \text{Huge thanks to}$$ $$\color{gold} \Large \text{Bia Pain Bache}$$ $$\color{silver} \small \text{for creating these amazing panel}$$
+#### $$\color{silver} \large \text{Huge thanks to}$$ $$\color{gold} \Large \text{Bia Pain Bache}$$ [^2] $$\color{silver} \small \text{for creating these amazing panel}$$
 <br><br>
 
 #### $$\color{ghostwhite} \Large \text{The panel offers two deployment options:}$$
@@ -52,7 +50,6 @@
 - [How to use](docs/configuration_fa.md)
 - [FAQ](docs/faq.md)
 <br>
-
 
 ## Variable description
 > For further information on how to create variables, please refer to [this link](https://github.com/NiREvil/bia-pain-bache/blob/main/docs/pages_installation_fa.md#3--%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D9%BE%D8%B3%D9%88%D8%B1%D8%AF%D9%87%D8%A7%DB%8C-trojan).
@@ -122,8 +119,8 @@
 - CF-vless code author [3Kmfi6HP](https://github.com/3Kmfi6HP/EDtunnel)
 - CF preferred IP program author [badafans](https://github.com/badafans/Cloudflare-IP-SpeedTest), [XIU2](https://github.com/XIU2/CloudflareSpeedTest)
 ---
-[BPB](https://github.com/bia-pain-bache)  
-[yonggekkk](https://github.com/yonggekkk/Cloudflare-workers-pages-vless)  
+[^1]: [yonggekkk](https://github.com/yonggekkk/Cloudflare-workers-pages-vless) 
+[^2]: [BPB](https://github.com/bia-pain-bache) 
 
 ---
 For a detailed tutorial on the core script, please refer to [Yongge’s blog and video tutorials](https://ygkkk.blogspot.com/2023/07/cfworkers-vless.html).
