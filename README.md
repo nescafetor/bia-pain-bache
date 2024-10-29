@@ -31,14 +31,13 @@ HUGE THANKS TO
 3. __Protocols:__ Provides VLESS, Trojan and Wireguard (Warp) protocols.
 4. __Warp Pro configs:__ Optimized Warp for crucial circumstances.
 5. __Support Fragment:__ Supports Fragment functionality for crucial network situations.
-6. __Full routing rules:__ Bypassing Iran/China and LAN, Blocking QUIC, Porn, Ads, Malwares, Phishing...
+6. __Full routing rules:__ Bypassing Iran/China/Russia and LAN, Blocking QUIC, Porn, Ads, Malwares, Phishing...
 5. __Bypass Iran and LAN (Optional)__
 6. __Full routing rules:__ Bypassing Iran, Blocking Ads, Malwares, Phishing... for Sing-box.
 7. __Chain Proxy:__ Capable of adding a chain proxy to fix IP.
 8. __Supports Wide Range of Clients:__ Offers subscription links for Xray, Sing-box and Clash core clients.
-10. __Subscription Link (JSON):__ Provides subscription link for JSON configs.
-11. __Password-Protected Panel:__ Secure your panel with password protection.
-12. __Fully customizable:__ Ability to use online scanner and setting up clean IP-domains, Proxy IP, setting DNS servers, choosing ports and protocols, Warp endpoints...
+9. __Password-Protected Panel:__ Secure your panel with password protection.
+10. __Fully customizable:__ Ability to use online scanner and setting up clean IP-domains, Proxy IP, setting DNS servers, choosing ports and protocols, Warp endpoints...
 <br>
 
 ## How to use
