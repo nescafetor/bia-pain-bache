@@ -1,4 +1,10 @@
-<h1 align="center">⁉️ سوالات متداول</h1>
+<h1 align="center">$$\color{#a5a5a5} \Huge \text{ ؟ سوالات متداول ؟}$$</h1>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/2687f318-87eb-4af6-a30a-5904f25bd394" width="120px" 
+   style="text-align: center;" alt="https://github/.com/NiREvil/bia-pain-bache"<figcaption> v2.7
+</p><br>
+
 
 1- چرا کانفیگ Fragment وصل نمیشه؟
 - اگر `Routing` فعال کردید و VPN متصل نشد تنها دلیلش آپدیت نبودن Geo asset هست. از منوی برنامه‌ی v2rayNG وارد قسمت `Geo asset files` بشید و اون علامت ابر یا دانلود رو بزنید تا آپدیت بشن، اگر آپدیت ناموفق باشه وصل نمیشید. اگر هر کاری کردید آپدیت نشد دو تا فایل از دو تا لینک زیر دانلود کنید و بجای آپدیت زدن، دکمه اضافه کردن رو بزنید و این دوتا فایل رو وارد کنید:
@@ -31,6 +37,15 @@
 - هر اپراتوری تنظیمات فرگمنت مخصوص خودش رو داره. اکثرا با پیشفرض پنل اوکی هستن ولی ممکنه روی اپراتور شما این مقادیر بهتر باشه، باید تست کنید:
 > `Packets: tlshello`
 > 
+> `Length: 10-30`
+> 
+> `Length: 1-2`
+<br>
+
+OR
+
+> `Packets: tlshello`
+> 
 > `Length: 100-200`
 > 
 > `Length: 10-20`
@@ -38,20 +53,11 @@
 
 OR
 
-> `Packets: tlshello`
-> 
-> `Length: 10-100`
-> 
-> `Length: 5-10`
-<br>
-
-OR
-
 > `Packets: 1-1`
 > 
-> `Length: 10-30`
+> `Length: 1403`
 > 
-> `Length: 1-3`
+> `Length: 1`
 <br>
 
 5- چرا Ping من انقدر بالاست؟
@@ -64,6 +70,8 @@ OR
 
 7- وقتی proxy IP گذاشتم کار میکرد ولی الان از کار افتاده!
 - اگر از تک IP استفاده کنید احتمالا بعد یه مدت دوباره از کار میافته و خیلی سایتا باز نمیشن. باید از اول این مراحلو برید. ترجیحا اگر کار خاصی انجام نمیدید که نیاز به IP ثابت داشته باشه بذارید پیشفرض پنل بمونه، Proxy IP تکی نذارید.
+- از [مخزن آی‌پی خودمون](https://github.com/NiREvil/vless/blob/main/sub/ProxyIP.md) از دامنه ها انتخاب کنید مثلا این : `nima.nscl,ir`
+
 <br>
 
 8- چرا وقتی میرم به آدرس `panel/` ارور میده؟
@@ -104,7 +112,9 @@ OR
 
 16- چرا ChatGPT باز نمیشه؟
 - بخاطر اینکه Proxy IP های پیشفرض پنل عمومی هستن و ممکنه خیلیاشون برای ChatGPT مشکوک باشن. از لینک زیر باید بگردید تست کنید و یه IP مناسب برای خودتون بردارید:
-> https://www.nslookup.io/domains/bpb.yousef.isegaro.com/dns-records/
+>[Find proxyIP](https://www.nslookup.io/domains/ipdb.rr.nu/dns-records/)
+>
+>[Find proxyIP](https://www.nslookup.io/domains/bpb.yousef.isegaro.com/dns-records/)
 <br>
 
 17- پسورد پنل یادم نمیاد چیکار کنم؟
