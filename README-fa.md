@@ -1,6 +1,4 @@
-## $$\color{silver} \Large \text{ بیا پایین بچه}$$  
-
- __*[🇮🇷فارسی](README-fa.md)*__   __*[🇬🇧انگلیسی](README.md)*__  
+<h1 align="center">$$\color{#a5a5a5} \Large \text{ بیا پایین بچه}$$</h1>
 
 
 <p align="center">
@@ -8,9 +6,11 @@
    style="text-align: center;" alt="https://github/.com/NiREvil/bia-pain-bache" <figcaption>v2.7
 </p><br>
 
+ __*[🇮🇷فارسی](README-fa.md)*__   __*[🇬🇧انگلیسی](README.md)*__  
 
+<br>
 
-### $$\color{#ghostwhite} \Large \text{جدول مطالب}$$
+<h2>$$\color{#a5a5a5} \Large \text{جدول مطالب}$$</h2>
 
 - [معرفی](#معرفی)
 - [ویژگی ها](#ویژگی-ها)
