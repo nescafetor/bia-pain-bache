@@ -1,6 +1,5 @@
 <h1 align="center">$$\color{#a5a5a5} \Large \text{ بیا پایین بچه}$$</h1>
 
-
 <p align="center">
   <img src="https://github.com/user-attachments/assets/2687f318-87eb-4af6-a30a-5904f25bd394" width="160px" 
    style="text-align: center;" alt="https://github/.com/NiREvil/bia-pain-bache" <figcaption>v2.7
@@ -10,7 +9,7 @@
 
 <br>
 
-<h2>$$\color{#a5a5a5} \Large \text{جدول مطالب}$$</h2>
+<h2>$$\color{gray} \Large \text{جدول مطالب}$$</h2>
 
 - [معرفی](#معرفی)
 - [ویژگی ها](#ویژگی-ها)
@@ -20,17 +19,18 @@
 - [کلاینت های پشتیبانی‌ شده](#کلاینت-های-پشتیبانی-شده)
 </p><br>
 
-## $$\color{ghostwhite} \Large \text{معرفی}$$ 
-#### $$\color{silver} \large \text{این پروژه توسعه‌ی یک پنل کاربری برای اسکریپت وورکر کلادفلر ایجاد شده توسط}$$ $$\color{gold} \Large \text{yonggekkk}$$ [^1] $$\color{silver} \large \text{می‌باشد.}$$
+<h2>$$\color{gray} \Large \text{معرفی}$$</h2>
 
-#### $$\color{silver} \large \text{و همچنین قدردانی می‌کنم از توسعه دهنده اصلی پروژه}$$  $$\color{gold} \Large \text{بیا پایین بچه}$$ [^2] $$\color{silver} \large \text{.بخاطر پنل فوق العاده ای که ایجاد کردند}$$
+#### $$\color{gray} \large \text{این پروژه توسعه‌ی یک پنل کاربری برای اسکریپت وورکر کلادفلر ایجاد شده توسط}$$ $$\color{gold} \Large \text{yonggekkk}$$ [^1] $$\color{gray} \large \text{می‌باشد.}$$
+
+#### $$\color{gray} \large \text{و همچنین قدردانی می‌کنم از توسعه دهنده اصلی پروژه}$$  $$\color{gold} \Large \text{بیا پایین بچه}$$ [^2] $$\color{gray} \large \text{.بخاطر پنل فوق العاده ای که ایجاد کردند}$$
 
 </p><br>
 
-### $$\color{ghostwhite} \Large \text{:این پنل به دو روش راه‌اندازی می‌شود}$$
+<h3>$$\color{gray} \Large \text{:این پنل به دو روش راه‌اندازی می‌شود}$$</h3>
 
-- [__راه‌اندازی با Worker__](docs/worker_installation_fa.md)  
-- [__راه‌اندازی با Pages__](docs/pages_installation_fa.md)
+- [راه‌اندازی با __Worker__](docs/worker_installation_fa.md)  
+- [راه‌اندازی با __Pages__](docs/pages_installation_fa.md)
 </p><br>
 
 ## ویژگی‌ ها
