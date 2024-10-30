@@ -1,12 +1,9 @@
- <h1 align="center">$$\color{#a5a5a5} \Huge \text{ نحوه‌ی استفاده و تنظیمات}$$ </h1>
-
+<h1 align="center">$$\color{#a5a5a5} \Huge \text{ نحوه‌ی استفاده و تنظیمات}$$ </h1>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/2687f318-87eb-4af6-a30a-5904f25bd394" width="120px" 
-   style="text-align: center;" alt="https://github/.com/NiREvil/bia-pain-bache"<figcaption> v2.7
+  <img src="https://github.com/user-attachments/assets/2687f318-87eb-4af6-a30a-5904f25bd394" width="140px" 
+   style="text-align: center;" alt="https://github/.com/NiREvil/bia-pain-bache"
 </p><br>
-
-
 
 <h2>$$\color{#a5a5a5} \Large \text{جدول مطالب}$$</h2>
 
@@ -228,7 +225,7 @@
 لاین 4100 فایل وورکر یعنی دقیقا [از این لاین](https://github.com/NiREvil/bia-pain-bache/blob/4bfd8adb08653198dcd2398e1b6aca8bf5a35c1f/_worker.js#L4100) اونو تغییر بدین. مثلا ب این شکل:
 
 ```css
-const proxyIPs = ['bpb.radicalization.ir'];
+var proxyIPs = ["bpb.radicalization.ir"];
 ```
 در نهایت Commit changes بزنید تا ذخیره بشه.
 
