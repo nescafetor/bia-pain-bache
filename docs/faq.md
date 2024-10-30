@@ -1,8 +1,8 @@
 <h1 align="center">$$\color{#a5a5a5} \Huge \text{ ؟ سوالات متداول ؟}$$</h1>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/2687f318-87eb-4af6-a30a-5904f25bd394" width="120px" 
-   style="text-align: center;" alt="https://github/.com/NiREvil/bia-pain-bache"<figcaption> v2.7
+  <img src="https://github.com/user-attachments/assets/2687f318-87eb-4af6-a30a-5904f25bd394" width="140px" 
+   style="text-align: center;" alt="https://github/.com/NiREvil/bia-pain-bache"
 </p><br>
 
 
