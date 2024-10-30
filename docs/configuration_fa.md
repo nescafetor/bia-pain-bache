@@ -1,12 +1,7 @@
- <h1 align="center">$$\color{#a5a5a5} \Huge \text{ نحوه‌ی استفاده و تنظیمات}$$ </h1>
+<h1 align="center">$$\color{#a5a5a5} \Huge \text{نحوه‌ی استفاده و تنظیمات}$$ </h1>
+<br>
 
-
-<p align="center">
-  <img src="assets/images/BPB-Panel-Logo.png">
-</p>
-<br><br>
-
-<h2>$$\color{black} \Large \text{جدول مطالب}$$</h2>
+<h2>$$\color{#a5a5a5} \Large \text{جدول مطالب}$$</h2>
 
 1. [سابسکریپشن Normal](#سابسکریپشن-normal)
 2. [سابسکریپشن Full Normal](#سابسکریپشن-full-normal)
@@ -479,6 +474,7 @@ const proxyIPs = ['bpb.radicalization.ir'];
 5. تبلیغات ایرانی و خارجی تا حدود 80 درصد مسدود کنن.
 6. سایت‌های پورن رو مسدود کنن.
 7. اتصالات QUIC رو مسدود کنن (بخاطر ناپایدار بودن شبکه)
+
 
 در حالت عادی این قسمت غیر فعال شده، چون باید اول مطمئن بشید Geo asset برنامه‌تون آپدیته.
 > [!CAUTION]
