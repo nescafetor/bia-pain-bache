@@ -1,7 +1,7 @@
 /**
-* Start From the line 4095
-* @ts-nocheck   <!--GAMFC-->version base on commit 43fad05dcdae3b723c53c226f8181fc5bd47223e, time is 2023-06-22 15:20:02 UTC<!--GAMFC-END-->.
 * Last Update: 4:20 UTC - Friday, 1 November 2024, \\__WE ARE ALL REvil__//
+* @ts-nocheck   <!--GAMFC-->version base on commit 43fad05dcdae3b723c53c226f8181fc5bd47223e, time is 2023-06-22 15:20:02 UTC<!--GAMFC-END-->.
+* You can find them on line 4095 onwards.
 * Many thanks to github.com/bia-pain-bache
 */
 var __create = Object.create;
