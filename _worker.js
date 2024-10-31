@@ -7874,7 +7874,7 @@ function buildClashRoutingRules(proxySettings) {
   blockUDP443 && rules.push("AND,((NETWORK,udp),(DST-PORT,443)),REJECT");
   blockAds && rules.push("GEOSITE,category-ads-all,REJECT", "GEOSITE,category-ads-ir,REJECT");
   blockPorn && rules.push("GEOSITE,category-porn,REJECT");
-  rules.push("MATCH,\u2705 Selector");
+  rules.push("MATCH,🔴 Selector");
   return rules;
 }
 function buildClashVLESSOutbound(remark, address, port, host, sni, path, allowInsecure) {
