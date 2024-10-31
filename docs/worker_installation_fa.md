@@ -11,7 +11,7 @@
 و وارد شدن به قسمت Edit codes: سپس کد Worker رو از [اینجا](https://github.com/NiREvil/bia-pain-bache/blob/main/_worker.js) دانلود کنید و ببرید توی داشبورد ورکر کلادفلرو فایل رو آپلود کنید (چون کد خیلی زیاد شده Copy Paste کردن با گوشی خیلی سخت شده، با توجه به عکس زیر آپلود کنید). توی مویایل منوی کناری رو باز کنید و تاچ کنید روش نگه دارید و آپلود کنید.
 
 <p align="center">
-  <img src="assets/images/Worker_mobile_upload.jpg">
+  <img src="https://github.com/user-attachments/assets/3ed03897-4105-45bb-b48e-f7dc5b41cb13" width="360px">
 </p>
 
 پنل با UUID و Proxy IP و پسوردهای Trojan پیشفرض خودش کار میکنه و میتونید ادامه بدید، ولی اگر خواستید تغییر بدید به بخش [تنظیمات پیشرفته](#تنظیمات-پیشرفته-اختیاری) برید و برگردید اینجا.
