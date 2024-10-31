@@ -1,4 +1,4 @@
-<h1 align="center">$$\color{#a5a5a5} \Huge \text{ ؟ سوالات متداول ؟}$$</h1>
+<h1 align="center">$$\color{#a5a5a5} \Huge \text{ ؟ سوالات متداول ؟ }$$</h1>
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/2687f318-87eb-4af6-a30a-5904f25bd394" width="140px" 
@@ -12,12 +12,10 @@
 >[geoip.dat](https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat)
 > 
 >[geosite.dat](https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat)
-<br>
 
-<p align="center">
-  <br><img src="https://github.com/NiREvil/bia-pain-bache/assets/126243832/7d0b6589-212a-4ced-ab73-044ec4646c22" width="480px">
-</p>
-<br>
+<p align="left">
+  <br><img src="assets/images/Geo-Assets-Files.png" width="360px">
+</p><br>
 
 2- چرا کانفیگ نرمال وصل نمیشه؟
 - برای استفاده از این کانفیگ ها `Mux` رو از تنظیمات هر اپلیکیشنی که استفاده میکنید خاموش کنید.
