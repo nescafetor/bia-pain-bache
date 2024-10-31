@@ -9,7 +9,7 @@
 </p><br>
 
 
-<h2>$$\color{gray} \Large \text{Table of Contents}$$</h2>
+<h2>$$\color{#a5a5a5} \Large \text{Table of Contents}$$</h2>
 
 - [Introduction](#Introduction)
 - [Features](#Features)
@@ -18,23 +18,23 @@
 - [Panel preview](#Panel-preview)  
 - [Supported clients](#Supported-clients)
 
+<br><br>
 
-<h2>$$\color{gray} \Large \text{Introduction}$$</h2>
+<h2>$$\color{#a5a5a5} \Large \text{Introduction}$$</h2>
 
 #### $$\color{gray} \large \text{This project is dedicated to developing a user panel for the Cloudflare Workers-Pages proxy-script created by}$$ $$\color{gold} \Large \text{yonggekkk}$$ [^1] 
-
 #### $$\color{gray} \large \text{Huge thanks to}$$ $$\color{gold} \Large \text{Bia Pain Bache}$$ [^2] $$\color{gray} \large \text{for creating these amazing panel}$$
 <br><br>
 
-<h3>$$\color{gray} \Large \text{The panel offers two deployment options:}$$</h3>
+
+<h3>$$\color{#a5a5a5} \Large \text{The panel offers two deployment options:}$$</h3>
 
 > [Worker __deployment__](docs/worker_installation_fa.md)  
 > [Pages __deployment__](docs/pages_installation_fa.md)
-
-<br>
-
+<br><br>
 
 ## Features
+
 1. **Free**: No cost involved.
 2. **User-Friendly Panel:** Designed for easy navigation, configuration and usage.
 3. **Protocols:** Provides VLESS, Trojan and Wireguard (Warp) protocols.
