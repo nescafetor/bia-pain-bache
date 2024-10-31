@@ -1,7 +1,7 @@
 /**
 * Start From the line 4095
 * @ts-nocheck   <!--GAMFC-->version base on commit 43fad05dcdae3b723c53c226f8181fc5bd47223e, time is 2023-06-22 15:20:02 UTC<!--GAMFC-END-->.
-* Last Update: 4:20 UTC - Monday, 28 October 2024, We are all REvil
+* Last Update: 4:20 UTC - Friday, 1 November 2024, \\__WE ARE ALL REvil__//
 * Many thanks to github.com/bia-pain-bache
 */
 var __create = Object.create;
@@ -5003,7 +5003,7 @@ async function updateDataset(env, newSettings, resetSettings) {
       return false;
     return fieldValue;
   };
-  const remoteDNS = validateField("remoteDNS") ?? currentSettings?.remoteDNS ?? "https://8.8.8.8/dns-query";
+  const remoteDNS = validateField("remoteDNS") ?? currentSettings?.remoteDNS ?? "https://dns.google/dns-query";
   const url = new URL(remoteDNS);
   const remoteDNSServer = url.hostname;
   const isServerDomain = isDomain(remoteDNSServer);
@@ -5049,10 +5049,10 @@ async function updateDataset(env, newSettings, resetSettings) {
     blockAds: validateField("block-ads") ?? currentSettings?.blockAds ?? false,
     blockPorn: validateField("block-porn") ?? currentSettings?.blockPorn ?? false,
     blockUDP443: validateField("block-udp-443") ?? currentSettings?.blockUDP443 ?? false,
-    warpEndpoints: validateField("warpEndpoints")?.replaceAll(" ", "") ?? currentSettings?.warpEndpoints ?? "188.114.98.99:4233,188.114.97.149:1070,188.114.96.220:7152,188.114.99.223:2506,188.114.98.44:988,162.159.192.175:891,188.114.98.1:1010,162.159.192.100:1018,162.159.192.0:955,188.114.97.170:2371",
+    warpEndpoints: validateField("warpEndpoints")?.replaceAll(" ", "") ?? currentSettings?.warpEndpoints ?? "188.114.98.183:955,188.114.98.99:4233,188.114.97.149:1070,188.114.99.223:2506,188.114.98.44:988,162.159.192.175:891,188.114.98.1:1010,162.159.192.0:955,188.114.97.170:2371,162.159.192.187:7559",
     warpFakeDNS: validateField("warpFakeDNS") ?? currentSettings?.warpFakeDNS ?? false,
     warpPlusLicense: validateField("warpPlusLicense") ?? currentSettings?.warpPlusLicense ?? "",
-    bestWarpInterval: validateField("bestWarpInterval") ?? currentSettings?.bestWarpInterval ?? "20",
+    bestWarpInterval: validateField("bestWarpInterval") ?? currentSettings?.bestWarpInterval ?? "30",
     hiddifyNoiseMode: validateField("hiddifyNoiseMode") ?? currentSettings?.hiddifyNoiseMode ?? "m4",
     nikaNGNoiseMode: validateField("nikaNGNoiseMode") ?? currentSettings?.nikaNGNoiseMode ?? "quic",
     noiseCountMin: validateField("noiseCountMin") ?? currentSettings?.noiseCountMin ?? "10",
