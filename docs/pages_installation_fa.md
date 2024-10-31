@@ -1,6 +1,14 @@
-<h1 align="center">نصب از طریق Cloudflare Pages</h1>
+<h1 align="center">$$\color{#a5a5a5} \Huge \text{Cloudflare Pages نصب از طریق}$$ </h1>
 
-## مقدمه
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/2687f318-87eb-4af6-a30a-5904f25bd394" width="140px" 
+   style="text-align: center;" alt="https://github/.com/NiREvil/bia-pain-bache"
+</p><br>
+
+
+<h2>$$\color{#a5a5a5} \Large \text{مقدمه}$$</h2>
+
 احتمالاً میدونید که دو روش استفاده Worker و Pages برای ساخت پروکسی روی کلادفلر مورد استفاده قرار میگیره، نکته جالب توجه اینه که روش Worker که مرسوم‌تره یه محدودیت داره که روزانه اجازه ارسال بیشتر از صدهزار Request  به شما نمیده. البته این محدودیت برای مصرف ۲-۳ نفر کافیه . برای دور زدن این محدودیت در روش worker  یه دامنه به ورکر وصل میکردیم  و اینجوری نامحدود میشد (که ظاهرا باگ کلادفلر هست). اما Pages این محدودیت رو نداره. البته چون ما در این روش از امکانی به اسم Pages functions استفاده میکنیم  کماکان مشابه Worker شما ایمیلی دریافت خواهید کرد که پر شدن ظرفیت مصرف 100k رو به شما اطلاع میده، در این روش حتی اگر از دامنه شخصی هم استفاده کنید باز این ایمیل رو دریافت می کنید. **ولی در نهایت تجربه نشون داده که سرویس شما قطع نخواهد شد.**
 
 مزیت  مهم دیگه‌ش سهولت در یروزرسانی هست. وقتی کد پروژه به روز بشه شما هم به راحتی و بدون نیاز به طی مجدد مراحل میتونید پنلتون رو به روزرسانی کنید. توضیحات بیشتر در بخش [بروزرسانی](#بروز-رسانی) اومده.
@@ -13,7 +21,7 @@
 حالا به آدرس گیتهاب [BPB-Worker-Panel](https://github.com/NiREvil/bia-pain-bache) میرید و از اون بالا دکمه‌ی Fork رو میزنید.
 <br><br>
 <p align="center">
-  <img src="assets/images/Fork_repo.jpg">
+  <img src="assets/images/Fork_repo.png">
 </p>
 
 تو صفحه‌ی بعدی به هیچی دست نزنید و Create Fork رو بزنید. خب کار ما با گیتهاب تموم شد.
@@ -25,13 +33,13 @@
 حالا در اکانت کلادفلرتون از منوی سمت چپ وارد قسمت `Workers and Pages` بشید (همونجا که ورکر میساختیم) و `Create Application` رو بزنید. با این تفاوت این دفعه `Pages` رو انتخاب میکنیم:
 
 <p align="center">
-  <img src="assets/images/Pages_application.jpg">
+  <img src="assets/images/Pages_application.png">
 </p>
 
 اینجا `Connect to Git` رو میزنید و میرید مرحله بعد:
 
 <p align="center">
-  <img src="assets/images/Connect_to_git.jpg">
+  <img src="assets/images/Connect_to_git.png">
 </p>
 
 اینجا روی `BPB-Worker-Panel` کلیک کنید تا فعال بشه و `Begin Setup` رو بزنید. مرحله‌ی بعد یه `Project Name` داره که میشه دامین پنل شما، اونو حتما عوض کنید یه اسم دلخواه بذارید. حالا اینجا یه فرقی با Workers داره، یعنی اگر بخواید UUID یا Proxy IP رو عوض کنید دیکه نمیتونید برید توی کد تغییر بدید، اگر خواستید از پیشفرض پنل استفاده کنید که هیچ، اگرنه همین الان برید بخش [تنظیمات پیشرفته](#تنظیمات-پیشرفته-اختیاری) رو بخونید و بعد ادامه بدید.
@@ -43,7 +51,7 @@
 از منوی سمت چپ میریم به قسمت KV:
 
 <p align="center">
-  <img src="assets/images/Nav_dash_kv.jpg">
+  <img src="assets/images/Nav_dash_kv.png">
 </p>
 
 روی `Create a namespace` کلیک میکنیم و یه اسم دلخواه بهش میدیم و Add میکنیم.
@@ -52,13 +60,13 @@
 برگردید به قسمت `Workers and Pages` و وارد اون پروژه‌ی Pages بشید که ساختید، با توجه به عکس زیر برید قسمت `Settings`:
 
 <p align="center">
-  <img src="assets/images/Settings_functions.jpg">
+  <img src="assets/images/Settings_functions.png">
 </p>
 
 
 اینجا مثل ورکر تو صفحه قسمت `Bindings` رو پیدا کنید، `Add` بزنید و `KV Namespace` رو انتخاب کنید، `Variable name` باید حتما `bpb` باشه (همینجوری که نوشتم) و `KV namespace` اون KV رو انتخاب میکنید که مرحله دو ساختید و `save` میکنید.
 <p align="center">
-  <img src="assets/images/Pages_bind_kv.jpg">
+  <img src="assets/images/Pages_bind_kv.png">
 </p>
 
 خب کارمون با KV تموم شد، حالا فقط باید دوباره Deploy کنیم که تغییرات KV اعمال بشه.
@@ -66,13 +74,13 @@
 از نوار بالا به قسمت `Deployment` برگردید و از بخش `Production` برید به `view details`:
 
 <p align="center">
-  <img src="assets/images/Pages_production_details.jpg">
+  <img src="assets/images/Pages_production_details.png">
 </p>
 
 حالا تو قسمت `Deployment detail` دکمه‌ی `Manage Deployment` رو بزنید و `Retry deployment`:
 
 <p align="center">
-  <img src="assets/images/Pages_retry_deployment.jpg">
+  <img src="assets/images/Pages_retry_deployment.png">
 </p>
 
 چند ثانیه صبر میکنید تا مراحلش تموم شه و کار ما تموم شد!
@@ -100,14 +108,14 @@
 
 ### 3- تغییر پسوردهای Trojan:
 
-پروتکل Trojan با پسوردهای پیشفرض خودش کار میکنه ولی با توجه به اینکه تعداد زیادی از این پنل استفاده میکنن، توصیه میکنم حتما این دو تا پسورد عوض بشن.
+پروتکل Trojan با پسورد پیشفرض خودش کار میکنه ولی با توجه به اینکه تعداد زیادی از این پنل استفاده میکنن، توصیه میکنم حتما پسورد عوض بشه.
 
 <br>
 
 برای تغییر UUID و Proxy IP و پسوردهای Trojan توی همین صفحه (قدم سوم، جایی که bia-pain-bache رو انتخاب میکنید) میاید پایین و قسمت `Environment variables` رو باز میکنید:
 
 <p align="center">
-  <img src="assets/images/Pages_env_vars.jpg">
+  <img src="assets/images/Pages_env_vars.png">
 </p>
 
 اینجا باید مقادیر رو مشخص کنید. یه بار `Add variable` بزنید و خونه اول رو بنویسید `UUID` با حروف بزرگ، بعد از [اینجا](https://www.uuidgenerator.net/) یه UUID بگیرید و بذارید خونه دوم.
@@ -121,39 +129,33 @@
 >[Find proxyIP](https://www.nslookup.io/domains/bpb.yousef.isegaro.com/dns-records/)
 
 <p align="center">
-  <img src="assets/images/Proxy_ips.jpg">
+  <img src="assets/images/Proxy_ips.png">
 </p>
 <br>
 
-و یا میتونید بعدا مستقیما از داخل کد اونو تغییر بدید
-لاین 13 فایل [_worker.js](_worker.js) به این شکله:
 
-```javascript
-const proxyIPs = ['turk.radicalization.ir'];
+و یا میتونید مستقیما از داخل کد اونو تغییر بدید
+لاین 4100 فایل وورکر یعنی دقیقا [از این لاین](https://github.com/NiREvil/bia-pain-bache/blob/4bfd8adb08653198dcd2398e1b6aca8bf5a35c1f/_worker.js#L4100) اونو تغییر بدین. مثلا ب این شکل:
+
+```css
+var proxyIPs = ["bpb.radicalization.ir"];
 ```
-در نهایت Comit changes بزنید تا ذخیره بشه.
+در نهایت Commit changes بزنید تا ذخیره بشه.
 <br>
 
 
-یه بار دیگه `Add variable` بزنید خونه اول `TROJAN_PASS` با حروف بزرگ، یه پسورد دلخواه بذارید.
+یه بار دیگه `Add variable` بزنید خونه اول `TROJAN_PASS` با حروف بزرگ، یه پسورد دلخواه بذارید
 
-دوباره `Add variable` بزنید خونه اول `HASH_PASS` با حروف بزرگ و:
-- وارد این سایت بشید و `TROJAN_PASS` رو بذارید input خودش قسمت output سریع `HASH_PASS` رو بهتون میده.
-> https://emn178.github.io/online-tools/sha224.html
-
-- یا اگر از این استفاده میکنید، `TROJAN_PASS` رو میذارید سمت چپ و convert رو میزنید.
-
-> https://www.atatus.com/tools/sha224-to-hash
 <br>
 
 > [!TIP]
 > اگر موقع دپلوی کردن این تنظیمات رو انجام ندادید بعدا هم میتونید از قسمت Settings این مقادیر رو اضافه کنید. از قسمت `Workers and Pages` وارد اون پروژه‌ی Pages بشید که ساختید، با توجه به عکس زیر برید قسمت `Settings` و پایین‌تر `Variables and Secrets`:
 <p align="center">
-  <img src="assets/images/Pages_variables.jpg">
+  <img src="assets/images/Pages_variables.png">
 </p>
 هر بار `Add` میزنید و یه کدوم رو وارد میکنید و `Save` میکنید:
 <p align="center">
-  <img src="assets/images/Pages_add_variables.jpg">
+  <img src="assets/images/Pages_add_variables.png">
 </p>
 و در نهایت از نوار بالا به قسمت `Deployment` برگردید و از بخش `Production` برید به `view details` و تو قسمت `Deployment detail` دکمه‌ی `Manage Deployment` رو بزنید و `Retry deployment`.
 
@@ -164,7 +166,7 @@ const proxyIPs = ['turk.radicalization.ir'];
 یکی از مزیت‌های Pages نسبت به Worker اینه که وقتی آپدیتی برای کد منتشر میشه دیگه نیازی نیست برید ورژن جدید worker.js رو دانلود کنید و روز از نو روزی از نو! اصلا برای آپدیت دیگه کاری به کلادفلر ندارید. کافیه به گیتهاب خودتون برید وارد ریپازیتوری `bia-pain-bache` بشید و از اینجا `Sync fork` رو بزنید:
 
 <p align="center">
-  <img src="assets/images/Sync_fork.jpg">
+  <img src="assets/images/Sync_fork.png">
 </p>
 
 بعد `Update branch` رو میزنید و تمام. خوبیش اینه که با این کار Cloudflare Pages خودش متوجه میشه و در حدود ۱ دقیقه بعد خودبخود آپدیت میکنه براتون.
