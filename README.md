@@ -26,7 +26,6 @@
 #### $$\color{gray} \large \text{Huge thanks to}$$ $$\color{gold} \Large \text{Bia Pain Bache}$$ [^2] $$\color{gray} \large \text{for creating these amazing panel}$$
 <br><br>
 
-
 <h3>$$\color{#a5a5a5} \Large \text{The panel offers two deployment options:}$$</h3>
 
 > [Worker __deployment__](docs/worker_installation_fa.md)  
