@@ -2,13 +2,11 @@
 
  __*[فارسی 🇮🇷](README-fa.md)*__
  __*[انگلیسی 🇬🇧](README.md)*__
+ 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/2687f318-87eb-4af6-a30a-5904f25bd394" width="160px" 
    style="text-align: center;" alt="https://github/.com/NiREvil/bia-pain-bache" <figcaption>v2.7
 </p><br>
-
-
-
 
 <h2>$$\color{#a5a5a5} \Large \text{جدول مطالب}$$</h2>
 
@@ -23,7 +21,6 @@
 <h2>$$\color{gray} \Large \text{معرفی}$$</h2>
 
 #### $$\color{gray} \large \text{این پروژه توسعه‌ی یک پنل کاربری برای اسکریپت وورکر کلادفلر ایجاد شده توسط}$$ $$\color{gold} \Large \text{yonggekkk}$$ [^1] $$\color{gray} \large \text{می‌باشد.}$$
-
 #### $$\color{gray} \large \text{و همچنین قدردانی می‌کنم از توسعه دهنده اصلی پروژه}$$  $$\color{gold} \Large \text{بیا پایین بچه}$$ [^2] $$\color{gray} \large \text{.بخاطر پنل فوق العاده ای که ایجاد کردند}$$
 
 </p><br>
